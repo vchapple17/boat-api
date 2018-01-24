@@ -61,7 +61,7 @@ Status: 200 OK
 
 [
   {
-    "url": "totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
+    "url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
     "id": "asdf1234hlkj0987a",
     "name": "S.S. Awesome",
     "type": "power boat",
@@ -84,7 +84,7 @@ GET /boats/{boat_id}
 Status: 200 OK
 
 {
-  "url": "totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
+  "url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
   "id": "asdf1234hlkj0987a",
   "name": "S.S. Awesome",
   "type": "power boat",
@@ -107,7 +107,7 @@ Status: 200 OK
 
 [
   {
-    "url": "totemic-splicer-145122.appspot.com/slips/123abc",
+    "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
     "id":"123abc",
     "number": 5,
     "current_boat":"abc555",
@@ -135,10 +135,11 @@ GET /slips/{slip_id}
 Status: 200 OK
 
 {
-  "url": "totemic-splicer-145122.appspot.com/slips/123abc",
+  "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
   "id":"123abc",
   "number": 5,
   "current_boat":"abc555",
+  "current_boat_url":"https://totemic-splicer-145122.appspot.com/boats/abc555",
   "arrival_date":"1/1/2015",
   "departure_history":
     [ {
@@ -149,7 +150,7 @@ Status: 200 OK
 }
 ```
 
-## View the current boat in a slip
+<!-- ## View the current boat in a slip
 
 Return the URL to the boat the currently occupies the slip.
 
@@ -167,7 +168,7 @@ Status: 200 OK
 
 
 }
-```
+``` -->
 
 ## Create a new boat
 
