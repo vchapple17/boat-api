@@ -11,10 +11,11 @@
 | `name` | `string` | **Required.** Name of boat |
 | `type` | `string` | **Required.** Type of boat |
 | `length` | `int` | **Required.** Length of boat in feet|
-| `at_sea` | `boolean` | **Required.** Default `false`|
+| `at_sea` | `boolean` | **Required.** Default is `false`|
 
 ```
-{ "id":"abc123",        
+{
+  "id":"kj0987a234bcdasdf12",        
   "name": "Sea Witch",  
   "type":"Catamaran",   
   "length":28,          
@@ -61,8 +62,8 @@ Status: 200 OK
 
 [
   {
-    "url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
-    "id": "asdf1234hlkj0987a",
+    "url": "https://totemic-splicer-145122.appspot.com/boats/cdasdf12kj0987a23",
+    "id": "cdasdf12kj0987a23",
     "name": "S.S. Awesome",
     "type": "power boat",
     "length": 18,          
@@ -84,8 +85,8 @@ GET /boats/{boat_id}
 Status: 200 OK
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234hlkj0987a",
-  "id": "asdf1234hlkj0987a",
+  "url": "https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf15",
+  "id": "kj0987a234bcdasdf15",
   "name": "S.S. Awesome",
   "type": "power boat",
   "length": 18,          
@@ -102,15 +103,16 @@ GET /slips
 ```
 
 **Response**
+
 ```
 Status: 200 OK
 
 [
   {
-    "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
-    "id":"123abc",
+    "url": "https://totemic-splicer-145122.appspot.com/boats/cdasdf12kj0987a23",
+    "id":"cdasdf12kj0987a23",
     "number": 5,
-    "current_boat":"abc555",
+    "current_boat":"kj0987a234bcdasdf1234hl",
     "arrival_date":"1/1/2015",
     "departure_history":
       [ {
@@ -150,25 +152,6 @@ Status: 200 OK
 }
 ```
 
-<!-- ## View the current boat in a slip
-
-Return the URL to the boat the currently occupies the slip.
-
-```
-GET /slips/{slip_id}/boat
-```
-
-**Response**
-```
-Status: 200 OK
-
-{
-  "url":
-
-
-
-}
-``` -->
 
 ## Create a new boat
 
@@ -183,12 +166,15 @@ POST /boats
 | `type` | `string` | **Required.** Type of boat |
 | `length` | `int` | **Required.** Length of boat in feet|
 
+**Note**: A new boat defaults to `true` for `at sea`, and the boat `id` is auto-generated on the server.
+
+**Request Body**
 
 ```
 {
-  "name": "S.S. Brighteyes",
-  "type": "canoe",
-  "length": 10
+  "name": "Escape",
+  "type": "yacht",
+  "length": 390
 }
 ```
 
@@ -197,27 +183,58 @@ POST /boats
 Status: 201 Created
 
 {
-  "name": "S.S. Brighteyes",
-  "type": "canoe",
-  "length": 10
-}
-```
-
-
-???ERROR???
-```
-Status:
-
-{
-  "url":
-
+  "url": "https://totemic-splicer-145122.appspot.com/boats/dasdf1234hl",
+  "id": "dasdf1234hl",
+  "name": "Escape",
+  "type": "yacht",
+  "length": 390,
+  "at sea": true
 
 }
 ```
-
 
 
 ## Create a new slip
+
+```
+POST /slips
+```
+**Input**
+
+| Name | Type | Description |
+|--------|----------|---------|
+| `number` | `int` | **Required.** Slip number; may not be unique|
+
+**Note 1**: A new slip defaults to being empty. That is, `current_boat` and `arrival_date` default to `null`, and the `departure_history` is an empty array.
+
+**Note 2**: The slip `id` is auto-generated on the server.
+
+**Request Body**
+
+```
+{
+  "number": 125
+}
+```
+
+**Response**
+```
+Status: 201 Created
+
+{
+  "url": "https://totemic-splicer-145122.appspot.com/slips/456abc",
+  "id":"456abc",
+  "number": 125,
+  "current_boat":"kj0987a234bcdasdf15",
+  "arrival_date":"1/1/2015",
+  "departure_history":
+    [ {
+      "departure_date":"11/4/2014",
+      "departed_boat":"87a234bcdailkjsdf15"
+      }, ...
+    ]  
+}
+```
 
 ## Edit a boat
 
