@@ -1,0 +1,764 @@
+{
+	"id": "b8b54457-6efe-4318-8aec-3005d69b2b30",
+	"name": "marina-api",
+	"allTests": [],
+	"timestamp": "2018-01-29T17:05:11.934Z",
+	"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+	"folder_id": 0,
+	"target_type": "collection",
+	"environment_id": "b0060060-efe4-29f6-706c-ffce87bbb2f7",
+	"data": [],
+	"delay": "500",
+	"count": 1,
+	"collection": {
+		"id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+		"name": "marina-api",
+		"description": "",
+		"order": [],
+		"folders": [
+			{
+				"name": "Create & Read Boat",
+				"description": "",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"order": [
+					"65bcc712-a13b-5098-0187-cc247689be3c",
+					"1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
+					"1471d4db-7124-b366-4097-66b429748415",
+					"ffe399bf-fb96-99ba-c420-d39219e7ca27",
+					"638243e8-97db-47a8-588e-b16b17662f10"
+				],
+				"owner": "1242759",
+				"folders_order": [],
+				"auth": null,
+				"createdAt": 1517198695713,
+				"updatedAt": 1517198695713,
+				"id": "23a9a53c-5d35-d04b-ea8f-8636cfcccd6d",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064"
+			},
+			{
+				"name": "Edit Boat",
+				"description": "",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"order": [
+					"7005fe70-5f2d-54bb-f48c-5c027182e977",
+					"f641ac7e-e721-9e9d-0b09-53b36e3f2c63"
+				],
+				"owner": "1242759",
+				"folders_order": [],
+				"auth": null,
+				"createdAt": 1517198710864,
+				"updatedAt": 1517198710864,
+				"id": "73d3ced0-d724-d364-20f0-197d39c5329a",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064"
+			},
+			{
+				"name": "Pre-Clean",
+				"description": "",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"order": [
+					"5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
+					"68e02598-88d4-2d47-4311-84043dae7bf4",
+					"c1862c74-dd0d-f163-3792-1987b035a9b2"
+				],
+				"owner": "1242759",
+				"folders_order": [],
+				"auth": null,
+				"createdAt": 1517236501836,
+				"updatedAt": 1517236501836,
+				"id": "d8f6b6b9-083d-8cb3-81f6-1334bb5a2fc0",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064"
+			}
+		],
+		"folders_order": [
+			"d8f6b6b9-083d-8cb3-81f6-1334bb5a2fc0",
+			"23a9a53c-5d35-d04b-ea8f-8636cfcccd6d",
+			"73d3ced0-d724-d364-20f0-197d39c5329a"
+		],
+		"timestamp": 1517008090259,
+		"synced": false,
+		"remote_id": 0,
+		"owner": "1242759",
+		"sharedWithTeam": false,
+		"subscribed": false,
+		"remoteLink": "",
+		"remoteLinkUpdatedAt": null,
+		"public": false,
+		"createdAt": 1517008090259,
+		"updatedAt": 1517236771414,
+		"write": true,
+		"published": false,
+		"favorite": false,
+		"permissions": {},
+		"syncedPermissions": {},
+		"events": [],
+		"variables": [],
+		"auth": null
+	},
+	"folder": null,
+	"environment": null,
+	"globals": [],
+	"results": [
+		{
+			"name": "CLEAN UP - Boats 1",
+			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"name": "response is ok",
+				"status": "pass",
+				"response has json body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 2,
+					"fail": 0
+				},
+				"response has json body": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				"56",
+				"31"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				}
+			],
+			"time": "31",
+			"totalRequestTime": "5631",
+			"iterationResults": {}
+		},
+		{
+			"name": "CLEAN UP - Boats 2",
+			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCQw",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"response is 204": true
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"47"
+			],
+			"allTests": [
+				{
+					"response is 204": true
+				}
+			],
+			"time": "47",
+			"totalRequestTime": "47",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 1: GET /boats/",
+			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
+			"url": "localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response has 0 objects": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has 0 objects": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"28"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response has 0 objects": true
+				}
+			],
+			"time": "28",
+			"totalRequestTime": "28",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 2: POST /boats/",
+			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
+			"url": "localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"response is 201 Created": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"35"
+			],
+			"allTests": [
+				{
+					"response is 201 Created": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "35",
+			"totalRequestTime": "35",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 3: GET {{test2url}}",
+			"id": "1471d4db-7124-b366-4097-66b429748415",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches test2 data sent": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test2 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"51"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches test2 data sent": true
+				}
+			],
+			"time": "51",
+			"totalRequestTime": "51",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 4: GET /boats/{{test2id}}",
+			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches test2 data sent": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test2 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"33"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches test2 data sent": true
+				}
+			],
+			"time": "33",
+			"totalRequestTime": "33",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 5: GET /boats/",
+			"id": "638243e8-97db-47a8-588e-b16b17662f10",
+			"url": "localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"Test 1 was successful": true,
+				"response is ok": true,
+				"response has body": true,
+				"response has 1 element that matches test2 data": true
+			},
+			"testPassFailCounts": {
+				"Test 1 was successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has 1 element that matches test2 data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"32"
+			],
+			"allTests": [
+				{
+					"Test 1 was successful": true,
+					"response is ok": true,
+					"response has body": true,
+					"response has 1 element that matches test2 data": true
+				}
+			],
+			"time": "32",
+			"totalRequestTime": "32",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 6: PATCH /boats/{test2id}",
+			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is 200 ok": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 200 ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"55"
+			],
+			"allTests": [
+				{
+					"response is 200 ok": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "55",
+			"totalRequestTime": "55",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 7: GET /boats/{{test2id}}",
+			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches test 6 data sent": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test 6 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"71"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches test 6 data sent": true
+				}
+			],
+			"time": "71",
+			"totalRequestTime": "71",
+			"iterationResults": {}
+		}
+	],
+	"totalPass": 27,
+	"totalFail": 0,
+	"totalTime": 439,
+	"lifecycle": "done",
+	"requests": [
+		{
+			"name": "CLEAN UP - Boats 1",
+			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
+			"url": "localhost:8080/boats/",
+			"time": "31",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 2,
+					"fail": 0
+				},
+				"response has json body": {
+					"pass": 2,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CLEAN UP - Boats 2",
+			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCQw",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 1: GET /boats/",
+			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
+			"url": "localhost:8080/boats/",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has 0 objects": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 2: POST /boats/",
+			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
+			"url": "localhost:8080/boats",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 3: GET {{test2url}}",
+			"id": "1471d4db-7124-b366-4097-66b429748415",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test2 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 4: GET /boats/{{test2id}}",
+			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test2 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 5: GET /boats/",
+			"id": "638243e8-97db-47a8-588e-b16b17662f10",
+			"url": "localhost:8080/boats/",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"Test 1 was successful": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has 1 element that matches test2 data": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 6: PATCH /boats/{test2id}",
+			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 200 ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 7: GET /boats/{{test2id}}",
+			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICgCww",
+			"time": "2018-01-29T17:05:11.934Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches test 6 data sent": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		}
+	],
+	"synced": false
+}
