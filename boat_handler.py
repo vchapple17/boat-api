@@ -2,29 +2,36 @@
 from webapp2 import RequestHandler
 import webapp2_extras
 import json
-
+from const import baseURL, boatsURL
 from Boat import Boat
-
 from google.appengine.ext import ndb
 
-# class Boat(ndb.Model):
-#     name = ndb.StringProperty()
-#     boat_type = ndb.StringProperty()
-#     length = ndb.IntegerProperty()
-#     at_sea = ndb.BooleanProperty()
-
-# https://stackoverflow.com/questions/12664696/how-to-properly-output-json-with-app-engine-python-webapp2
 
 class BoatsHandler(RequestHandler):
 
     def get(self):
         print("BoatsHandler: GET LIST")
-        self.response.headers['Content-Type'] = 'text/plain';
+        # Retrieve boats
+        boats = Boat.query().fetch()
+
+        # Send response
+        res = []
+        for boat in boats:
+            obj = {
+                "url": str(boatsURL + "/" + boat.key.urlsafe()),
+                "id": boat.key.urlsafe(),
+                "name": boat.name,
+                "type": boat.boat_type,
+                "length": boat.length,
+                "at_sea": boat.at_sea,
+            }
+            res.append(obj)
+        self.response.content_type = 'text/plain'
         self.response.status_int = 200;
-        self.response.out.write('Hello, List Boats');
+        self.response.out.write(json.dumps(res))
 
     def post(self):
-        # Get Request Body
+        # Save Request Body
         try:
             req = self.request.body
             obj = json.loads(req)
@@ -38,25 +45,58 @@ class BoatsHandler(RequestHandler):
             self.response.status_int = 400;
             return
 
-        # Create Resource Instance
-        boat = Boat(name=name, boat_type=boat_type, length=length, at_sea=False);
-        boat.put()
-        print(boat.key.id)
+        # Create Resource on datastore
+        try:
+            boat = Boat(name=name, boat_type=boat_type, length=length, at_sea=True);
+            boat.put()
+        except:
+            print()
+            self.response.write("Error saving boat");
+            self.response.status_int = 400;
+            return
+
         # Send response
-        self.response.content_type = 'application/json'
-        self.response.status_int = 201;
-        res = {
-            'name': name,
-            'type': boat_type,
-            'length': length
-        }
-        self.response.write(json.dumps(res))
+        try:
+            boat_id = boat.key.urlsafe()
+            boatURL = boatsURL + "/" + boat_id;
+            self.response.content_type = 'application/json'
+            self.response.status_int = 201;
+            res = {
+                "url": boatURL,
+                "id": boat_id,
+                "name": boat.name,
+                "type": boat.boat_type,
+                "length": boat.length,
+                "at_sea": boat.at_sea,
+            }
+            self.response.write(json.dumps(res))
+        except:
+            self.response.write("Error writing response");
+            self.response.status_int = 500;
+            return
 
 # Boat identified by id
 class BoatHandler(RequestHandler):
     def get(self, boat_id):
-        print("BoatHandler: GET")
-        self.response.headers['Content-Type'] = 'text/plain';
+        print("BoatHandler: GET 1")
+
+        # Convert boat_id to ndb object
+        boat_key = ndb.Key(urlsafe=boat_id);
+        boat = boat_key.get()
+
+        # Send response
+        boatURL = boatsURL + "/" + boat_id;
+        self.response.content_type = 'application/json'
         self.response.status_int = 200;
-        self.response.out.write('Hello, Boat ');
-        self.response.out.write(boat_id);
+        res = {
+            "url": boatURL,
+            "id": boat_id,
+            "name": boat.name,
+            "type": boat.boat_type,
+            "length": boat.length,
+            "at_sea": boat.at_sea,
+        }
+        self.response.write(json.dumps(res))
+
+    def patch(self, boat_id):
+        print("BoatHandler: PATCH")
