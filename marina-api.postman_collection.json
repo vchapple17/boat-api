@@ -1,0 +1,468 @@
+{
+	"info": {
+		"name": "marina-api",
+		"_postman_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create & Read Boat",
+			"description": "",
+			"item": [
+				{
+					"name": "TEST 1: GET /boats/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f90d39e1-e27a-42a0-84e1-11f19c12510b",
+								"type": "text/javascript",
+								"exec": [
+									"// False until proven true",
+									"pm.environment.set(\"test1\", false)",
+									"",
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response has 0 objects\", function () {",
+									"    var length = Object.keys(pm.response.json()).length;",
+									"    pm.expect(length).to.equal(0);",
+									"});",
+									"",
+									"// Passes all tests",
+									"pm.environment.set(\"test1\", true)"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "c7b56151-7869-459e-8e5d-6cc054919443",
+								"type": "text/javascript",
+								"exec": [
+									"// Set environmental variables.",
+									"",
+									"pm.environment.set(\"test2name\", \"Boat Name\");",
+									"pm.environment.set(\"test2type\", \"Boat Type\");",
+									"pm.environment.set(\"test2length\", \"10\");",
+									"",
+									"",
+									"pm.environment.set(\"test6name\", \"NEW Boat Name\");",
+									"pm.environment.set(\"test6type\", \"NEW Boat Type\");",
+									"pm.environment.set(\"test6length\", \"20\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": "Get all boats"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 2: POST /boats/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "df4a17e0-b56e-48b0-a90b-2048c8353016",
+								"type": "text/javascript",
+								"exec": [
+									"// Initialize test2 response variables",
+									"pm.environment.set(\"test2url\", null);",
+									"pm.environment.set(\"test2id\", null);",
+									"pm.environment.set(\"test2response\", null);",
+									"",
+									"pm.test(\"response is 201 Created\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches request\", function () {",
+									"    exp_name = pm.environment.get(\"test2name\");",
+									"    exp_type = pm.environment.get(\"test2type\");",
+									"    exp_length = pm.environment.get(\"test2length\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['name']).to.equal(exp_name);",
+									"    pm.expect(res['type']).to.equal(exp_type);",
+									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"    ",
+									"    // Save URL and ID",
+									"    pm.environment.set(\"test2url\", res['url']);",
+									"    pm.environment.set(\"test2id\", res['id']);",
+									"    ",
+									"    // Save response as string",
+									"    res_string = JSON.stringify(res);",
+									"    pm.environment.set(\"test2response\", res_string);",
+									"});",
+									"",
+									"// Passes all tests and save data",
+									"pm.environment.set(\"test1\", true)"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"{{test2name}}\",\n  \"type\": \"{{test2type}}\",\n  \"length\": {{test2length}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats"
+							]
+						},
+						"description": "Get all boats"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 3: GET {{test2url}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5caa3846-36cc-4369-b412-5a95162d95e6",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches test2 data sent\", function () {",
+									"    exp_name = pm.environment.get(\"test2name\");",
+									"    exp_type = pm.environment.get(\"test2type\");",
+									"    exp_length = pm.environment.get(\"test2length\");",
+									"    exp_url = pm.environment.get(\"test2url\");",
+									"    exp_id = pm.environment.get(\"test2id\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['name']).to.equal(exp_name);",
+									"    pm.expect(res['type']).to.equal(exp_type);",
+									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id'].toString()).to.equal(exp_id);",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "be88062d-bc4e-4271-9ec7-703a27004afa",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{test2url}}",
+							"host": [
+								"{{test2url}}"
+							]
+						},
+						"description": "Test URL from test 2"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 4: GET /boats/{{test2id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "05b70c2e-70bb-4cec-b7f1-10c2a7c533b8",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches test2 data sent\", function () {",
+									"    exp_name = pm.environment.get(\"test2name\");",
+									"    exp_type = pm.environment.get(\"test2type\");",
+									"    exp_length = pm.environment.get(\"test2length\");",
+									"    exp_url = pm.environment.get(\"test2url\");",
+									"    exp_id = pm.environment.get(\"test2id\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['name']).to.equal(exp_name);",
+									"    pm.expect(res['type']).to.equal(exp_type);",
+									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id'].toString()).to.equal(exp_id);",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}"
+							]
+						},
+						"description": "Test id from test 2"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 5: GET /boats/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "c2d49c10-160c-47f1-917d-4a4cc660b450",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Test 1 was successful', function() {",
+									"    pm.expect(pm.environment.get(\"test1\")).to.equal('true');",
+									"});",
+									"",
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response has 1 element that matches test2 data\", function () {",
+									"    exp_name = pm.environment.get(\"test2name\");",
+									"    exp_type = pm.environment.get(\"test2type\");",
+									"    exp_length = pm.environment.get(\"test2length\");",
+									"    exp_url = pm.environment.get(\"test2url\");",
+									"    exp_id = pm.environment.get(\"test2id\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    // Test",
+									"    res = pm.response.json();",
+									"    boat = res[0];",
+									"    pm.expect(boat['name']).to.equal(exp_name);",
+									"    pm.expect(boat['type']).to.equal(exp_type);",
+									"    pm.expect(boat['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(boat['url']).to.equal(exp_url);",
+									"    pm.expect(boat['id'].toString()).to.equal(exp_id);",
+									"    pm.expect(boat['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9932c7db-9467-43be-a22b-2531d369ad8e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": "Ensure new boat added to list of all boats"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Edit Boat",
+			"description": "",
+			"item": [
+				{
+					"name": "TEST 6: PATCH /boats/{id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "9f4e77f5-7b18-46ab-ad52-e102868b1082",
+								"type": "text/javascript",
+								"exec": [
+									"// Initialize test2 response variables",
+									"pm.environment.set(\"test6url\", null);",
+									"pm.environment.set(\"test6id\", null);",
+									"pm.environment.set(\"test6response\", null);",
+									"",
+									"pm.test(\"response is 200 ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches request\", function () {",
+									"    exp_name = pm.environment.get(\"test6name\");",
+									"    exp_type = pm.environment.get(\"test6type\");",
+									"    exp_length = pm.environment.get(\"test6length\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['name']).to.equal(exp_name);",
+									"    pm.expect(res['type']).to.equal(exp_type);",
+									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"    ",
+									"    ",
+									"    // Save response as string",
+									"    res_string = JSON.stringify(res);",
+									"    pm.environment.set(\"test6response\", res_string);",
+									"});",
+									"",
+									"// Passes all tests and save data",
+									"pm.environment.set(\"test1\", true)"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"{{test2name}}\",\n  \"type\": \"{{test2type}}\",\n  \"length\": {{test2length}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}"
+							]
+						},
+						"description": "Get all boats"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
