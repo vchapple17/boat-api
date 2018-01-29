@@ -2,6 +2,10 @@
 
 <!-- CS496 api structure -->
 <!-- https://developer.github.com/v3/gists/#input -->
+<!-- Find port to kill: lsof -n | grep LISTEN -->
+
+## Google App Engine
+`dev_appserver.py app.yaml`
 
 ## Boat Example JSON
 
