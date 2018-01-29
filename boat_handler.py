@@ -81,8 +81,15 @@ class BoatHandler(RequestHandler):
         print("BoatHandler: GET 1")
 
         # Convert boat_id to ndb object
-        boat_key = ndb.Key(urlsafe=boat_id);
-        boat = boat_key.get()
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+            boat = boat_key.get()
+            # print(boat);
+        except:
+            self.response.write({"Error": "Error getting boat"});
+            self.response.status_int = 404;
+            return
+
 
         # Send response
         boatURL = boatsURL + "/" + boat_id;
@@ -175,10 +182,22 @@ class BoatHandler(RequestHandler):
     def delete(self, boat_id):
         print("BoatHandler: DELETE 1")
 
-        # Convert boat_id to ndb object
-        boat_key = ndb.Key(urlsafe=boat_id);
-        boat = boat_key.get()
-        boat_key.delete()
+        # Convert boat_id to ndb KEY
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+        except:
+            self.response.write({"Error": "Error getting boat"});
+            self.response.status_int = 404;
+            return
+
+        # Delete ndb entity
+        try:
+            boat_key.delete();
+        except:
+            self.response.write({"Error": "Error deleting boat"});
+            self.response.status_int = 404;
+            return
+
 
         # # Send response that boat is deleted
         self.response.status_int = 204;
