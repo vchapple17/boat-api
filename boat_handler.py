@@ -248,10 +248,8 @@ class DockingHandler(RequestHandler):
                 # Check that key is a valid input
                 if (key == "arrival_date"):
                     datestring = str(obj["arrival_date"]);
-
-                    #slip.arrival_date = datetime.strptime(datestring, "%m/%d/%Y").date();
-
-
+                    slip.arrival_date = datetime.strptime(datestring, "%m/%d/%Y").date();
+                    # slip.arrival_date = datestring;
                     saveObject = True;
                 else:
                     saveObject = False;

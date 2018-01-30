@@ -5,7 +5,7 @@ import json
 from const import baseURL, slipsURL
 from Slip import Slip
 from google.appengine.ext import ndb
-
+from datetime import datetime
 
 class SlipsHandler(RequestHandler):
     def get(self):
@@ -22,9 +22,15 @@ class SlipsHandler(RequestHandler):
                 "number": slip.number,
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
-                "arrival_date": slip.arrival_date,
+                # "arrival_date": str(slip.arrival_date),
                 "departure_history": slip.departure_history
             }
+            # print(slip.arrival_date)
+            if (slip.arrival_date) == None:
+                obj["arrival_date"] = slip.arrival_date
+            else:
+                obj["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%Y")
+
             res.append(obj)
         self.response.content_type = 'text/plain'
         self.response.status_int = 200;
@@ -64,9 +70,15 @@ class SlipsHandler(RequestHandler):
                 "number": slip.number,
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
-                "arrival_date": slip.arrival_date,
+                # "arrival_date": slip.arrival_date,
                 "departure_history": slip.departure_history
             }
+            if (slip.arrival_date) == None:
+                res["arrival_date"] = slip.arrival_date
+            else:
+                res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%-Y")
+
+            # print(slip)
             self.response.write(json.dumps(res))
         except:
             self.response.write("Error writing response");
@@ -96,9 +108,14 @@ class SlipHandler(RequestHandler):
             "number": slip.number,
             "current_boat": slip.current_boat,
             "current_boat_url": slip.current_boat_url,
-            "arrival_date": slip.arrival_date,
+            # "arrival_date": str(slip.arrival_date),
             "departure_history": slip.departure_history
         }
+        if (slip.arrival_date) == None:
+            res["arrival_date"] = slip.arrival_date
+        else:
+            res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%Y")
+
         self.response.write(json.dumps(res))
 
     def patch(self, slip_id):
@@ -163,9 +180,13 @@ class SlipHandler(RequestHandler):
                 "number": slip.number,
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
-                "arrival_date": slip.arrival_date,
+                # "arrival_date": slip.arrival_date,
                 "departure_history": slip.departure_history
             }
+            if (slip.arrival_date) == None:
+                res["arrival_date"] = slip.arrival_date
+            else:
+                res["arrival_date"] = datetime.date(slip.arrival_date, "%-m/%-d/%Y")
             self.response.write(json.dumps(res))
         except:
             self.response.write("Error writing response");
