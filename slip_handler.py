@@ -38,7 +38,6 @@ class SlipsHandler(RequestHandler):
             obj = json.loads(req)
             number = obj['number'];
             print("SlipsHandler: POST new slip #" + str(number));
-
         except (TypeError, ValueError):
             self.response.write("Invalid inputs");
             self.response.status_int = 400;
@@ -46,7 +45,6 @@ class SlipsHandler(RequestHandler):
 
         # Create Resource on datastore
         try:
-            # slip = Slip(number=number, current_boat=null, current_boat_url=null, arrival_date=null, departure_history=[]);
             slip = Slip(number=number);
             slip.put()
         except:
@@ -60,33 +58,17 @@ class SlipsHandler(RequestHandler):
             slipURL = slipsURL + "/" + slip_id;
             self.response.content_type = 'application/json'
             self.response.status_int = 201;
-
-            # Translate None to null
-            current_boat = slip.current_boat
-            current_boat_url = slip.current_boat_url
-            arrival_date = slip.arrival_date
-
-            # if current_boat == None:
-            #     current_boat = "null";
-            #
-            # if current_boat_url == None:
-            #     current_boat_url = "null";
-            #
-            # if arrival_date == None:
-            #     arrival_date = "null";
-
             res = {
                 "url": slipURL,
                 "id": slip_id,
                 "number": slip.number,
-                "current_boat": current_boat,
-                "current_boat_url": current_boat_url,
-                "arrival_date": arrival_date,
+                "current_boat": slip.current_boat,
+                "current_boat_url": slip.current_boat_url,
+                "arrival_date": slip.arrival_date,
                 "departure_history": slip.departure_history
             }
-            print("slip res", json.dumps(res))
             self.response.write(json.dumps(res))
-        except TypeError:
+        except:
             self.response.write("Error writing response");
             self.response.status_int = 500;
             return
@@ -99,7 +81,6 @@ class SlipHandler(RequestHandler):
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
-            print(slip);
         except:
             self.response.write({"Error": "Error getting slip"});
             self.response.status_int = 404;
@@ -120,6 +101,78 @@ class SlipHandler(RequestHandler):
         }
         self.response.write(json.dumps(res))
 
+    def patch(self, slip_id):
+        print("SlipHandler: PATCH")
+
+        # Convert slip_id to ndb object
+        slip_key = ndb.Key(urlsafe=slip_id);
+        slip = slip_key.get()
+
+        # Get JSON from Request Body
+        try:
+            req = self.request.body;
+            obj = json.loads(req);
+        except:
+            self.response.write("No JSON body in Request");
+            self.response.status_int = 400;
+            return
+
+        # Iterate through each JSON Key before saving
+        try:
+            saveObject = False;     # Update to True if new information given
+            for key in obj:
+                # Check that key is a valid input
+                if (key == "number"):
+                    slip.number = obj["number"];
+                    saveObject = True;
+                else:
+                    saveObject = False;
+                    # Invalid Information Given in JSON
+                    self.response.write("Invalid inputs");
+                    self.response.status_int = 400;
+                    return
+
+        except (TypeError, ValueError):
+            self.response.write("Invalid inputs");
+            self.response.status_int = 400;
+            return
+
+        try:
+            # Save data if saveObject = True
+            if (saveObject == False):
+                self.response.write("Invalid Request");
+                self.response.status_int = 400;
+                return
+            else:
+                print("SAVE SLIP: ", slip)
+                slip.put()
+        except:
+            self.response.write("Error saving slip");
+            self.response.status_int = 400;
+            return
+
+        # Send response
+        try:
+            slip_id = slip.key.urlsafe()
+            slipURL = slipsURL + "/" + slip_id;
+            self.response.content_type = 'application/json'
+            self.response.status_int = 200;
+            res = {
+                "url": slipURL,
+                "id": slip_id,
+                "number": slip.number,
+                "current_boat": slip.current_boat,
+                "current_boat_url": slip.current_boat_url,
+                "arrival_date": slip.arrival_date,
+                "departure_history": slip.departure_history
+            }
+            self.response.write(json.dumps(res))
+        except:
+            self.response.write("Error writing response");
+            self.response.status_int = 500;
+            return
+
+
     def delete(self, slip_id):
         print("SlipHandler: DELETE 1")
 
@@ -138,7 +191,6 @@ class SlipHandler(RequestHandler):
             self.response.write({"Error": "Error deleting slip"});
             self.response.status_int = 404;
             return
-
 
         # # Send response that slip is deleted
         self.response.status_int = 204;
