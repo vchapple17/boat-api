@@ -11,6 +11,7 @@
 
 | Name | Type | Description |
 |--------|----------|---------|
+| `url` | `string` | **Required.** URL with auto-generated unique id |
 | `id` | `string` | **Required.** Auto-generated unique id |
 | `name` | `string` | **Required.** Name of boat |
 | `type` | `string` | **Required.** Type of boat |
@@ -19,6 +20,7 @@
 
 ```
 {
+  "url": "https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf12",
   "id":"kj0987a234bcdasdf12",        
   "name": "Sea Witch",  
   "type":"Catamaran",   
@@ -31,6 +33,7 @@
 
 | Name | Type | Description |
 |--------|----------|---------|
+| `url` | `string` | **Required.** URL with auto-generated unique id |
 | `id` | `string` | **Required.** Auto-generated unique id |
 | `number` | `int` | **Required.** Slip number; may not be unique|
 | `current_boat` | `string` | ID of the current boat, null if empty |
@@ -41,7 +44,9 @@
 A `histJSON` is a json object that contains the `departure_date` and the ID of the `departed_boat`.
 
 ```
-{ "id":"123abc",              
+{
+  "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
+  "id":"123abc",              
   "number": 5,                
   "current_boat":"abc555",    
   "arrival_date":"1/1/2015",  
