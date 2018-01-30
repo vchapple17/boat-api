@@ -602,7 +602,7 @@ GET /boats/{test2id}
 * Save `test17arrival_date` for future use.
 
 ```
-PUT /slips/{test9id}/boats/{test2id}
+PUT /boats/{test2id}/slips/{test9id}
 
 {
 	"arrival_date", "1/15/2016"
@@ -691,7 +691,7 @@ GET /slips/{test9id}
 * Save `test20departure_date` for future use.
 
 ```
-DELETE /slips/{test9id}/boats/{test2id}
+DELETE /boats/{test2id}/slips/{test9id}
 
 {
 	"departure_date": "2/1/2016"

@@ -2,7 +2,7 @@
 
 import webapp2
 from webapp2 import Route
-from boat_handler import BoatsHandler, BoatHandler
+from boat_handler import BoatsHandler, BoatHandler, DockingHandler
 from slip_handler import SlipsHandler, SlipHandler
 from webapp2_extras.routes import RedirectRoute, PathPrefixRoute
 
@@ -22,6 +22,8 @@ application = webapp2.WSGIApplication([
     PathPrefixRoute( '/boats',[
         Route('/', handler=BoatsHandler, name='boats'),
         Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=BoatHandler, name='boat'),
+        Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+>/slips/<slip_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=DockingHandler, name='docking'),
+
     ]),
 
     Route('/slips', handler=SlipsHandler, name='slips'),
