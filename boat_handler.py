@@ -5,7 +5,7 @@ import json
 from const import baseURL, boatsURL
 from Boat import Boat
 from google.appengine.ext import ndb
-
+from datetime import datetime
 
 class BoatsHandler(RequestHandler):
 
@@ -198,3 +198,100 @@ class BoatHandler(RequestHandler):
         # # Send response that boat is deleted
         self.response.status_int = 204;
         return;
+
+
+class DockingHandler(RequestHandler):
+    def put(self, boat_id, slip_id):
+        print("DockingHandler: PUT: Boat to Slip");
+        # Add Boat URL, Boat ID, and Arrival Date to Slip
+
+        # Convert boat_id and slip_id to ndb objects
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+            boat = boat_key.get()
+            boatURL = boatsURL + "/" + boat_id;
+        except:
+            self.response.write("Invalid Boat ID");
+            self.response.status_int = 400;
+        try:
+            slip_key = ndb.Key(urlsafe=slip_id);
+            slip = slip_key.get()
+        except:
+            self.response.write("Invalid Slip ID");
+            self.response.status_int = 400;
+
+        # Verify Boat At Sea, reject if not
+        if (boat.at_sea == False):
+            self.response.write("Boat already docked.");
+            self.response.status_int = 400;
+            return
+
+        # Verify Slip Empty, reject if not
+        if (slip.current_boat != None) or (slip.current_boat_url != None) or (slip.arrival_date != None):
+            self.response.write("Slip already occupied.");
+            self.response.status_int = 400;
+            return
+
+        # Get JSON from Request Body
+        try:
+            req = self.request.body;
+            obj = json.loads(req);
+        except:
+            self.response.write("No JSON body in Request");
+            self.response.status_int = 400;
+            return
+
+        # Iterate through each JSON Key before saving
+        try:
+            saveObject = False;     # Update to True if new information given
+            for key in obj:
+                # Check that key is a valid input
+                if (key == "arrival_date"):
+                    datestring = str(obj["arrival_date"]);
+
+                    #slip.arrival_date = datetime.strptime(datestring, "%m/%d/%Y").date();
+
+
+                    saveObject = True;
+                else:
+                    saveObject = False;
+                    # Invalid Information Given in JSON
+                    self.response.write("Invalid input(s)");
+                    self.response.status_int = 400;
+                    return
+        except (TypeError, ValueError):
+            self.response.write("Invalid JSON input(s)");
+            self.response.status_int = 400;
+            return
+
+        # Save new boat info to slip if saveObject = True
+        try:
+            if (saveObject == False):
+                self.response.write("Invalid Request");
+                self.response.status_int = 400;
+                return
+            else:
+                slip.current_boat = boat_id
+                slip.current_boat_url = boatURL
+                slip.put()
+        except:
+            self.response.write("Error docking boat");
+            self.response.status_int = 400;
+            return
+
+        # Update Boat.at_sea to be false
+        try:
+            boat.at_sea = False;
+            boat.put();
+        except:
+
+            self.response.write("Error docking boat");
+            self.response.status_int = 400;
+            return
+
+        # Send response
+        self.response.status_int = 204;
+
+    def delete(self, boat_id, slip_id):
+        print("DockingHandler: DELETE: Boat to Sea");
+        pass
