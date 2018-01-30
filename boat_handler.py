@@ -31,6 +31,7 @@ class BoatsHandler(RequestHandler):
         self.response.out.write(json.dumps(res))
 
     def post(self):
+        print("SlipsHandler: CREATE POST")
         # Save Request Body
         try:
             req = self.request.body
@@ -38,7 +39,6 @@ class BoatsHandler(RequestHandler):
             name = obj['name'];
             boat_type = obj['type'];
             length = int(obj['length']);
-
             print("BoatsHandler: POST new boat = " + str(name));
         except (TypeError, ValueError):
             self.response.write("Invalid inputs");
@@ -79,10 +79,14 @@ class BoatsHandler(RequestHandler):
 class BoatHandler(RequestHandler):
     def get(self, boat_id):
         print("BoatHandler: GET 1")
-
         # Convert boat_id to ndb object
-        boat_key = ndb.Key(urlsafe=boat_id);
-        boat = boat_key.get()
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+            boat = boat_key.get()
+        except:
+            self.response.write({"Error": "Error getting boat"});
+            self.response.status_int = 404;
+            return
 
         # Send response
         boatURL = boatsURL + "/" + boat_id;
@@ -100,3 +104,97 @@ class BoatHandler(RequestHandler):
 
     def patch(self, boat_id):
         print("BoatHandler: PATCH")
+
+        # Convert boat_id to ndb object
+        boat_key = ndb.Key(urlsafe=boat_id);
+        boat = boat_key.get()
+
+        # Get JSON from Request Body
+        try:
+            req = self.request.body;
+            obj = json.loads(req);
+        except:
+            self.response.write("No JSON body in Request");
+            self.response.status_int = 400;
+            return
+
+        # Iterate through each JSON Key before saving
+        try:
+            saveObject = False;     # Update to True if new information given
+            for key in obj:
+                # Check that key is a valid input
+                if (key == "name"):
+                    boat.name = obj["name"];
+                    saveObject = True;
+                elif (key == "type"):
+                    boat.boat_type = obj["type"];
+                    saveObject = True;
+                elif (key == "length"):
+                    boat.length = int(obj["length"]);
+                    saveObject = True;
+                else:
+                    saveObject = False;
+                    # Invalid Information Given in JSON
+                    self.response.write("Invalid inputs");
+                    self.response.status_int = 400;
+                    return
+        except (TypeError, ValueError):
+            self.response.write("Invalid inputs");
+            self.response.status_int = 400;
+            return
+
+        try:
+            # Save data if saveObject = True
+            if (saveObject == False):
+                self.response.write("Invalid Request");
+                self.response.status_int = 400;
+                return
+            else:
+                boat.put()
+        except:
+            self.response.write("Error saving boat");
+            self.response.status_int = 400;
+            return
+
+        # Send response
+        try:
+            boat_id = boat.key.urlsafe()
+            boatURL = boatsURL + "/" + boat_id;
+            self.response.content_type = 'application/json'
+            self.response.status_int = 200;
+            res = {
+                "url": boatURL,
+                "id": boat_id,
+                "name": boat.name,
+                "type": boat.boat_type,
+                "length": boat.length,
+                "at_sea": boat.at_sea,
+            }
+            self.response.write(json.dumps(res))
+        except:
+            self.response.write("Error writing response");
+            self.response.status_int = 500;
+            return
+
+    def delete(self, boat_id):
+        print("BoatHandler: DELETE 1")
+
+        # Convert boat_id to ndb KEY
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+        except:
+            self.response.write({"Error": "Error getting boat"});
+            self.response.status_int = 404;
+            return
+
+        # Delete ndb entity
+        try:
+            boat_key.delete();
+        except:
+            self.response.write({"Error": "Error deleting boat"});
+            self.response.status_int = 404;
+            return
+
+        # # Send response that boat is deleted
+        self.response.status_int = 204;
+        return;

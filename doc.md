@@ -35,10 +35,10 @@
 | `number` | `int` | **Required.** Slip number; may not be unique|
 | `current_boat` | `string` | ID of the current boat, null if empty |
 | `arrival_date` | `string` | Date current boat arrived in "MM/DD/YYYY", null if empty  |
-| `departure_history` | `[ histObj ]` | list of previous boats and departure dates |
+| `departure_history` | `[ histJSON ]` | list of previous boats and departure dates |
 
 
-A `histObj` is a json object that contains the `departure_date` and the ID of the `departed_boat`.
+A `histJSON` is a json object that contains the `departure_date` and the ID of the `departed_boat`.
 
 ```
 { "id":"123abc",              

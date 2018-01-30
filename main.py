@@ -17,14 +17,17 @@ webapp2.WSGIApplication.allowed_methods = new_allowed_methods
 
 
 application = webapp2.WSGIApplication([
+
     Route('/boats', handler=BoatsHandler, name='boats'),
     PathPrefixRoute( '/boats',[
         Route('/', handler=BoatsHandler, name='boats'),
         Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=BoatHandler, name='boat'),
     ]),
-    # PathPrefixRoute( r'/slips',[
-    #     Route('/slips', handler=BoatsHandler, name='boats'),
-    #     RedirectRoute(r'/', handler=SlipsHandler, name='slips'),
-    #     Route('/<slip_id:[A-Z]|[a-z]|[0-9]|[-]+>', handler=SlipHandler, name='slip'),
-    # ]),
+
+    Route('/slips', handler=SlipsHandler, name='slips'),
+    PathPrefixRoute( '/slips',[
+        Route('/', handler=SlipsHandler, name='slips'),
+        Route('/<slip_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=SlipHandler, name='slip'),
+    ]),
+
 ], debug=DEBUG_FLAG)
