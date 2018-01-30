@@ -31,6 +31,7 @@ class BoatsHandler(RequestHandler):
         self.response.out.write(json.dumps(res))
 
     def post(self):
+        print("SlipsHandler: CREATE POST")
         # Save Request Body
         try:
             req = self.request.body
@@ -38,7 +39,6 @@ class BoatsHandler(RequestHandler):
             name = obj['name'];
             boat_type = obj['type'];
             length = int(obj['length']);
-
             print("BoatsHandler: POST new boat = " + str(name));
         except (TypeError, ValueError):
             self.response.write("Invalid inputs");
@@ -79,17 +79,14 @@ class BoatsHandler(RequestHandler):
 class BoatHandler(RequestHandler):
     def get(self, boat_id):
         print("BoatHandler: GET 1")
-
         # Convert boat_id to ndb object
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
             boat = boat_key.get()
-            # print(boat);
         except:
             self.response.write({"Error": "Error getting boat"});
             self.response.status_int = 404;
             return
-
 
         # Send response
         boatURL = boatsURL + "/" + boat_id;
@@ -197,7 +194,6 @@ class BoatHandler(RequestHandler):
             self.response.write({"Error": "Error deleting boat"});
             self.response.status_int = 404;
             return
-
 
         # # Send response that boat is deleted
         self.response.status_int = 204;
