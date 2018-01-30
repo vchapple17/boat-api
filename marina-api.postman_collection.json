@@ -583,7 +583,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "d99b1368-ef52-4b48-befe-6a3150d6b6bc",
+								"id": "84e0c872-1f33-456b-b2ba-cb4bbaeb6050",
 								"type": "text/javascript",
 								"exec": [
 									"// Initialize test2 response variables",
@@ -613,14 +613,10 @@
 									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
 									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
 									"    ",
-									"    ",
-									"    // Save response as string",
-									"    res_string = JSON.stringify(res);",
-									"    pm.environment.set(\"test6response\", res_string);",
-									"});",
-									"",
-									"// Passes all tests and save data",
-									"pm.environment.set(\"test1\", true)"
+									"    // // Save response as string",
+									"    // res_string = JSON.stringify(res);",
+									"    // pm.environment.set(\"test6response\", res_string);",
+									"});"
 								]
 							}
 						},
@@ -657,7 +653,7 @@
 								"{{test2id}}"
 							]
 						},
-						"description": "Get all boats"
+						"description": "Edit boat"
 					},
 					"response": []
 				},
@@ -1137,6 +1133,189 @@
 						],
 						"id": "fc49f882-a598-44dc-ad1b-0d9d5c1b685b",
 						"type": "text/javascript"
+					}
+				}
+			]
+		},
+		{
+			"name": "Edit Slip",
+			"description": "",
+			"item": [
+				{
+					"name": "TEST 13: PATCH /slips/{test9id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "fe57270c-65c9-429d-81b7-2b78369fa64c",
+								"type": "text/javascript",
+								"exec": [
+									"// Initialize test2 response variables",
+									"// pm.environment.set(\"test13url\", null);",
+									"// pm.environment.set(\"test13id\", null);",
+									"// pm.environment.set(\"test13response\", null);",
+									"",
+									"pm.test(\"response is 200 ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches updated values\", function () {",
+									"    exp_num = pm.environment.get(\"test13number\");",
+									"    exp_boat = pm.environment.get(\"test9boat\");",
+									"    exp_boat_url = pm.environment.get(\"test9boat_url\");",
+									"    exp_arrival_date = pm.environment.get(\"test9arrival_date\");",
+									"    exp_departure_history = pm.environment.get(\"test9departure_history\");",
+									"    exp_url = pm.environment.get(\"test9url\");",
+									"    exp_id = pm.environment.get(\"test9id\");",
+									"    ",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
+									"    pm.expect(String(res['current_boat'])).to.equal(exp_boat);",
+									"    pm.expect(String(res['current_boat_url'])).to.equal(exp_boat_url);",
+									"    pm.expect(String(res['arrival_date'])).to.equal(exp_arrival_date);",
+									"    pm.expect(JSON.stringify(res['departure_history'])).to.equal(exp_departure_history);",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id']).to.equal(exp_id);",
+									"});",
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": {{test13number}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "Edit Slip"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 14: GET /slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cad48fb6-fe5b-4683-98c5-88a299cdb261",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches test 13 data sent\", function () {",
+									"    ",
+									"    exp_num = pm.environment.get(\"test13number\");",
+									"    exp_boat = pm.environment.get(\"test9boat\");",
+									"    exp_boat_url = pm.environment.get(\"test9boat_url\");",
+									"    exp_arrival_date = pm.environment.get(\"test9arrival_date\");",
+									"    exp_departure_history = pm.environment.get(\"test9departure_history\");",
+									"    exp_url = pm.environment.get(\"test9url\");",
+									"    exp_id = pm.environment.get(\"test9id\");",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
+									"    pm.expect(String(res['current_boat'])).to.equal(exp_boat);",
+									"    pm.expect(String(res['current_boat_url'])).to.equal(exp_boat_url);",
+									"    pm.expect(String(res['arrival_date'])).to.equal(exp_arrival_date);",
+									"    pm.expect(JSON.stringify(res['departure_history'])).to.equal(exp_departure_history);",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id']).to.equal(exp_id);",
+									"});",
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "Check Boat Updated Correctly in TEST 6"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "32401f68-7770-411a-a6d3-72e910a24814",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5bc1349b-bcbb-4807-969f-489da73a6433",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
 					}
 				}
 			]
