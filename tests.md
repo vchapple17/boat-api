@@ -661,6 +661,8 @@ GET /slips/{test9id}
 
 * JSON that that matches `test15slip` except for `current_boat` is equal to `id` of `test16boat`, `current_boat_url` is equal to `url` of `test16boat`, and `arrival_date` matches requested date (`test17arrival_date`).
 
+* `arrival_date` must be a date string in the form of `mm/dd/yyyy`
+
 ```
 {           
 	"number": 17,                
@@ -690,13 +692,10 @@ GET /slips/{test9id}
 
 * Save `test20departure_date` for future use.
 
+* query parameter `departure` must be a date string in the form of `mm/dd/yyyy`
+
 ```
-DELETE /boats/{test2id}/slips/{test9id}
-
-{
-	"departure_date": "2/1/2016"
-}
-
+DELETE /boats/{test2id}/slips/{test9id}?departure={datestring}
 ```
 
 ### Expected Response
