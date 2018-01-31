@@ -209,34 +209,36 @@ class DockingHandler(RequestHandler):
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
             boat = boat_key.get()
-            print("DockingHandler: PUT: Boat to Slip");
+            if (boat == None):
+                raise TypeError("Boat is of type none")
             boatURL = boatsURL + "/" + boat_id;
         except:
-            print("boat", boat);
             self.response.write("Invalid Boat ID");
-            self.response.status_int = 400;
+            self.response.status_int = 404;
 
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
+            if (slip == None):
+                raise TypeError("Slip is of type none")
         except:
-            print("boat", boat);
+            # print("boat", boat);
             self.response.write("Invalid Slip ID");
-            self.response.status_int = 400;
-
+            self.response.status_int = 404;
+            return
 
         # Verify Boat At Sea, reject if not
         if (boat.at_sea == False):
-            print("boat", boat);
+            # print("boat", boat);
             self.response.write("Boat already docked.");
-            self.response.status_int = 400;
+            self.response.status_int = 403;
             return
 
         # Verify Slip Empty, reject if not
         if (slip.current_boat != None) or (slip.current_boat_url != None) or (slip.arrival_date != None):
-            print("slip", slip);
+            # print("slip", slip);
             self.response.write("Slip already occupied.");
-            self.response.status_int = 400;
+            self.response.status_int = 403;
             return
 
         # Get JSON from Request Body
@@ -281,7 +283,7 @@ class DockingHandler(RequestHandler):
                 slip.put()
         except:
             self.response.write("Error docking boat");
-            self.response.status_int = 400;
+            self.response.status_int = 500;
             return
 
         # Update Boat.at_sea to be false
@@ -289,9 +291,8 @@ class DockingHandler(RequestHandler):
             boat.at_sea = False;
             boat.put();
         except:
-
             self.response.write("Error docking boat");
-            self.response.status_int = 400;
+            self.response.status_int = 500;
             return
 
         # Send response

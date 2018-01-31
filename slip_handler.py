@@ -94,6 +94,8 @@ class SlipHandler(RequestHandler):
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
+            if (slip == None):
+                raise TypeError
         except:
             self.response.write({"Error": "Error getting slip"});
             self.response.status_int = 404;
@@ -125,8 +127,15 @@ class SlipHandler(RequestHandler):
         print("SlipHandler: PATCH")
 
         # Convert slip_id to ndb object
-        slip_key = ndb.Key(urlsafe=slip_id);
-        slip = slip_key.get()
+        try:
+            slip_key = ndb.Key(urlsafe=slip_id);
+            slip = slip_key.get()
+            if (slip == None):
+                raise TypeError
+        except:
+            self.response.write({"Error": "Error getting slip"});
+            self.response.status_int = 404;
+            return
 
         # Get JSON from Request Body
         try:
@@ -167,7 +176,7 @@ class SlipHandler(RequestHandler):
                 slip.put()
         except:
             self.response.write("Error saving slip");
-            self.response.status_int = 400;
+            self.response.status_int = 500;
             return
 
         # Send response
@@ -192,9 +201,6 @@ class SlipHandler(RequestHandler):
 
             # Stringify departure_history
             res["departure_history"] = slip._serializeHistory()
-
-            # print(res["departure_history"]);
-            # print(res);
             self.response.write(json.dumps(res))
         except TypeError:
             self.response.write("Error writing response");
@@ -208,11 +214,30 @@ class SlipHandler(RequestHandler):
         # Convert slip_id to ndb KEY
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
+            slip = slip_key.get();
         except:
             self.response.write({"Error": "Error getting slip"});
             self.response.status_int = 404;
             return
+        if (slip == None):
+            self.response.write({"Error": "Ship does not exist"});
+            self.response.status_int = 404;
+            return
 
+        # Release Boat if occupied
+        if (slip.current_boat != None):
+            # Convert boat_id to ndb objects
+            try:
+                boat_key = ndb.Key(urlsafe=slip.current_boat);
+                boat = boat_key.get();
+                if (boat == None):
+                    raise TypeError;
+                boat.at_sea = True;
+                boat.put();
+            except:
+                # # Send response that slip is deleted
+                self.response.write({"Error": "Cannot release boat from slip."})
+                self.response.status_int = 400;
         # Delete ndb entity
         try:
             slip_key.delete();
@@ -221,6 +246,6 @@ class SlipHandler(RequestHandler):
             self.response.status_int = 404;
             return
 
-        # # Send response that slip is deleted
+        # Send response that slip is deleted
         self.response.status_int = 204;
         return;
