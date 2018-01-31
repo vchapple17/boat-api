@@ -209,25 +209,32 @@ class DockingHandler(RequestHandler):
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
             boat = boat_key.get()
+            print("DockingHandler: PUT: Boat to Slip");
             boatURL = boatsURL + "/" + boat_id;
         except:
+            print("boat", boat);
             self.response.write("Invalid Boat ID");
             self.response.status_int = 400;
+
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
         except:
+            print("boat", boat);
             self.response.write("Invalid Slip ID");
             self.response.status_int = 400;
 
+
         # Verify Boat At Sea, reject if not
         if (boat.at_sea == False):
+            print("boat", boat);
             self.response.write("Boat already docked.");
             self.response.status_int = 400;
             return
 
         # Verify Slip Empty, reject if not
         if (slip.current_boat != None) or (slip.current_boat_url != None) or (slip.arrival_date != None):
+            print("slip", slip);
             self.response.write("Slip already occupied.");
             self.response.status_int = 400;
             return
@@ -290,6 +297,83 @@ class DockingHandler(RequestHandler):
         # Send response
         self.response.status_int = 204;
 
+
     def delete(self, boat_id, slip_id):
         print("DockingHandler: DELETE: Boat to Sea");
-        pass
+
+        # Get & Verify Departure Date from Query String
+        try:
+            dep_date_param = self.request.GET["departure"];
+            datestring = str(dep_date_param);
+            departure_date = datetime.strptime(datestring, "%m/%d/%Y").date();
+        except:
+            self.response.write("Invalid `departure` parameter");
+            self.response.status_int = 400;
+
+        # Convert boat_id and slip_id to ndb objects
+        try:
+            boat_key = ndb.Key(urlsafe=boat_id);
+            boat = boat_key.get()
+            boatURL = boatsURL + "/" + boat_id;
+        except:
+            self.response.write("Invalid Boat ID");
+            self.response.status_int = 400;
+        try:
+            slip_key = ndb.Key(urlsafe=slip_id);
+            slip = slip_key.get()
+        except:
+            self.response.write("Invalid Slip ID");
+            self.response.status_int = 400;
+
+        # Verify Boat Not At Sea, reject if not
+        if (boat.at_sea == True):
+            self.response.write("Boat already at sea.");
+            self.response.status_int = 400;
+            return
+
+        # Verify Slip is NOT Empty, reject if not
+        if (slip.current_boat == None) and (slip.current_boat_url == None) and (slip.arrival_date == None):
+            self.response.write("Slip already empty.");
+            self.response.status_int = 400;
+            return
+            #### Cases not tested: when any of the three clauses are None...
+
+        # Update Boat to At Sea
+        try:
+            boat.at_sea = True;
+            boat.put()
+        except:
+            print("Cannot update boat");
+            self.response.write("Cannot update boat.");
+            self.response.status_int = 400;
+            return
+
+        # Update Slip
+        try:
+            # add new departure date with boat id
+            # slip.departure_history.append(new_departure)
+            # print(slip.departure_history);
+
+            # Remove current_boat data (boat, url, and arrival date)
+            slip.arrival_date = None;
+            slip.current_boat = None;
+            slip.current_boat_url = None;
+            slip.departure_history.append({
+                "departure_date": departure_date,
+                "departed_boat": boat_id
+            })
+            slip.put()
+            print("UPDATED SLIP", slip)
+        except:
+            print("Cannot update slip");
+            # Undo boat update
+            boat.at_sea = False;
+            boat.put()
+
+            # Send Response
+            self.response.write("Cannot update slip.");
+            self.response.status_int = 400;
+            return
+
+        # Send response
+        self.response.status_int = 204;

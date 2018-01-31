@@ -23,14 +23,14 @@ class SlipsHandler(RequestHandler):
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
                 # "arrival_date": str(slip.arrival_date),
-                "departure_history": slip.departure_history
+                # "departure_history": slip.departure_history
             }
             # print(slip.arrival_date)
             if (slip.arrival_date) == None:
                 obj["arrival_date"] = slip.arrival_date
             else:
                 obj["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%Y")
-
+            obj["departure_history"] = slip._serializeHistory()
             res.append(obj)
         self.response.content_type = 'text/plain'
         self.response.status_int = 200;
@@ -71,13 +71,14 @@ class SlipsHandler(RequestHandler):
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
                 # "arrival_date": slip.arrival_date,
-                "departure_history": slip.departure_history
+                # "departure_history": slip.departure_history
             }
             if (slip.arrival_date) == None:
                 res["arrival_date"] = slip.arrival_date
             else:
                 res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%-Y")
 
+            res["departure_history"] = slip._serializeHistory()
             # print(slip)
             self.response.write(json.dumps(res))
         except:
@@ -109,12 +110,14 @@ class SlipHandler(RequestHandler):
             "current_boat": slip.current_boat,
             "current_boat_url": slip.current_boat_url,
             # "arrival_date": str(slip.arrival_date),
-            "departure_history": slip.departure_history
+            # "departure_history": slip.departure_history
         }
         if (slip.arrival_date) == None:
             res["arrival_date"] = slip.arrival_date
         else:
             res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%Y")
+
+        res["departure_history"] = slip._serializeHistory()
 
         self.response.write(json.dumps(res))
 
@@ -161,7 +164,6 @@ class SlipHandler(RequestHandler):
                 self.response.status_int = 400;
                 return
             else:
-                print("SAVE SLIP: ", slip)
                 slip.put()
         except:
             self.response.write("Error saving slip");
@@ -181,14 +183,20 @@ class SlipHandler(RequestHandler):
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
                 # "arrival_date": slip.arrival_date,
-                "departure_history": slip.departure_history
+                # "departure_history": str(slip.departure_history)
             }
             if (slip.arrival_date) == None:
                 res["arrival_date"] = slip.arrival_date
             else:
-                res["arrival_date"] = datetime.date(slip.arrival_date, "%-m/%-d/%Y")
+                res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%Y")
+
+            # Stringify departure_history
+            res["departure_history"] = slip._serializeHistory()
+
+            # print(res["departure_history"]);
+            # print(res);
             self.response.write(json.dumps(res))
-        except:
+        except TypeError:
             self.response.write("Error writing response");
             self.response.status_int = 500;
             return
