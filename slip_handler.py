@@ -93,7 +93,7 @@ class SlipsHandler(RequestHandler):
             # print(slip)
             self.response.write(json.dumps(res))
         except:
-            self.response.write("Error writing response");
+            self.response.write(json.dumps({"error": "Error writing response"}));
             self.response.status_int = 500;
             return
 
@@ -108,7 +108,7 @@ class SlipHandler(RequestHandler):
             if (slip == None):
                 raise TypeError
         except:
-            self.response.write({"Error": "Error getting slip"});
+            self.response.write(json.dumps({"error":"Slip not found"}));
             self.response.status_int = 404;
             return
 
@@ -144,7 +144,7 @@ class SlipHandler(RequestHandler):
             if (slip == None):
                 raise TypeError
         except:
-            self.response.write({"Error": "Error getting slip"});
+            self.response.write(json.dumps({"error": "Error getting slip"}));
             self.response.status_int = 404;
             return
 
@@ -153,7 +153,7 @@ class SlipHandler(RequestHandler):
             req = self.request.body;
             obj = json.loads(req);
         except:
-            self.response.write("No JSON body in Request");
+            self.response.write(json.dumps({"error": "Invalid Request"}));
             self.response.status_int = 400;
             return
 
@@ -168,25 +168,25 @@ class SlipHandler(RequestHandler):
                 else:
                     saveObject = False;
                     # Invalid Information Given in JSON
-                    self.response.write("Invalid inputs");
+                    self.response.write(json.dumps({"error":"Invalid inputs"}));
                     self.response.status_int = 400;
                     return
 
         except (TypeError, ValueError):
-            self.response.write("Invalid inputs");
+            self.response.write(json.dumps({"error":"Invalid inputs"}));
             self.response.status_int = 400;
             return
 
         try:
             # Save data if saveObject = True
             if (saveObject == False):
-                self.response.write("Invalid Request");
+                self.response.write(json.dumps({"error":"Invalid request"}));
                 self.response.status_int = 400;
                 return
             else:
                 slip.put()
         except:
-            self.response.write("Error saving slip");
+            self.response.write(json.dumps({"error":"Cannot save slip"}));
             self.response.status_int = 500;
             return
 
@@ -214,7 +214,7 @@ class SlipHandler(RequestHandler):
             res["departure_history"] = slip._serializeHistory()
             self.response.write(json.dumps(res))
         except TypeError:
-            self.response.write("Error writing response");
+            self.response.write(json.dumps({"error":"Cannot write response."}));
             self.response.status_int = 500;
             return
 
@@ -229,9 +229,7 @@ class SlipHandler(RequestHandler):
             if (slip == None):
                 raise TypeError
         except:
-            # self.response.write({"Error": "Error getting slip"});
             self.response.status_int = 204;
-            # self.response.status_int = 404;
             return
 
         # Release Boat if occupied
@@ -246,13 +244,13 @@ class SlipHandler(RequestHandler):
                 boat.put();
             except:
                 # # Send response that slip is deleted
-                self.response.write({"Error": "Cannot release boat from slip."})
+                self.response.write(json.dumps({"error": "Cannot release boat from slip."}))
                 self.response.status_int = 400;
         # Delete ndb entity
         try:
             slip_key.delete();
         except:
-            self.response.write({"Error": "Error deleting slip"});
+            self.response.write(json.dumps({"error": "Error deleting slip"}));
             self.response.status_int = 404;
             return
 
