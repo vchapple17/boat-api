@@ -530,7 +530,6 @@ GET /slips/{test9id}
 	```
 
 
-
 # Boat Arrival Case 1
 
 Place an at sea boat into an empty slip.

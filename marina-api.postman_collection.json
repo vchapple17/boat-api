@@ -1349,7 +1349,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "4875627d-29e7-4fdb-a5b2-4f44569bd8d8",
+								"id": "60901b1d-4371-4ad0-8ba2-51c4f8b1b8eb",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
@@ -1367,7 +1367,7 @@
 									"    exp_boat = null;",
 									"    exp_boat_url = null;",
 									"    exp_arrival_date = null;",
-									"    exp_departure_history = pm.environment.get(\"test9departure_history\");",
+									"    // exp_departure_history = pm.environment.get(\"test9departure_history\");",
 									"    exp_url = pm.environment.get(\"test9url\");",
 									"    exp_id = pm.environment.get(\"test9id\");",
 									"    ",
@@ -1377,7 +1377,7 @@
 									"    pm.expect(res['current_boat']).to.equal(exp_boat);",
 									"    pm.expect(res['current_boat_url']).to.equal(exp_boat_url);",
 									"    pm.expect(res['arrival_date']).to.equal(exp_arrival_date);",
-									"    pm.expect(JSON.stringify(res['departure_history'])).to.equal(exp_departure_history);",
+									"    // pm.expect(JSON.stringify(res['departure_history'])).to.equal(exp_departure_history);",
 									"    pm.expect(res['url']).to.equal(exp_url);",
 									"    pm.expect(res['id']).to.equal(exp_id);",
 									"    ",
@@ -1613,7 +1613,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "00b927ec-632a-4fc7-8684-5fbc8c3eeb92",
+								"id": "e7e1d7b0-d63e-4e8b-ac3b-f9a58263afb7",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
@@ -1643,16 +1643,18 @@
 									"    exp_id = slip[\"id\"];",
 									"    ",
 									"    res = pm.response.json();",
-									"    console.log(res)",
+									"    actual_hist = JSON.stringify(res['departure_history']);",
+									"    // console.log(res)",
 									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
 									"    pm.expect(res['current_boat']).to.equal(exp_boat);",
 									"    pm.expect(res['current_boat_url']).to.equal(exp_boat_url);",
 									"    pm.expect(res['arrival_date']).to.equal(exp_arrival_date);",
-									"    pm.expect(JSON.stringify(res['departure_history'])).to.equal(JSON.stringify(exp_departure_history));",
+									"    pm.expect(actual_hist).to.equal(JSON.stringify(exp_departure_history));",
 									"    pm.expect(res['url']).to.equal(exp_url);",
 									"    pm.expect(res['id']).to.equal(exp_id);",
 									"    ",
 									"    pm.environment.set(\"test19slip\", JSON.stringify(res));",
+									"    pm.environment.set(\"test19actual_hist\", actual_hist)",
 									"    pm.environment.set(\"test19\", true); // Verified SLIP has boat information",
 									"});"
 								]
@@ -1783,6 +1785,484 @@
 						"description": "Set boat to at sea boat and empty the slip"
 					},
 					"response": []
+				},
+				{
+					"name": "TEST 21: GET /slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a44241c6-853f-4cc3-bcb0-ab5229a3dfc0",
+								"type": "text/javascript",
+								"exec": [
+									"// Check again result of Test 19",
+									"var slip = JSON.parse(pm.environment.get(\"test19slip\"));",
+									"",
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches test19 number\", function () {",
+									"    exp_num = slip[\"number\"]",
+									"    res = pm.response.json();",
+									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
+									"});",
+									"pm.test(\"response matches test19 boat ID\", function () {",
+									"    exp_boat = String(null);",
+									"    res = pm.response.json();",
+									"    pm.expect(String(res['current_boat'])).to.equal(exp_boat);",
+									"});",
+									"pm.test(\"response matches test9 boat url\", function () {",
+									"    exp_boat_url = String(null);",
+									"    res = pm.response.json();",
+									"    pm.expect(String(res['current_boat_url'])).to.equal(exp_boat_url);",
+									"});",
+									"",
+									"pm.test(\"response matches test9 arrival_date\", function () {",
+									"    exp_arrival_date = String(null); ",
+									"    res = pm.response.json();",
+									"    pm.expect(String(res['arrival_date'])).to.equal(exp_arrival_date);",
+									"});",
+									"",
+									"pm.test(\"response matches test19 departure_history\", function () {",
+									"    // Parse Departure History",
+									"    var departure_date = pm.environment.get(\"test20_departure_date\");",
+									"    // console.log(pm.environment.get(\"test19actual_hist\"));",
+									"    exp_departure_history = JSON.parse(pm.environment.get(\"test19actual_hist\"))",
+									"    console.log(\"history: \" + exp_departure_history)",
+									"    console.log(exp_departure_history);",
+									"    ",
+									"    if (typeof exp_departure_history == \"string\") {",
+									"        exp_departure_history = JSON.parse(exp_departure_history)",
+									"    }",
+									"    exp_departure_history.push({\"departed_boat\": slip[\"current_boat\"], \"departure_date\": departure_date });",
+									"    console.log(exp_departure_history)",
+									"    actual = res['departure_history'];",
+									"    actual_departure_history = JSON.parse(actual);",
+									"    ",
+									"    for ( i = 0; i < actual_departure_history.length; i++ ) {",
+									"        console.log(actual_departure_history[i][\"departed_boat\"]);",
+									"        console.log(exp_departure_history[i][\"departed_boat\"]);",
+									"        console.log(exp_departure_history[i][\"departure_date\"]);",
+									"        console.log(actual_departure_history[i][\"departure_date\"]);",
+									"        ",
+									"        pm.expect(actual_departure_history[i][\"departed_boat\"]).to.equal(exp_departure_history[i][\"departed_boat\"]);",
+									"        pm.expect(actual_departure_history[i][\"departure_date\"]).to.equal(exp_departure_history[i][\"departure_date\"]);",
+									"    }",
+									"    // pm.expect(actual_departure_history).to.equal(exp_departure_history);",
+									"});",
+									"",
+									"pm.test(\"response matches test9 url & id\", function () {",
+									"    exp_url = slip[\"url\"];",
+									"    exp_id = slip[\"id\"];",
+									"    res = pm.response.json();",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id']).to.equal(exp_id);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "Verify Slip is Empty and Depature History is updated"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Occupied Slip Delete",
+			"description": "",
+			"item": [
+				{
+					"name": "TEST 22: PUT /boats/{{test2id}}/slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d44104e7-c422-49ee-878b-6833c9e83d11",
+								"type": "text/javascript",
+								"exec": [
+									"// Delete boat and Repeat",
+									"pm.test(\"response is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "05a456c4-bac0-43a4-87a8-85048c0443cd",
+								"type": "text/javascript",
+								"exec": [
+									"pm.environment.set(\"test17_arrival_date\", \"03/15/2016\");"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"arrival_date\": \"{{test17_arrival_date}}\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}",
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "dock \"at sea boat\" with empty slip"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 23: GET /slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93d7326e-13ca-4b21-8529-97fdd7f83f45",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches test9 data sent\", function () {",
+									"    exp_num = pm.environment.get(\"test13number\");",
+									"    exp_boat = null;",
+									"    exp_boat_url = null;",
+									"    exp_arrival_date = null;",
+									"    // exp_departure_history = pm.environment.get(\"test9departure_history\");",
+									"    exp_url = pm.environment.get(\"test9url\");",
+									"    exp_id = pm.environment.get(\"test9id\");",
+									"    ",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
+									"    pm.expect(res['current_boat']).to.not.equal(exp_boat);",
+									"    pm.expect(res['current_boat_url']).to.not.equal(exp_boat_url);",
+									"    pm.expect(res['arrival_date']).to.not.equal(exp_arrival_date);",
+									"    // pm.expect(JSON.stringify(res['departure_history'])).to.equal(exp_departure_history);",
+									"    pm.expect(res['url']).to.equal(exp_url);",
+									"    pm.expect(res['id']).to.equal(exp_id);",
+									"    ",
+									"    ",
+									"    pm.environment.set(\"test23slip\", JSON.stringify(res));",
+									"    pm.environment.set(\"test23\", true);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "922388fa-7972-40c5-a1d3-a8ea1379bd75",
+								"type": "text/javascript",
+								"exec": [
+									"pm.environment.set(\"test17_arrival_date\", \"1/15/2016\");",
+									"pm.environment.set(\"test20_departure_date\", \"2/5/2016\");",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "Verify Slip is NOT empty"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 24: GET /boats/{{test2id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5c5bfcd8-c090-4cb6-a660-622798c33e62",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response is not at sea\", function () {",
+									"    exp_at_sea = false;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"    pm.environment.set(\"test24boat\", JSON.stringify(res));",
+									"    pm.environment.set(\"test24\", true);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}"
+							]
+						},
+						"description": "Verify boat is at sea"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 25: DELETE /slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2b13008c-7f3c-490d-a1cf-a5dd79af886f",
+								"type": "text/javascript",
+								"exec": [
+									"// Delete boat and Repeat",
+									"pm.test(\"response is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 23: GET /slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f4185288-c3b5-4413-8daa-42aacfa60367",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "922388fa-7972-40c5-a1d3-a8ea1379bd75",
+								"type": "text/javascript",
+								"exec": [
+									"pm.environment.set(\"test17_arrival_date\", \"1/15/2016\");",
+									"pm.environment.set(\"test20_departure_date\", \"2/5/2016\");",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/{{test9id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{test9id}}"
+							]
+						},
+						"description": "Verify Slip is deleted"
+					},
+					"response": []
+				},
+				{
+					"name": "TEST 24: GET /boats/{{test2id}} copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d835c158-687f-49df-a3a5-895b0a9e56d2",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response is at sea\", function () {",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"    pm.environment.set(\"test24boat\", JSON.stringify(res));",
+									"    pm.environment.set(\"test24\", true);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}"
+							]
+						},
+						"description": "Verify boat is at sea"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "1e34c564-eec2-433b-b506-720cf8cff63c",
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "744eed82-2e76-4d3d-a7fc-c2410f8d9c76",
+						"type": "text/javascript"
+					}
 				}
 			]
 		}
