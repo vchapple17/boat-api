@@ -1,14 +1,14 @@
 {
-	"id": "e7247f97-9178-4d40-a216-0893e5b79fc3",
+	"id": "50bbedca-4875-43e8-90c3-c57fcfff33a0",
 	"name": "marina-api",
 	"allTests": [],
-	"timestamp": "2018-01-31T20:29:55.992Z",
+	"timestamp": "2018-01-31T21:08:29.455Z",
 	"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 	"folder_id": 0,
 	"target_type": "collection",
 	"environment_id": "b0060060-efe4-29f6-706c-ffce87bbb2f7",
 	"data": [],
-	"delay": "500",
+	"delay": 0,
 	"count": 1,
 	"collection": {
 		"id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
@@ -144,20 +144,6 @@
 				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
-				"createdAt": 1517419940539,
-				"description": "",
-				"folders_order": [],
-				"id": "e933025b-0bf0-b633-64d9-5485a863c73a",
-				"name": "Docked Boat is Deleted",
-				"order": [],
-				"owner": "1242759",
-				"updatedAt": 1517419940540
-			},
-			{
-				"auth": null,
-				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
-				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
-				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 				"createdAt": 1517198710864,
 				"description": "",
 				"folders_order": [],
@@ -278,19 +264,89 @@
 				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 				"createdAt": 1517417287187,
 				"description": "",
+				"events": [
+					{
+						"listen": "prerequest",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "747a6efb-c69a-4140-b2d7-79c5fca50370",
+							"type": "text/javascript"
+						}
+					},
+					{
+						"listen": "test",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "0157a895-3af4-454b-9061-690ed6d2f8df",
+							"type": "text/javascript"
+						}
+					}
+				],
 				"folders_order": [],
 				"id": "eb40a176-024a-a40f-4b17-2a542f6dc408",
-				"name": "Rejections",
+				"name": "Create Rejections",
 				"order": [
 					"bf0738ab-78d7-1ecf-8e2c-e7fd2f9d8361",
 					"799c9c3d-0ba9-8dc1-0002-4ae7cb2adcc3",
 					"48eb54ae-2f37-a672-827d-4a19fa86148a",
 					"1b39ad28-302e-1fda-9a3a-ad7e4788f21f",
 					"242117f3-e072-1ad9-eeb6-e6bbee009564",
-					"3f82d081-8600-cb8f-1c11-a60ff7953f8d"
+					"3f82d081-8600-cb8f-1c11-a60ff7953f8d",
+					"7cb2638d-1011-5f26-2220-d55cdf64642a",
+					"5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
+					"291f9012-9c21-2a6c-e728-6820cd8a4e43",
+					"6586f52e-0ca8-42be-49b8-432183f2de64",
+					"cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
+					"10e67dac-fa94-69da-8492-15366fe0a788",
+					"79eb9bdd-e846-8c59-3011-1958535b0486",
+					"11d95291-802a-7e84-a762-0933a852e676",
+					"2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
+					"b334c6dc-9a92-155b-0639-917e68a968ea",
+					"af12af81-d7ec-99bf-53d5-29e559d7cfe7",
+					"9ac03fed-6b33-8e35-9eda-9ba3df3e770d"
 				],
 				"owner": "1242759",
 				"updatedAt": 1517417287187
+			},
+			{
+				"auth": null,
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"createdAt": 1517419940539,
+				"description": "",
+				"folders_order": [],
+				"id": "e933025b-0bf0-b633-64d9-5485a863c73a",
+				"name": "Docked Boat is Deleted",
+				"order": [],
+				"owner": "1242759",
+				"updatedAt": 1517419940540
+			},
+			{
+				"auth": null,
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"createdAt": 1517431628164,
+				"description": "",
+				"folders_order": [],
+				"id": "86021102-4586-7ec3-a1b0-2f7973f70aea",
+				"name": "Read 1 Rejections",
+				"order": [
+					"3e0cabbc-97da-a5e2-9040-cea9765a7be6",
+					"ee606220-9492-f505-9bb7-a3a4ebf16de0",
+					"784cb22c-9f2a-b0f2-458d-593d333b1e4a",
+					"59fbe851-2e79-2eb9-59f3-5fe2570a8e7f",
+					"230a57f3-e0db-d13e-9ae7-6ed2ff4c335c",
+					"3ef77eb5-e79b-d713-8510-063f5452d4c6",
+					"449e63e6-d97d-5106-0587-b7ca93b4b887"
+				],
+				"owner": "1242759",
+				"updatedAt": 1517431628164
 			}
 		],
 		"folders_order": [
@@ -303,7 +359,8 @@
 			"8a7c8e96-bae4-8e37-b328-fcae629ddf02",
 			"cd0872b2-c917-29fd-b36f-877b7c822ea0",
 			"e933025b-0bf0-b633-64d9-5485a863c73a",
-			"eb40a176-024a-a40f-4b17-2a542f6dc408"
+			"eb40a176-024a-a40f-4b17-2a542f6dc408",
+			"86021102-4586-7ec3-a1b0-2f7973f70aea"
 		],
 		"timestamp": 1517008090259,
 		"synced": false,
@@ -315,7 +372,7 @@
 		"remoteLinkUpdatedAt": null,
 		"public": false,
 		"createdAt": 1517008090259,
-		"updatedAt": 1517426220978,
+		"updatedAt": 1517432579155,
 		"write": true,
 		"published": false,
 		"favorite": false,
@@ -348,17 +405,18 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 2,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 2,
+					"pass": 3,
 					"fail": 0
 				}
 			},
 			"times": [
-				"189",
-				"429"
+				"178",
+				"26",
+				"25"
 			],
 			"allTests": [
 				{
@@ -369,16 +427,20 @@
 					"name": "response is ok",
 					"status": "pass",
 					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
 				}
 			],
-			"time": "429",
-			"totalRequestTime": "189429",
+			"time": "25",
+			"totalRequestTime": "1782625",
 			"iterationResults": {}
 		},
 		{
 			"name": "CLEAN UP - Boats 2",
 			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICAw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -389,24 +451,30 @@
 				}
 			},
 			"tests": {
-				"response is 204": true
+				"name": "response is 204",
+				"status": "pass"
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 1,
+					"pass": 2,
 					"fail": 0
 				}
 			},
 			"times": [
-				"68"
+				"35",
+				"42"
 			],
 			"allTests": [
 				{
 					"response is 204": true
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
 				}
 			],
-			"time": "68",
-			"totalRequestTime": "68",
+			"time": "42",
+			"totalRequestTime": "3542",
 			"iterationResults": {}
 		},
 		{
@@ -442,7 +510,7 @@
 				}
 			},
 			"times": [
-				"47"
+				"29"
 			],
 			"allTests": [
 				{
@@ -451,8 +519,8 @@
 					"Conditional": true
 				}
 			],
-			"time": "47",
-			"totalRequestTime": "47",
+			"time": "29",
+			"totalRequestTime": "29",
 			"iterationResults": {}
 		},
 		{
@@ -488,7 +556,7 @@
 				}
 			},
 			"times": [
-				"28"
+				"37"
 			],
 			"allTests": [
 				{
@@ -497,8 +565,8 @@
 					"response has 0 objects": true
 				}
 			],
-			"time": "28",
-			"totalRequestTime": "28",
+			"time": "37",
+			"totalRequestTime": "37",
 			"iterationResults": {}
 		},
 		{
@@ -534,7 +602,7 @@
 				}
 			},
 			"times": [
-				"58"
+				"40"
 			],
 			"allTests": [
 				{
@@ -543,14 +611,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "58",
-			"totalRequestTime": "58",
+			"time": "40",
+			"totalRequestTime": "40",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -580,7 +648,7 @@
 				}
 			},
 			"times": [
-				"89"
+				"84"
 			],
 			"allTests": [
 				{
@@ -589,14 +657,14 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "89",
-			"totalRequestTime": "89",
+			"time": "84",
+			"totalRequestTime": "84",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -626,7 +694,7 @@
 				}
 			},
 			"times": [
-				"31"
+				"36"
 			],
 			"allTests": [
 				{
@@ -635,8 +703,8 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "31",
-			"totalRequestTime": "31",
+			"time": "36",
+			"totalRequestTime": "36",
 			"iterationResults": {}
 		},
 		{
@@ -694,7 +762,7 @@
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -724,7 +792,7 @@
 				}
 			},
 			"times": [
-				"68"
+				"45"
 			],
 			"allTests": [
 				{
@@ -733,14 +801,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "68",
-			"totalRequestTime": "68",
+			"time": "45",
+			"totalRequestTime": "45",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -770,7 +838,7 @@
 				}
 			},
 			"times": [
-				"59"
+				"63"
 			],
 			"allTests": [
 				{
@@ -779,8 +847,8 @@
 					"response matches test 6 data sent": true
 				}
 			],
-			"time": "59",
-			"totalRequestTime": "59",
+			"time": "63",
+			"totalRequestTime": "63",
 			"iterationResults": {}
 		},
 		{
@@ -816,7 +884,7 @@
 				}
 			},
 			"times": [
-				"24"
+				"42"
 			],
 			"allTests": [
 				{
@@ -825,8 +893,8 @@
 					"response has 0 objects": true
 				}
 			],
-			"time": "24",
-			"totalRequestTime": "24",
+			"time": "42",
+			"totalRequestTime": "42",
 			"iterationResults": {}
 		},
 		{
@@ -862,7 +930,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"36"
 			],
 			"allTests": [
 				{
@@ -871,14 +939,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "36",
+			"totalRequestTime": "36",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -933,7 +1001,7 @@
 				}
 			},
 			"times": [
-				"88"
+				"77"
 			],
 			"allTests": [
 				{
@@ -947,14 +1015,14 @@
 					"response matches test9 url & id": true
 				}
 			],
-			"time": "88",
-			"totalRequestTime": "88",
+			"time": "77",
+			"totalRequestTime": "77",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -984,7 +1052,7 @@
 				}
 			},
 			"times": [
-				"22"
+				"36"
 			],
 			"allTests": [
 				{
@@ -993,8 +1061,8 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "22",
-			"totalRequestTime": "22",
+			"time": "36",
+			"totalRequestTime": "36",
 			"iterationResults": {}
 		},
 		{
@@ -1035,7 +1103,7 @@
 				}
 			},
 			"times": [
-				"30"
+				"24"
 			],
 			"allTests": [
 				{
@@ -1045,14 +1113,14 @@
 					"response has 1 element that matches test9 data": true
 				}
 			],
-			"time": "30",
-			"totalRequestTime": "30",
+			"time": "24",
+			"totalRequestTime": "24",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1082,7 +1150,7 @@
 				}
 			},
 			"times": [
-				"41"
+				"53"
 			],
 			"allTests": [
 				{
@@ -1091,14 +1159,14 @@
 					"response matches updated values": true
 				}
 			],
-			"time": "41",
-			"totalRequestTime": "41",
+			"time": "53",
+			"totalRequestTime": "53",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1128,7 +1196,7 @@
 				}
 			},
 			"times": [
-				"73"
+				"74"
 			],
 			"allTests": [
 				{
@@ -1137,14 +1205,14 @@
 					"response matches test 13 data sent": true
 				}
 			],
-			"time": "73",
-			"totalRequestTime": "73",
+			"time": "74",
+			"totalRequestTime": "74",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1174,7 +1242,7 @@
 				}
 			},
 			"times": [
-				"24"
+				"32"
 			],
 			"allTests": [
 				{
@@ -1183,14 +1251,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "24",
-			"totalRequestTime": "24",
+			"time": "32",
+			"totalRequestTime": "32",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1220,7 +1288,7 @@
 				}
 			},
 			"times": [
-				"22"
+				"38"
 			],
 			"allTests": [
 				{
@@ -1229,14 +1297,14 @@
 					"response matches test2/6 data sent": true
 				}
 			],
-			"time": "22",
-			"totalRequestTime": "22",
+			"time": "38",
+			"totalRequestTime": "38",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1256,21 +1324,21 @@
 				}
 			},
 			"times": [
-				"98"
+				"62"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "98",
-			"totalRequestTime": "98",
+			"time": "62",
+			"totalRequestTime": "62",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1300,7 +1368,7 @@
 				}
 			},
 			"times": [
-				"73"
+				"306"
 			],
 			"allTests": [
 				{
@@ -1309,14 +1377,14 @@
 					"response matches test16 data sent and at_sea false": true
 				}
 			],
-			"time": "73",
-			"totalRequestTime": "73",
+			"time": "306",
+			"totalRequestTime": "306",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1346,7 +1414,7 @@
 				}
 			},
 			"times": [
-				"73"
+				"47"
 			],
 			"allTests": [
 				{
@@ -1355,14 +1423,14 @@
 					"response matches test15 data sent but new boat": true
 				}
 			],
-			"time": "73",
-			"totalRequestTime": "73",
+			"time": "47",
+			"totalRequestTime": "47",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww?departure=2/5/2016",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw?departure=2/5/2016",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1382,21 +1450,21 @@
 				}
 			},
 			"times": [
-				"90"
+				"74"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "90",
-			"totalRequestTime": "90",
+			"time": "74",
+			"totalRequestTime": "74",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 21: GET /slips/{{test9id}}",
 			"id": "5a0e64e5-0ecc-02a8-cb60-f92f7717c1f0",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1451,7 +1519,7 @@
 				}
 			},
 			"times": [
-				"82"
+				"70"
 			],
 			"allTests": [
 				{
@@ -1465,14 +1533,14 @@
 					"response matches test9 url & id": true
 				}
 			],
-			"time": "82",
-			"totalRequestTime": "82",
+			"time": "70",
+			"totalRequestTime": "70",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 22: GET /boats/{{test2id}}",
 			"id": "30ed4fd5-a3af-f807-3a0b-97250108c482",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1502,7 +1570,7 @@
 				}
 			},
 			"times": [
-				"86"
+				"91"
 			],
 			"allTests": [
 				{
@@ -1511,14 +1579,14 @@
 					"response is at sea": true
 				}
 			],
-			"time": "86",
-			"totalRequestTime": "86",
+			"time": "91",
+			"totalRequestTime": "91",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 23: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a8aaa458-4f18-d7c4-b460-9fa88cfdd5bf",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1538,21 +1606,21 @@
 				}
 			},
 			"times": [
-				"91"
+				"82"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "91",
-			"totalRequestTime": "91",
+			"time": "82",
+			"totalRequestTime": "82",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 24: GET /slips/{{test9id}}",
 			"id": "e66406c4-97a4-66aa-0551-0f3a00ed19e1",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1582,7 +1650,7 @@
 				}
 			},
 			"times": [
-				"74"
+				"52"
 			],
 			"allTests": [
 				{
@@ -1591,14 +1659,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "74",
-			"totalRequestTime": "74",
+			"time": "52",
+			"totalRequestTime": "52",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 25: GET /boats/{{test2id}}",
 			"id": "4956e253-33af-68a9-9f57-ed9522b2d7d5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1628,7 +1696,7 @@
 				}
 			},
 			"times": [
-				"71"
+				"68"
 			],
 			"allTests": [
 				{
@@ -1637,14 +1705,14 @@
 					"response is not at sea": true
 				}
 			],
-			"time": "71",
-			"totalRequestTime": "71",
+			"time": "68",
+			"totalRequestTime": "68",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 26: DELETE /slips/{{test9id}}",
 			"id": "880c6673-2af3-e350-a8de-55c3944297c1",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1664,21 +1732,21 @@
 				}
 			},
 			"times": [
-				"130"
+				"65"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "130",
-			"totalRequestTime": "130",
+			"time": "65",
+			"totalRequestTime": "65",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 27: GET /slips/{{test9id}}",
 			"id": "005a3f63-35a3-3f2f-d55d-822cf1df6741",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -1703,7 +1771,7 @@
 				}
 			},
 			"times": [
-				"56"
+				"30"
 			],
 			"allTests": [
 				{
@@ -1711,14 +1779,14 @@
 					"response has error": true
 				}
 			],
-			"time": "56",
-			"totalRequestTime": "56",
+			"time": "30",
+			"totalRequestTime": "30",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 28: GET /boats/{{test2id}}",
 			"id": "f48a5e5b-b76c-e19f-1be9-035eaaba0dd4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1748,7 +1816,7 @@
 				}
 			},
 			"times": [
-				"76"
+				"42"
 			],
 			"allTests": [
 				{
@@ -1757,8 +1825,8 @@
 					"response is at sea": true
 				}
 			],
-			"time": "76",
-			"totalRequestTime": "76",
+			"time": "42",
+			"totalRequestTime": "42",
 			"iterationResults": {}
 		},
 		{
@@ -1789,7 +1857,7 @@
 				}
 			},
 			"times": [
-				"21"
+				"19"
 			],
 			"allTests": [
 				{
@@ -1797,8 +1865,8 @@
 					"response has body": true
 				}
 			],
-			"time": "21",
-			"totalRequestTime": "21",
+			"time": "19",
+			"totalRequestTime": "19",
 			"iterationResults": {}
 		},
 		{
@@ -1829,7 +1897,7 @@
 				}
 			},
 			"times": [
-				"67"
+				"39"
 			],
 			"allTests": [
 				{
@@ -1837,8 +1905,8 @@
 					"response has body": true
 				}
 			],
-			"time": "67",
-			"totalRequestTime": "67",
+			"time": "39",
+			"totalRequestTime": "39",
 			"iterationResults": {}
 		},
 		{
@@ -1869,7 +1937,7 @@
 				}
 			},
 			"times": [
-				"23"
+				"13"
 			],
 			"allTests": [
 				{
@@ -1877,8 +1945,8 @@
 					"response has error": true
 				}
 			],
-			"time": "23",
-			"totalRequestTime": "23",
+			"time": "13",
+			"totalRequestTime": "13",
 			"iterationResults": {}
 		},
 		{
@@ -1914,7 +1982,7 @@
 				}
 			},
 			"times": [
-				"44"
+				"43"
 			],
 			"allTests": [
 				{
@@ -1923,8 +1991,8 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "44",
-			"totalRequestTime": "44",
+			"time": "43",
+			"totalRequestTime": "43",
 			"iterationResults": {}
 		},
 		{
@@ -1955,7 +2023,7 @@
 				}
 			},
 			"times": [
-				"28"
+				"17"
 			],
 			"allTests": [
 				{
@@ -1963,8 +2031,8 @@
 					"response has error": true
 				}
 			],
-			"time": "28",
-			"totalRequestTime": "28",
+			"time": "17",
+			"totalRequestTime": "17",
 			"iterationResults": {}
 		},
 		{
@@ -2000,7 +2068,7 @@
 				}
 			},
 			"times": [
-				"26"
+				"33"
 			],
 			"allTests": [
 				{
@@ -2009,21 +2077,814 @@
 					"response matches pre exactly": true
 				}
 			],
+			"time": "33",
+			"totalRequestTime": "33",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Datatype - POST /boats/",
+			"id": "7cb2638d-1011-5f26-2220-d55cdf64642a",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"41"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "41",
+			"totalRequestTime": "41",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Data - POST /slips/",
+			"id": "291f9012-9c21-2a6c-e728-6820cd8a4e43",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "6586f52e-0ca8-42be-49b8-432183f2de64",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"30"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "30",
+			"totalRequestTime": "30",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 1 - POST /boats/",
+			"id": "cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"22"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "22",
+			"totalRequestTime": "22",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "10e67dac-fa94-69da-8492-15366fe0a788",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"37"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "37",
+			"totalRequestTime": "37",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 2 - POST /boats/",
+			"id": "79eb9bdd-e846-8c59-3011-1958535b0486",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"20"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "20",
+			"totalRequestTime": "20",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "11d95291-802a-7e84-a762-0933a852e676",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"35"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "35",
+			"totalRequestTime": "35",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 3 - POST /boats/",
+			"id": "2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"36"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "36",
+			"totalRequestTime": "36",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "b334c6dc-9a92-155b-0639-917e68a968ea",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"38"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "38",
+			"totalRequestTime": "38",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little - POST /slips/",
+			"id": "af12af81-d7ec-99bf-53d5-29e559d7cfe7",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"29"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "29",
+			"totalRequestTime": "29",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "9ac03fed-6b33-8e35-9eda-9ba3df3e770d",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"45"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "45",
+			"totalRequestTime": "45",
+			"iterationResults": {}
+		},
+		{
+			"name": "/slips/",
+			"id": "3e0cabbc-97da-a5e2-9040-cea9765a7be6",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
 			"time": "26",
 			"totalRequestTime": "26",
 			"iterationResults": {}
+		},
+		{
+			"name": "/boats/",
+			"id": "ee606220-9492-f505-9bb7-a3a4ebf16de0",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"31"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "31",
+			"totalRequestTime": "31",
+			"iterationResults": {}
+		},
+		{
+			"name": "404 /boats/{{fake_id}}",
+			"id": "784cb22c-9f2a-b0f2-458d-593d333b1e4a",
+			"url": "http://localhost:8080/boats/asdf1234",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"response is 404 Not Found": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"response is 404 Not Found": true,
+					"response has error": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		},
+		{
+			"name": "404 /slips/{{fake_id}}",
+			"id": "59fbe851-2e79-2eb9-59f3-5fe2570a8e7f",
+			"url": "http://localhost:8080/slips/asdf1234",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"response is 404 Not Found": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"26"
+			],
+			"allTests": [
+				{
+					"response is 404 Not Found": true,
+					"response has error": true
+				}
+			],
+			"time": "26",
+			"totalRequestTime": "26",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "230a57f3-e0db-d13e-9ae7-6ed2ff4c335c",
+			"url": "http://localhost:8080/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"27"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "27",
+			"totalRequestTime": "27",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "3ef77eb5-e79b-d713-8510-063f5452d4c6",
+			"url": "http://localhost:8080/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"29"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "29",
+			"totalRequestTime": "29",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "449e63e6-d97d-5106-0587-b7ca93b4b887",
+			"url": "http://localhost:8080/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				"12"
+			],
+			"allTests": [
+				{}
+			],
+			"time": "12",
+			"totalRequestTime": "12",
+			"iterationResults": {}
 		}
 	],
-	"totalPass": 109,
+	"totalPass": 156,
 	"totalFail": 0,
-	"totalTime": 2659,
+	"totalTime": 2788,
 	"lifecycle": "done",
 	"requests": [
 		{
 			"name": "CLEAN UP - Boats 1",
 			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
 			"url": "http://localhost:8080/boats/",
-			"time": "429",
+			"time": "25",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2034,11 +2895,11 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 2,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 2,
+					"pass": 3,
 					"fail": 0
 				}
 			}
@@ -2046,8 +2907,8 @@
 		{
 			"name": "CLEAN UP - Boats 2",
 			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICAw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDYCww",
+			"time": "42",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -2058,7 +2919,7 @@
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 1,
+					"pass": 2,
 					"fail": 0
 				}
 			}
@@ -2067,7 +2928,7 @@
 			"name": "CLEAN UP - Slips 1",
 			"id": "c1862c74-dd0d-f163-3792-1987b035a9b2",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2095,7 +2956,7 @@
 			"name": "TEST 1: GET /boats/",
 			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
 			"url": "http://localhost:8080/boats/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2123,7 +2984,7 @@
 			"name": "TEST 2: POST /boats/",
 			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
 			"url": "http://localhost:8080/boats",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -2150,8 +3011,8 @@
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2178,8 +3039,8 @@
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2207,7 +3068,7 @@
 			"name": "TEST 5: GET /boats/",
 			"id": "638243e8-97db-47a8-588e-b16b17662f10",
 			"url": "http://localhost:8080/boats/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2238,8 +3099,8 @@
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2266,8 +3127,8 @@
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2295,7 +3156,7 @@
 			"name": "TEST 8: GET /slips/",
 			"id": "1b0f49bc-3878-2160-eaa6-558dc7fae17b",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2323,7 +3184,7 @@
 			"name": "TEST 9: POST /slips/",
 			"id": "0f50a39c-e3c1-6a6c-5865-e5f1e7d652c2",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -2350,8 +3211,8 @@
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2398,8 +3259,8 @@
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2427,7 +3288,7 @@
 			"name": "TEST 12: GET /slips/",
 			"id": "85e0f58b-3a33-9597-830a-8c655e6dfda7",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2458,8 +3319,8 @@
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2486,8 +3347,8 @@
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2514,8 +3375,8 @@
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2542,8 +3403,8 @@
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2570,8 +3431,8 @@
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -2590,8 +3451,8 @@
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2618,8 +3479,8 @@
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2646,8 +3507,8 @@
 		{
 			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww?departure=2/5/2016",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw?departure=2/5/2016",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -2666,8 +3527,8 @@
 		{
 			"name": "TEST 21: GET /slips/{{test9id}}",
 			"id": "5a0e64e5-0ecc-02a8-cb60-f92f7717c1f0",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2714,8 +3575,8 @@
 		{
 			"name": "TEST 22: GET /boats/{{test2id}}",
 			"id": "30ed4fd5-a3af-f807-3a0b-97250108c482",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2742,8 +3603,8 @@
 		{
 			"name": "TEST 23: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a8aaa458-4f18-d7c4-b460-9fa88cfdd5bf",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -2762,8 +3623,8 @@
 		{
 			"name": "TEST 24: GET /slips/{{test9id}}",
 			"id": "e66406c4-97a4-66aa-0551-0f3a00ed19e1",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2790,8 +3651,8 @@
 		{
 			"name": "TEST 25: GET /boats/{{test2id}}",
 			"id": "4956e253-33af-68a9-9f57-ed9522b2d7d5",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2818,8 +3679,8 @@
 		{
 			"name": "TEST 26: DELETE /slips/{{test9id}}",
 			"id": "880c6673-2af3-e350-a8de-55c3944297c1",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -2838,8 +3699,8 @@
 		{
 			"name": "TEST 27: GET /slips/{{test9id}}",
 			"id": "005a3f63-35a3-3f2f-d55d-822cf1df6741",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIDICww",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgIC4CQw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -2862,8 +3723,8 @@
 		{
 			"name": "TEST 28: GET /boats/{{test2id}}",
 			"id": "f48a5e5b-b76c-e19f-1be9-035eaaba0dd4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDICQw",
-			"time": "2018-01-31T20:29:55.992Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIC4Cgw",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2891,7 +3752,7 @@
 			"name": "/slips/",
 			"id": "bf0738ab-78d7-1ecf-8e2c-e7fd2f9d8361",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2915,7 +3776,7 @@
 			"name": "/boats/",
 			"id": "799c9c3d-0ba9-8dc1-0002-4ae7cb2adcc3",
 			"url": "http://localhost:8080/boats/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2939,7 +3800,7 @@
 			"name": "400 - Extra Info - POST /boats/",
 			"id": "48eb54ae-2f37-a672-827d-4a19fa86148a",
 			"url": "http://localhost:8080/boats/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -2963,7 +3824,7 @@
 			"name": "Verify /boats/ ",
 			"id": "1b39ad28-302e-1fda-9a3a-ad7e4788f21f",
 			"url": "http://localhost:8080/boats/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -2991,7 +3852,7 @@
 			"name": "400 - Extra Info - POST /slips/",
 			"id": "242117f3-e072-1ad9-eeb6-e6bbee009564",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -3015,7 +3876,7 @@
 			"name": "Verify /slips/",
 			"id": "3f82d081-8600-cb8f-1c11-a60ff7953f8d",
 			"url": "http://localhost:8080/slips/",
-			"time": "2018-01-31T20:29:55.992Z",
+			"time": "2018-01-31T21:08:29.455Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -3038,6 +3899,485 @@
 					"fail": 0
 				}
 			}
+		},
+		{
+			"name": "400 - Invalid Datatype - POST /boats/",
+			"id": "7cb2638d-1011-5f26-2220-d55cdf64642a",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "400 - Invalid Data - POST /slips/",
+			"id": "291f9012-9c21-2a6c-e728-6820cd8a4e43",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "6586f52e-0ca8-42be-49b8-432183f2de64",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "400 - Too Little 1 - POST /boats/",
+			"id": "cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "10e67dac-fa94-69da-8492-15366fe0a788",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "400 - Too Little 2 - POST /boats/",
+			"id": "79eb9bdd-e846-8c59-3011-1958535b0486",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "11d95291-802a-7e84-a762-0933a852e676",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "400 - Too Little 3 - POST /boats/",
+			"id": "2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "b334c6dc-9a92-155b-0639-917e68a968ea",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "400 - Too Little - POST /slips/",
+			"id": "af12af81-d7ec-99bf-53d5-29e559d7cfe7",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "9ac03fed-6b33-8e35-9eda-9ba3df3e770d",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/slips/",
+			"id": "3e0cabbc-97da-a5e2-9040-cea9765a7be6",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "/boats/",
+			"id": "ee606220-9492-f505-9bb7-a3a4ebf16de0",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "404 /boats/{{fake_id}}",
+			"id": "784cb22c-9f2a-b0f2-458d-593d333b1e4a",
+			"url": "http://localhost:8080/boats/asdf1234",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "404 /slips/{{fake_id}}",
+			"id": "59fbe851-2e79-2eb9-59f3-5fe2570a8e7f",
+			"url": "http://localhost:8080/slips/asdf1234",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "230a57f3-e0db-d13e-9ae7-6ed2ff4c335c",
+			"url": "http://localhost:8080/slips/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "3ef77eb5-e79b-d713-8510-063f5452d4c6",
+			"url": "http://localhost:8080/boats/",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "449e63e6-d97d-5106-0587-b7ca93b4b887",
+			"url": "http://localhost:8080/boats",
+			"time": "2018-01-31T21:08:29.455Z",
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"testPassFailCounts": {}
 		}
 	],
 	"synced": false
