@@ -1166,7 +1166,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "fe57270c-65c9-429d-81b7-2b78369fa64c",
+								"id": "388f79cd-28d4-4170-aee4-33e8bd7800e1",
 								"type": "text/javascript",
 								"exec": [
 									"// Initialize test2 response variables",
@@ -1320,27 +1320,27 @@
 				{
 					"listen": "prerequest",
 					"script": {
-						"id": "32401f68-7770-411a-a6d3-72e910a24814",
-						"type": "text/javascript",
 						"exec": [
 							""
-						]
+						],
+						"id": "32401f68-7770-411a-a6d3-72e910a24814",
+						"type": "text/javascript"
 					}
 				},
 				{
 					"listen": "test",
 					"script": {
-						"id": "5bc1349b-bcbb-4807-969f-489da73a6433",
-						"type": "text/javascript",
 						"exec": [
 							""
-						]
+						],
+						"id": "5bc1349b-bcbb-4807-969f-489da73a6433",
+						"type": "text/javascript"
 					}
 				}
 			]
 		},
 		{
-			"name": "Boatl Arrival 1",
+			"name": "Boat Arrival 1",
 			"description": "",
 			"item": [
 				{
@@ -1391,10 +1391,11 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "99e4bc87-ad55-450b-907a-7fd76aaecfa7",
+								"id": "922388fa-7972-40c5-a1d3-a8ea1379bd75",
 								"type": "text/javascript",
 								"exec": [
 									"pm.environment.set(\"test17_arrival_date\", \"1/15/2016\");",
+									"pm.environment.set(\"test20_departure_date\", \"2/5/2016\");",
 									""
 								]
 							}
@@ -1538,7 +1539,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "e3d20243-cc55-4789-9a3b-60c5db7248a9",
+								"id": "8c9c6610-6778-4782-a497-a718d41b90b7",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
@@ -1570,7 +1571,9 @@
 									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
 									"    ",
 									"    pm.environment.set(\"test18boat\", JSON.stringify(res));",
-									"    pm.environment.set(\"test18\", true);",
+									"    pm.environment.set(\"test18\", true); // Verified Boat is NOT AT SEA",
+									"    ",
+									"    ",
 									"});"
 								]
 							}
@@ -1610,7 +1613,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "14be188a-b8be-4a3b-beac-f8078270bfd1",
+								"id": "00b927ec-632a-4fc7-8684-5fbc8c3eeb92",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
@@ -1650,7 +1653,7 @@
 									"    pm.expect(res['id']).to.equal(exp_id);",
 									"    ",
 									"    pm.environment.set(\"test19slip\", JSON.stringify(res));",
-									"    pm.environment.set(\"test19\", true);",
+									"    pm.environment.set(\"test19\", true); // Verified SLIP has boat information",
 									"});"
 								]
 							}
@@ -1658,7 +1661,7 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "fa45b5f0-3935-4500-8b53-b48f31045246",
+								"id": "f5185f9d-053b-48a2-9673-57f35a2eecb3",
 								"type": "text/javascript",
 								"exec": [
 									""
@@ -1681,6 +1684,103 @@
 							]
 						},
 						"description": "Slip has boat and boat url and arrival_date"
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "1e34c564-eec2-433b-b506-720cf8cff63c",
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "744eed82-2e76-4d3d-a7fc-c2410f8d9c76",
+						"type": "text/javascript"
+					}
+				}
+			]
+		},
+		{
+			"name": "Boat Departure 1",
+			"description": "",
+			"item": [
+				{
+					"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "d44104e7-c422-49ee-878b-6833c9e83d11",
+								"type": "text/javascript",
+								"exec": [
+									"// Delete boat and Repeat",
+									"pm.test(\"response is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "540cfe84-98e3-499d-9418-04c84004a257",
+								"type": "text/javascript",
+								"exec": [
+									"var test18 = pm.environment.get(\"test18\");",
+									"var test19 = pm.environment.get(\"test19\");",
+									"",
+									"// Skip this folder",
+									"if ( ( test18 === false ) || (test19 === false ) ) {",
+									"    console.log(\"Skipping Boat Departure Test\");",
+									"    postman.setNextRequest(null);",
+									"}"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}/slips/{{test9id}}?departure={{test20_departure_date}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}",
+								"slips",
+								"{{test9id}}"
+							],
+							"query": [
+								{
+									"key": "departure",
+									"value": "{{test20_departure_date}}",
+									"equals": true
+								}
+							]
+						},
+						"description": "Set boat to at sea boat and empty the slip"
 					},
 					"response": []
 				}

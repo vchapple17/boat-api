@@ -1,8 +1,8 @@
 {
-	"id": "8659bcf9-0f14-4615-bc54-faa5cbd36426",
+	"id": "3d8d30ff-53ec-4d9f-977d-3497d5893875",
 	"name": "marina-api",
 	"allTests": [],
-	"timestamp": "2018-01-30T19:42:54.301Z",
+	"timestamp": "2018-01-31T00:44:46.443Z",
 	"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 	"folder_id": 0,
 	"target_type": "collection",
@@ -17,10 +17,37 @@
 		"order": [],
 		"folders": [
 			{
-				"name": "Boatl Arrival 1",
-				"description": "",
-				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"auth": null,
 				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"createdAt": 1517278857140,
+				"description": "",
+				"events": [
+					{
+						"listen": "prerequest",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "1e34c564-eec2-433b-b506-720cf8cff63c",
+							"type": "text/javascript"
+						}
+					},
+					{
+						"listen": "test",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "744eed82-2e76-4d3d-a7fc-c2410f8d9c76",
+							"type": "text/javascript"
+						}
+					}
+				],
+				"folders_order": [],
+				"id": "6ab21dd2-4140-5f56-b84a-6384a61a2d15",
+				"name": "Boat Arrival 1",
 				"order": [
 					"6c84deed-3cdd-357c-f6a5-340ddacee66e",
 					"224efce3-4487-cdfb-0318-d3b482ce81c5",
@@ -29,12 +56,23 @@
 					"c32c750c-91a0-0376-8aec-0d14b6b82677"
 				],
 				"owner": "1242759",
-				"folders_order": [],
+				"updatedAt": 1517278857140
+			},
+			{
 				"auth": null,
-				"createdAt": 1517278857140,
-				"updatedAt": 1517278857140,
-				"id": "6ab21dd2-4140-5f56-b84a-6384a61a2d15",
-				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064"
+				"collection": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collectionId": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
+				"createdAt": 1517341742433,
+				"description": "",
+				"folders_order": [],
+				"id": "8a7c8e96-bae4-8e37-b328-fcae629ddf02",
+				"name": "Boat Departure 1",
+				"order": [
+					"a40f02b8-efb9-e815-a00a-864f72bfdacc"
+				],
+				"owner": "1242759",
+				"updatedAt": 1517341742433
 			},
 			{
 				"auth": null,
@@ -122,6 +160,28 @@
 				"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 				"createdAt": 1517198710864,
 				"description": "",
+				"events": [
+					{
+						"listen": "prerequest",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "32401f68-7770-411a-a6d3-72e910a24814",
+							"type": "text/javascript"
+						}
+					},
+					{
+						"listen": "test",
+						"script": {
+							"exec": [
+								""
+							],
+							"id": "5bc1349b-bcbb-4807-969f-489da73a6433",
+							"type": "text/javascript"
+						}
+					}
+				],
 				"folders_order": [],
 				"id": "49375ed4-bf5c-0f0e-edf1-c0fabe6b7c93",
 				"name": "Edit Slip",
@@ -130,29 +190,7 @@
 					"e1708caa-e2b3-f3fd-3889-ae31d71d1870"
 				],
 				"owner": "1242759",
-				"updatedAt": 1517198710864,
-				"events": [
-					{
-						"listen": "prerequest",
-						"script": {
-							"id": "32401f68-7770-411a-a6d3-72e910a24814",
-							"type": "text/javascript",
-							"exec": [
-								""
-							]
-						}
-					},
-					{
-						"listen": "test",
-						"script": {
-							"id": "5bc1349b-bcbb-4807-969f-489da73a6433",
-							"type": "text/javascript",
-							"exec": [
-								""
-							]
-						}
-					}
-				]
+				"updatedAt": 1517198710864
 			},
 			{
 				"auth": null,
@@ -180,7 +218,8 @@
 			"73d3ced0-d724-d364-20f0-197d39c5329a",
 			"ed51b1ac-d686-31e5-7108-54a80f622bbd",
 			"49375ed4-bf5c-0f0e-edf1-c0fabe6b7c93",
-			"6ab21dd2-4140-5f56-b84a-6384a61a2d15"
+			"6ab21dd2-4140-5f56-b84a-6384a61a2d15",
+			"8a7c8e96-bae4-8e37-b328-fcae629ddf02"
 		],
 		"timestamp": 1517008090259,
 		"synced": false,
@@ -192,7 +231,7 @@
 		"remoteLinkUpdatedAt": null,
 		"public": false,
 		"createdAt": 1517008090259,
-		"updatedAt": "2018-01-30T02:48:21.857Z",
+		"updatedAt": 1517359294527,
 		"write": true,
 		"published": false,
 		"favorite": false,
@@ -209,7 +248,6 @@
 		{
 			"name": "CLEAN UP - Boats 1",
 			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
-			"url": "localhost:8080/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -220,36 +258,87 @@
 				}
 			},
 			"tests": {
-				"response is ok": true,
+				"name": "response is ok",
+				"status": "pass",
 				"response has json body": true
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				}
 			},
 			"times": [
-				"460"
+				"244",
+				"34",
+				"42"
 			],
 			"allTests": [
 				{
 					"response is ok": true,
 					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
 				}
 			],
-			"time": "460",
-			"totalRequestTime": "460",
+			"time": "42",
+			"totalRequestTime": "2443442",
+			"iterationResults": {}
+		},
+		{
+			"name": "CLEAN UP - Boats 2",
+			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "response is 204",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				"79",
+				"60"
+			],
+			"allTests": [
+				{
+					"response is 204": true
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				}
+			],
+			"time": "60",
+			"totalRequestTime": "7960",
 			"iterationResults": {}
 		},
 		{
 			"name": "CLEAN UP - Slips 1",
 			"id": "c1862c74-dd0d-f163-3792-1987b035a9b2",
-			"url": "localhost:8080/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -260,36 +349,90 @@
 				}
 			},
 			"tests": {
-				"response is ok": true,
+				"name": "response is ok",
+				"status": "pass",
 				"response has json body": true,
 				"Conditional": true
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"Conditional": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				}
 			},
 			"times": [
-				"59"
+				"46",
+				"45",
+				"45"
 			],
 			"allTests": [
 				{
 					"response is ok": true,
 					"response has json body": true,
 					"Conditional": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true,
+					"Conditional": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true,
+					"Conditional": true
 				}
 			],
-			"time": "59",
-			"totalRequestTime": "59",
+			"time": "45",
+			"totalRequestTime": "464545",
+			"iterationResults": {}
+		},
+		{
+			"name": "CLEAN UP - Slips 2",
+			"id": "92b72bbf-53ec-91c8-7956-feffedf85c55",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"name": "response is 204",
+				"status": "pass"
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 2,
+					"fail": 0
+				}
+			},
+			"times": [
+				"52",
+				"51"
+			],
+			"allTests": [
+				{
+					"response is 204": true
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				}
+			],
+			"time": "51",
+			"totalRequestTime": "5251",
 			"iterationResults": {}
 		},
 		{
@@ -325,7 +468,7 @@
 				}
 			},
 			"times": [
-				"87"
+				"36"
 			],
 			"allTests": [
 				{
@@ -334,8 +477,8 @@
 					"response has 0 objects": true
 				}
 			],
-			"time": "87",
-			"totalRequestTime": "87",
+			"time": "36",
+			"totalRequestTime": "36",
 			"iterationResults": {}
 		},
 		{
@@ -371,7 +514,7 @@
 				}
 			},
 			"times": [
-				"71"
+				"44"
 			],
 			"allTests": [
 				{
@@ -380,14 +523,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "71",
-			"totalRequestTime": "71",
+			"time": "44",
+			"totalRequestTime": "44",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -417,7 +560,7 @@
 				}
 			},
 			"times": [
-				"76"
+				"82"
 			],
 			"allTests": [
 				{
@@ -426,14 +569,14 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "76",
-			"totalRequestTime": "76",
+			"time": "82",
+			"totalRequestTime": "82",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -463,7 +606,7 @@
 				}
 			},
 			"times": [
-				"32"
+				"33"
 			],
 			"allTests": [
 				{
@@ -472,8 +615,8 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "32",
-			"totalRequestTime": "32",
+			"time": "33",
+			"totalRequestTime": "33",
 			"iterationResults": {}
 		},
 		{
@@ -514,7 +657,7 @@
 				}
 			},
 			"times": [
-				"37"
+				"40"
 			],
 			"allTests": [
 				{
@@ -524,14 +667,14 @@
 					"response has 1 element that matches test2 data": true
 				}
 			],
-			"time": "37",
-			"totalRequestTime": "37",
+			"time": "40",
+			"totalRequestTime": "40",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -561,7 +704,7 @@
 				}
 			},
 			"times": [
-				"78"
+				"59"
 			],
 			"allTests": [
 				{
@@ -570,14 +713,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "78",
-			"totalRequestTime": "78",
+			"time": "59",
+			"totalRequestTime": "59",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -607,7 +750,7 @@
 				}
 			},
 			"times": [
-				"76"
+				"79"
 			],
 			"allTests": [
 				{
@@ -616,8 +759,8 @@
 					"response matches test 6 data sent": true
 				}
 			],
-			"time": "76",
-			"totalRequestTime": "76",
+			"time": "79",
+			"totalRequestTime": "79",
 			"iterationResults": {}
 		},
 		{
@@ -653,7 +796,7 @@
 				}
 			},
 			"times": [
-				"28"
+				"26"
 			],
 			"allTests": [
 				{
@@ -662,8 +805,8 @@
 					"response has 0 objects": true
 				}
 			],
-			"time": "28",
-			"totalRequestTime": "28",
+			"time": "26",
+			"totalRequestTime": "26",
 			"iterationResults": {}
 		},
 		{
@@ -699,7 +842,7 @@
 				}
 			},
 			"times": [
-				"60"
+				"44"
 			],
 			"allTests": [
 				{
@@ -708,14 +851,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "60",
-			"totalRequestTime": "60",
+			"time": "44",
+			"totalRequestTime": "44",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -770,7 +913,7 @@
 				}
 			},
 			"times": [
-				"96"
+				"91"
 			],
 			"allTests": [
 				{
@@ -784,14 +927,14 @@
 					"response matches test9 url & id": true
 				}
 			],
-			"time": "96",
-			"totalRequestTime": "96",
+			"time": "91",
+			"totalRequestTime": "91",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -821,7 +964,7 @@
 				}
 			},
 			"times": [
-				"37"
+				"27"
 			],
 			"allTests": [
 				{
@@ -830,8 +973,8 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "37",
-			"totalRequestTime": "37",
+			"time": "27",
+			"totalRequestTime": "27",
 			"iterationResults": {}
 		},
 		{
@@ -872,7 +1015,7 @@
 				}
 			},
 			"times": [
-				"47"
+				"53"
 			],
 			"allTests": [
 				{
@@ -882,14 +1025,14 @@
 					"response has 1 element that matches test9 data": true
 				}
 			],
-			"time": "47",
-			"totalRequestTime": "47",
+			"time": "53",
+			"totalRequestTime": "53",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -919,7 +1062,7 @@
 				}
 			},
 			"times": [
-				"67"
+				"73"
 			],
 			"allTests": [
 				{
@@ -928,14 +1071,14 @@
 					"response matches updated values": true
 				}
 			],
-			"time": "67",
-			"totalRequestTime": "67",
+			"time": "73",
+			"totalRequestTime": "73",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -965,7 +1108,7 @@
 				}
 			},
 			"times": [
-				"82"
+				"81"
 			],
 			"allTests": [
 				{
@@ -974,14 +1117,14 @@
 					"response matches test 13 data sent": true
 				}
 			],
-			"time": "82",
-			"totalRequestTime": "82",
+			"time": "81",
+			"totalRequestTime": "81",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1011,7 +1154,7 @@
 				}
 			},
 			"times": [
-				"36"
+				"34"
 			],
 			"allTests": [
 				{
@@ -1020,14 +1163,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "36",
-			"totalRequestTime": "36",
+			"time": "34",
+			"totalRequestTime": "34",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1057,7 +1200,7 @@
 				}
 			},
 			"times": [
-				"40"
+				"44"
 			],
 			"allTests": [
 				{
@@ -1066,14 +1209,14 @@
 					"response matches test2/6 data sent": true
 				}
 			],
-			"time": "40",
-			"totalRequestTime": "40",
+			"time": "44",
+			"totalRequestTime": "44",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1093,21 +1236,21 @@
 				}
 			},
 			"times": [
-				"101"
+				"116"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "101",
-			"totalRequestTime": "101",
+			"time": "116",
+			"totalRequestTime": "116",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1137,7 +1280,7 @@
 				}
 			},
 			"times": [
-				"78"
+				"79"
 			],
 			"allTests": [
 				{
@@ -1146,14 +1289,14 @@
 					"response matches test16 data sent and at_sea false": true
 				}
 			],
-			"time": "78",
-			"totalRequestTime": "78",
+			"time": "79",
+			"totalRequestTime": "79",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1183,7 +1326,7 @@
 				}
 			},
 			"times": [
-				"78"
+				"77"
 			],
 			"allTests": [
 				{
@@ -1192,21 +1335,55 @@
 					"response matches test15 data sent but new boat": true
 				}
 			],
-			"time": "78",
-			"totalRequestTime": "78",
+			"time": "77",
+			"totalRequestTime": "77",
+			"iterationResults": {}
+		},
+		{
+			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
+			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw?departure=2/5/2016",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"response is 204": true
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"90"
+			],
+			"allTests": [
+				{
+					"response is 204": true
+				}
+			],
+			"time": "90",
+			"totalRequestTime": "90",
 			"iterationResults": {}
 		}
 	],
-	"totalPass": 67,
+	"totalPass": 82,
 	"totalFail": 0,
-	"totalTime": 1726,
+	"totalTime": 1906,
 	"lifecycle": "done",
 	"requests": [
 		{
 			"name": "CLEAN UP - Boats 1",
 			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
 			"url": "localhost:8080/boats/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "42",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1217,11 +1394,31 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 1,
+					"pass": 3,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CLEAN UP - Boats 2",
+			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgIDoCww",
+			"time": "60",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 2,
 					"fail": 0
 				}
 			}
@@ -1230,7 +1427,7 @@
 			"name": "CLEAN UP - Slips 1",
 			"id": "c1862c74-dd0d-f163-3792-1987b035a9b2",
 			"url": "localhost:8080/slips/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "45",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1241,15 +1438,35 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 1,
+					"pass": 3,
 					"fail": 0
 				},
 				"Conditional": {
-					"pass": 1,
+					"pass": 3,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "CLEAN UP - Slips 2",
+			"id": "92b72bbf-53ec-91c8-7956-feffedf85c55",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCAw",
+			"time": "51",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 2,
 					"fail": 0
 				}
 			}
@@ -1258,7 +1475,7 @@
 			"name": "TEST 1: GET /boats/",
 			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
 			"url": "localhost:8080/boats/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1286,7 +1503,7 @@
 			"name": "TEST 2: POST /boats/",
 			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
 			"url": "localhost:8080/boats",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -1313,8 +1530,8 @@
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1341,8 +1558,8 @@
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1370,7 +1587,7 @@
 			"name": "TEST 5: GET /boats/",
 			"id": "638243e8-97db-47a8-588e-b16b17662f10",
 			"url": "localhost:8080/boats/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1401,8 +1618,8 @@
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1429,8 +1646,8 @@
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1458,7 +1675,7 @@
 			"name": "TEST 8: GET /slips/",
 			"id": "1b0f49bc-3878-2160-eaa6-558dc7fae17b",
 			"url": "localhost:8080/slips/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1486,7 +1703,7 @@
 			"name": "TEST 9: POST /slips/",
 			"id": "0f50a39c-e3c1-6a6c-5865-e5f1e7d652c2",
 			"url": "localhost:8080/slips/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -1513,8 +1730,8 @@
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1561,8 +1778,8 @@
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1590,7 +1807,7 @@
 			"name": "TEST 12: GET /slips/",
 			"id": "85e0f58b-3a33-9597-830a-8c655e6dfda7",
 			"url": "localhost:8080/slips/",
-			"time": "2018-01-30T19:42:54.301Z",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1621,8 +1838,8 @@
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1649,8 +1866,8 @@
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1677,8 +1894,8 @@
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1705,8 +1922,8 @@
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1733,8 +1950,8 @@
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -1753,8 +1970,8 @@
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICACgw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1781,8 +1998,8 @@
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICACQw",
-			"time": "2018-01-30T19:42:54.301Z",
+			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw",
+			"time": "2018-01-31T00:44:46.443Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -1801,6 +2018,26 @@
 					"fail": 0
 				},
 				"response matches test15 data sent but new boat": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
+			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
+			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgICYCgw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgICYCQw?departure=2/5/2016",
+			"time": "2018-01-31T00:44:46.443Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 204": {
 					"pass": 1,
 					"fail": 0
 				}
