@@ -322,6 +322,8 @@ class DockingHandler(RequestHandler):
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
+            if (slip == None):
+                raise TypeError
         except:
             self.response.write("Invalid Slip ID");
             self.response.status_int = 400;

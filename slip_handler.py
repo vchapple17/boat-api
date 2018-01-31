@@ -215,6 +215,8 @@ class SlipHandler(RequestHandler):
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get();
+            if (slip == None):
+                raise TypeError
         except:
             self.response.write({"Error": "Error getting slip"});
             self.response.status_int = 404;
