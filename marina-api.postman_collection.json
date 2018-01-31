@@ -1896,6 +1896,66 @@
 						"description": "Verify Slip is Empty and Depature History is updated"
 					},
 					"response": []
+				},
+				{
+					"name": "TEST 22: GET /boats/{{test2id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response is at sea\", function () {",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"",
+									"    pm.environment.set(\"test24boat\", JSON.stringify(res));",
+									"    pm.environment.set(\"test24\", true);",
+									"});"
+								],
+								"id": "d835c158-687f-49df-a3a5-895b0a9e56d2",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "f6f611e5-875f-4b6e-838c-d13be0214f3b",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}"
+							]
+						},
+						"description": "Verify boat is at sea"
+					},
+					"response": []
 				}
 			]
 		},
@@ -1904,7 +1964,7 @@
 			"description": "",
 			"item": [
 				{
-					"name": "TEST 22: PUT /boats/{{test2id}}/slips/{{test9id}}",
+					"name": "TEST 23: PUT /boats/{{test2id}}/slips/{{test9id}}",
 					"event": [
 						{
 							"listen": "test",
@@ -1922,10 +1982,10 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "05a456c4-bac0-43a4-87a8-85048c0443cd",
+								"id": "6def7402-66b4-467e-8136-328b6ec6756c",
 								"type": "text/javascript",
 								"exec": [
-									"pm.environment.set(\"test17_arrival_date\", \"03/15/2016\");"
+									"pm.environment.set(\"test23_arrival_date\", \"03/15/2016\");"
 								]
 							}
 						}
@@ -1940,7 +2000,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"arrival_date\": \"{{test17_arrival_date}}\"\n}"
+							"raw": "{\n\t\"arrival_date\": \"{{test23_arrival_date}}\"\n}"
 						},
 						"url": {
 							"raw": "{{domain}}/boats/{{test2id}}/slips/{{test9id}}",
@@ -1959,7 +2019,7 @@
 					"response": []
 				},
 				{
-					"name": "TEST 23: GET /slips/{{test9id}}",
+					"name": "TEST 24: GET /slips/{{test9id}}",
 					"event": [
 						{
 							"listen": "test",
@@ -2035,7 +2095,7 @@
 					"response": []
 				},
 				{
-					"name": "TEST 24: GET /boats/{{test2id}}",
+					"name": "TEST 25: GET /boats/{{test2id}}",
 					"event": [
 						{
 							"listen": "test",
@@ -2095,7 +2155,7 @@
 					"response": []
 				},
 				{
-					"name": "TEST 25: DELETE /slips/{{test9id}}",
+					"name": "TEST 26: DELETE /slips/{{test9id}}",
 					"event": [
 						{
 							"listen": "test",
@@ -2133,7 +2193,7 @@
 					"response": []
 				},
 				{
-					"name": "TEST 23: GET /slips/{{test9id}}",
+					"name": "TEST 27: GET /slips/{{test9id}}",
 					"event": [
 						{
 							"listen": "test",
@@ -2183,7 +2243,7 @@
 					"response": []
 				},
 				{
-					"name": "TEST 24: GET /boats/{{test2id}} copy",
+					"name": "TEST 28: GET /boats/{{test2id}}",
 					"event": [
 						{
 							"listen": "test",
