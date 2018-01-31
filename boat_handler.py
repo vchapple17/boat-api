@@ -131,9 +131,9 @@ class BoatHandler(RequestHandler):
             if (boat == None):
                 raise TypeError("Boat is of type none")
         except:
-            self.response.write("Invalid Boat ID");
+            self.response.write(json.dumps({"error": "Invalid Boat ID"}));
             self.response.status_int = 404;
-
+            return;
         # Get json from Request Body
         try:
             req = self.request.body;
@@ -240,6 +240,7 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 404;
+            return
 
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
@@ -333,7 +334,6 @@ class DockingHandler(RequestHandler):
             datestring = str(dep_date_param);
             departure_date = datetime.strptime(datestring, "%m/%d/%Y").date();
         except:
-            self.response.write();
             self.response.write(json.dumps({"error": "Invalid `departure` parameter"}));
             self.response.status_int = 400;
 
