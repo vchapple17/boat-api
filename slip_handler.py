@@ -21,11 +21,8 @@ class SlipsHandler(RequestHandler):
                 "id": slip.key.urlsafe(),
                 "number": slip.number,
                 "current_boat": slip.current_boat,
-                "current_boat_url": slip.current_boat_url,
-                # "arrival_date": str(slip.arrival_date),
-                # "departure_history": slip.departure_history
+                "current_boat_url": slip.current_boat_url
             }
-            # print(slip.arrival_date)
             if (slip.arrival_date) == None:
                 obj["arrival_date"] = slip.arrival_date
             else:
@@ -42,19 +39,33 @@ class SlipsHandler(RequestHandler):
         try:
             req = self.request.body
             obj = json.loads(req)
-            number = obj['number'];
-            print("SlipsHandler: POST new slip #" + str(number));
-        except (TypeError, ValueError):
-            self.response.write("Invalid inputs");
+
+            saveObject = False;     # Update to True if new information given
+            for key in obj:
+                # Check that key is a valid input
+                if (key == "number"):
+                    number = int(obj["number"]);
+                    saveObject = True;
+                else:
+                    saveObject = False;
+                    # Invalid Information Given in json
+                    self.response.write(json.dumps({"error": "Invalid inputs"}));
+                    self.response.status_int = 400;
+                    return
+        except:
+            self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 400;
             return
 
         # Create Resource on datastore
+
         try:
+
             slip = Slip(number=number);
             slip.put()
+            print("here");
         except:
-            self.response.write("Error saving Slip");
+            self.response.write(json.dumps({"error": "Error saving Slip"}));
             self.response.status_int = 500;
             return
 
@@ -218,12 +229,9 @@ class SlipHandler(RequestHandler):
             if (slip == None):
                 raise TypeError
         except:
-            self.response.write({"Error": "Error getting slip"});
-            self.response.status_int = 404;
-            return
-        if (slip == None):
-            self.response.write({"Error": "Ship does not exist"});
-            self.response.status_int = 404;
+            # self.response.write({"Error": "Error getting slip"});
+            self.response.status_int = 204;
+            # self.response.status_int = 404;
             return
 
         # Release Boat if occupied
