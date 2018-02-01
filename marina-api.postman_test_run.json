@@ -1,14 +1,14 @@
 {
-	"id": "9a435fec-c1ab-4a20-91bb-4e7c9af2dd3a",
+	"id": "e89f2564-f630-422b-8e53-568c7cb5d35f",
 	"name": "marina-api",
 	"allTests": [],
-	"timestamp": "2018-02-01T21:49:31.930Z",
+	"timestamp": "2018-02-01T23:12:25.890Z",
 	"collection_id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
 	"folder_id": 0,
 	"target_type": "collection",
 	"environment_id": "b0060060-efe4-29f6-706c-ffce87bbb2f7",
 	"data": [],
-	"delay": "100",
+	"delay": "10",
 	"count": 1,
 	"collection": {
 		"id": "213bf9b8-8fcb-e0b4-c2db-b04a2dc52064",
@@ -53,8 +53,7 @@
 					"224efce3-4487-cdfb-0318-d3b482ce81c5",
 					"b3ea3daf-5d84-2660-15dc-3012bb7a8663",
 					"0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-					"c32c750c-91a0-0376-8aec-0d14b6b82677",
-					"a40f02b8-efb9-e815-a00a-864f72bfdacc"
+					"c32c750c-91a0-0376-8aec-0d14b6b82677"
 				],
 				"owner": "1242759",
 				"timestamp": null,
@@ -71,6 +70,7 @@
 				"id": "8a7c8e96-bae4-8e37-b328-fcae629ddf02",
 				"name": "Boat Departure 1",
 				"order": [
+					"a40f02b8-efb9-e815-a00a-864f72bfdacc",
 					"5a0e64e5-0ecc-02a8-cb60-f92f7717c1f0",
 					"30ed4fd5-a3af-f807-3a0b-97250108c482"
 				],
@@ -325,8 +325,9 @@
 					"bdac3bab-1a1a-0e99-d5bd-f170233da509",
 					"2b84eee2-37e4-8f7f-361f-7d6ae88f9529",
 					"f21c9e72-86d3-ce6c-160c-29ff13a5461e",
-					"e4d05a89-e035-cbe8-e8eb-9ae66784a1b3",
-					"7106013a-ae12-71ea-4cc5-e7a9c7f8eb06"
+					"9c150cfb-a6bf-7451-483d-a367b38f1d35",
+					"c832c88e-a7a9-aa4c-f0be-fd99227004fc",
+					"5c2d8364-4372-8cc0-9cfb-553987be9584"
 				],
 				"owner": "1242759",
 				"updatedAt": 1517433021359
@@ -560,7 +561,7 @@
 		"remoteLinkUpdatedAt": null,
 		"public": false,
 		"createdAt": 1517008090259,
-		"updatedAt": 1517519754046,
+		"updatedAt": "2018-02-01T23:07:22.683Z",
 		"write": true,
 		"published": false,
 		"favorite": false,
@@ -593,17 +594,27 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 2,
+					"pass": 12,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 2,
+					"pass": 12,
 					"fail": 0
 				}
 			},
 			"times": [
-				"196",
-				"33"
+				"205",
+				"69",
+				"65",
+				"107",
+				"65",
+				"67",
+				"75",
+				"69",
+				"125",
+				"58",
+				"57",
+				"52"
 			],
 			"allTests": [
 				{
@@ -614,16 +625,65 @@
 					"name": "response is ok",
 					"status": "pass",
 					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
+				},
+				{
+					"name": "response is ok",
+					"status": "pass",
+					"response has json body": true
 				}
 			],
-			"time": "33",
-			"totalRequestTime": "19633",
+			"time": "52",
+			"totalRequestTime": "205696510765677569125585752",
 			"iterationResults": {}
 		},
 		{
 			"name": "CLEAN UP - Boats 2",
 			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDyCww",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -634,24 +694,75 @@
 				}
 			},
 			"tests": {
-				"response is 204": true
+				"name": "response is 204",
+				"status": "pass"
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 1,
+					"pass": 11,
 					"fail": 0
 				}
 			},
 			"times": [
-				"46"
+				"342",
+				"194",
+				"208",
+				"223",
+				"131",
+				"152",
+				"223",
+				"218",
+				"213",
+				"227",
+				"151"
 			],
 			"allTests": [
 				{
 					"response is 204": true
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
+				},
+				{
+					"name": "response is 204",
+					"status": "pass"
 				}
 			],
-			"time": "46",
-			"totalRequestTime": "46",
+			"time": "151",
+			"totalRequestTime": "342194208223131152223218213227151",
 			"iterationResults": {}
 		},
 		{
@@ -674,57 +785,25 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				},
 				"Conditional": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				}
 			},
 			"times": [
-				"130",
-				"132",
-				"115",
-				"112",
-				"114",
-				"167",
-				"113",
-				"105",
-				"114",
-				"103",
-				"107",
-				"97",
-				"99",
-				"104",
-				"101",
-				"103",
-				"229",
-				"103",
-				"94",
-				"132",
-				"134",
-				"118",
-				"104",
-				"105",
-				"95",
-				"99",
-				"88",
-				"75",
-				"78",
-				"72",
-				"83",
-				"80",
-				"62",
-				"79",
-				"56",
-				"40",
-				"47",
-				"38"
+				"124",
+				"70",
+				"66",
+				"77",
+				"64",
+				"70"
 			],
 			"allTests": [
 				{
@@ -761,202 +840,10 @@
 					"status": "pass",
 					"response has json body": true,
 					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
-				},
-				{
-					"name": "response is ok",
-					"status": "pass",
-					"response has json body": true,
-					"Conditional": true
 				}
 			],
-			"time": "38",
-			"totalRequestTime": "1301321151121141671131051141031079799104101103229103941321341181041059599887578728380627956404738",
+			"time": "70",
+			"totalRequestTime": "1247066776470",
 			"iterationResults": {}
 		},
 		{
@@ -977,48 +864,16 @@
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 37,
+					"pass": 5,
 					"fail": 0
 				}
 			},
 			"times": [
-				"78",
-				"73",
-				"36",
-				"68",
-				"94",
-				"86",
-				"75",
-				"73",
-				"34",
-				"35",
-				"66",
-				"80",
-				"98",
-				"77",
-				"41",
-				"38",
-				"83",
-				"79",
-				"38",
-				"87",
-				"47",
-				"43",
-				"95",
-				"85",
-				"130",
-				"55",
-				"78",
-				"87",
-				"67",
-				"61",
-				"111",
-				"84",
-				"89",
-				"90",
-				"49",
-				"48",
-				"83"
+				"158",
+				"140",
+				"132",
+				"127",
+				"172"
 			],
 			"allTests": [
 				{
@@ -1039,144 +894,16 @@
 				{
 					"name": "response is 204",
 					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
-				},
-				{
-					"name": "response is 204",
-					"status": "pass"
 				}
 			],
-			"time": "83",
-			"totalRequestTime": "7873366894867573343566809877413883793887474395851305578876761111848990494883",
+			"time": "172",
+			"totalRequestTime": "158140132127172",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 1: GET /boats/",
 			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1206,7 +933,7 @@
 				}
 			},
 			"times": [
-				"37"
+				"59"
 			],
 			"allTests": [
 				{
@@ -1215,14 +942,14 @@
 					"response has 0 objects": true
 				}
 			],
-			"time": "37",
-			"totalRequestTime": "37",
+			"time": "59",
+			"totalRequestTime": "59",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 2: POST /boats/",
 			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
-			"url": "localhost:8080/boats",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 201,
@@ -1252,7 +979,7 @@
 				}
 			},
 			"times": [
-				"48"
+				"189"
 			],
 			"allTests": [
 				{
@@ -1261,14 +988,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "48",
-			"totalRequestTime": "48",
+			"time": "189",
+			"totalRequestTime": "189",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1298,7 +1025,7 @@
 				}
 			},
 			"times": [
-				"88"
+				"65"
 			],
 			"allTests": [
 				{
@@ -1307,14 +1034,14 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "88",
-			"totalRequestTime": "88",
+			"time": "65",
+			"totalRequestTime": "65",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1344,7 +1071,7 @@
 				}
 			},
 			"times": [
-				"31"
+				"48"
 			],
 			"allTests": [
 				{
@@ -1353,14 +1080,14 @@
 					"response matches test2 data sent": true
 				}
 			],
-			"time": "31",
-			"totalRequestTime": "31",
+			"time": "48",
+			"totalRequestTime": "48",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 5: GET /boats/",
 			"id": "638243e8-97db-47a8-588e-b16b17662f10",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1395,7 +1122,7 @@
 				}
 			},
 			"times": [
-				"32"
+				"71"
 			],
 			"allTests": [
 				{
@@ -1405,14 +1132,14 @@
 					"response has 1 element that matches test2 data": true
 				}
 			],
-			"time": "32",
-			"totalRequestTime": "32",
+			"time": "71",
+			"totalRequestTime": "71",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1442,7 +1169,7 @@
 				}
 			},
 			"times": [
-				"58"
+				"120"
 			],
 			"allTests": [
 				{
@@ -1451,14 +1178,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "58",
-			"totalRequestTime": "58",
+			"time": "120",
+			"totalRequestTime": "120",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1488,7 +1215,7 @@
 				}
 			},
 			"times": [
-				"88"
+				"64"
 			],
 			"allTests": [
 				{
@@ -1497,14 +1224,14 @@
 					"response matches test 6 data sent": true
 				}
 			],
-			"time": "88",
-			"totalRequestTime": "88",
+			"time": "64",
+			"totalRequestTime": "64",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 8: GET /slips/",
 			"id": "1b0f49bc-3878-2160-eaa6-558dc7fae17b",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1550,7 +1277,7 @@
 		{
 			"name": "TEST 9: POST /slips/",
 			"id": "0f50a39c-e3c1-6a6c-5865-e5f1e7d652c2",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 201,
@@ -1580,7 +1307,7 @@
 				}
 			},
 			"times": [
-				"44"
+				"167"
 			],
 			"allTests": [
 				{
@@ -1589,14 +1316,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "44",
-			"totalRequestTime": "44",
+			"time": "167",
+			"totalRequestTime": "167",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1651,7 +1378,7 @@
 				}
 			},
 			"times": [
-				"74"
+				"142"
 			],
 			"allTests": [
 				{
@@ -1665,14 +1392,14 @@
 					"response matches test9 url & id": true
 				}
 			],
-			"time": "74",
-			"totalRequestTime": "74",
+			"time": "142",
+			"totalRequestTime": "142",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1702,7 +1429,7 @@
 				}
 			},
 			"times": [
-				"43"
+				"50"
 			],
 			"allTests": [
 				{
@@ -1711,14 +1438,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "43",
-			"totalRequestTime": "43",
+			"time": "50",
+			"totalRequestTime": "50",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 12: GET /slips/",
 			"id": "85e0f58b-3a33-9597-830a-8c655e6dfda7",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1753,7 +1480,7 @@
 				}
 			},
 			"times": [
-				"42"
+				"62"
 			],
 			"allTests": [
 				{
@@ -1763,14 +1490,14 @@
 					"response has 1 element that matches test9 data": true
 				}
 			],
-			"time": "42",
-			"totalRequestTime": "42",
+			"time": "62",
+			"totalRequestTime": "62",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1800,7 +1527,7 @@
 				}
 			},
 			"times": [
-				"50"
+				"196"
 			],
 			"allTests": [
 				{
@@ -1809,14 +1536,14 @@
 					"response matches updated values": true
 				}
 			],
-			"time": "50",
-			"totalRequestTime": "50",
+			"time": "196",
+			"totalRequestTime": "196",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1846,7 +1573,7 @@
 				}
 			},
 			"times": [
-				"75"
+				"65"
 			],
 			"allTests": [
 				{
@@ -1855,14 +1582,14 @@
 					"response matches test 13 data sent": true
 				}
 			],
-			"time": "75",
-			"totalRequestTime": "75",
+			"time": "65",
+			"totalRequestTime": "65",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1892,7 +1619,7 @@
 				}
 			},
 			"times": [
-				"77"
+				"53"
 			],
 			"allTests": [
 				{
@@ -1901,14 +1628,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "77",
-			"totalRequestTime": "77",
+			"time": "53",
+			"totalRequestTime": "53",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -1938,7 +1665,7 @@
 				}
 			},
 			"times": [
-				"64"
+				"53"
 			],
 			"allTests": [
 				{
@@ -1947,14 +1674,14 @@
 					"response matches test2/6 data sent": true
 				}
 			],
-			"time": "64",
-			"totalRequestTime": "64",
+			"time": "53",
+			"totalRequestTime": "53",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -1974,21 +1701,21 @@
 				}
 			},
 			"times": [
-				"153"
+				"217"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "153",
-			"totalRequestTime": "153",
+			"time": "217",
+			"totalRequestTime": "217",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2018,7 +1745,7 @@
 				}
 			},
 			"times": [
-				"88"
+				"86"
 			],
 			"allTests": [
 				{
@@ -2027,14 +1754,14 @@
 					"response matches test16 data sent and at_sea false": true
 				}
 			],
-			"time": "88",
-			"totalRequestTime": "88",
+			"time": "86",
+			"totalRequestTime": "86",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2064,7 +1791,7 @@
 				}
 			},
 			"times": [
-				"71"
+				"114"
 			],
 			"allTests": [
 				{
@@ -2073,14 +1800,14 @@
 					"response matches test15 data sent but new boat": true
 				}
 			],
-			"time": "71",
-			"totalRequestTime": "71",
+			"time": "114",
+			"totalRequestTime": "114",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw?departure=2/5/2016",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM?departure=2/5/2016",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -2100,21 +1827,21 @@
 				}
 			},
 			"times": [
-				"108"
+				"166"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "108",
-			"totalRequestTime": "108",
+			"time": "166",
+			"totalRequestTime": "166",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 21: GET /slips/{{test9id}}",
 			"id": "5a0e64e5-0ecc-02a8-cb60-f92f7717c1f0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2169,7 +1896,7 @@
 				}
 			},
 			"times": [
-				"90"
+				"73"
 			],
 			"allTests": [
 				{
@@ -2183,14 +1910,14 @@
 					"response matches test9 url & id": true
 				}
 			],
-			"time": "90",
-			"totalRequestTime": "90",
+			"time": "73",
+			"totalRequestTime": "73",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 22: GET /boats/{{test2id}}",
 			"id": "30ed4fd5-a3af-f807-3a0b-97250108c482",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2220,7 +1947,7 @@
 				}
 			},
 			"times": [
-				"81"
+				"67"
 			],
 			"allTests": [
 				{
@@ -2229,14 +1956,14 @@
 					"response is at sea": true
 				}
 			],
-			"time": "81",
-			"totalRequestTime": "81",
+			"time": "67",
+			"totalRequestTime": "67",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 23: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a8aaa458-4f18-d7c4-b460-9fa88cfdd5bf",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -2256,21 +1983,21 @@
 				}
 			},
 			"times": [
-				"109"
+				"184"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "109",
-			"totalRequestTime": "109",
+			"time": "184",
+			"totalRequestTime": "184",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 24: GET /slips/{{test9id}}",
 			"id": "e66406c4-97a4-66aa-0551-0f3a00ed19e1",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2300,7 +2027,7 @@
 				}
 			},
 			"times": [
-				"90"
+				"158"
 			],
 			"allTests": [
 				{
@@ -2309,14 +2036,14 @@
 					"response matches test9 data sent": true
 				}
 			],
-			"time": "90",
-			"totalRequestTime": "90",
+			"time": "158",
+			"totalRequestTime": "158",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 25: GET /boats/{{test2id}}",
 			"id": "4956e253-33af-68a9-9f57-ed9522b2d7d5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2346,7 +2073,7 @@
 				}
 			},
 			"times": [
-				"128"
+				"83"
 			],
 			"allTests": [
 				{
@@ -2355,14 +2082,14 @@
 					"response is not at sea": true
 				}
 			],
-			"time": "128",
-			"totalRequestTime": "128",
+			"time": "83",
+			"totalRequestTime": "83",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 26: DELETE /slips/{{test9id}}",
 			"id": "880c6673-2af3-e350-a8de-55c3944297c1",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -2382,21 +2109,21 @@
 				}
 			},
 			"times": [
-				"79"
+				"259"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "79",
-			"totalRequestTime": "79",
+			"time": "259",
+			"totalRequestTime": "259",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 27: GET /slips/{{test9id}}",
 			"id": "005a3f63-35a3-3f2f-d55d-822cf1df6741",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -2421,7 +2148,7 @@
 				}
 			},
 			"times": [
-				"32"
+				"62"
 			],
 			"allTests": [
 				{
@@ -2429,14 +2156,14 @@
 					"response has error": true
 				}
 			],
-			"time": "32",
-			"totalRequestTime": "32",
+			"time": "62",
+			"totalRequestTime": "62",
 			"iterationResults": {}
 		},
 		{
 			"name": "TEST 28: GET /boats/{{test2id}}",
 			"id": "f48a5e5b-b76c-e19f-1be9-035eaaba0dd4",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2466,7 +2193,7 @@
 				}
 			},
 			"times": [
-				"139"
+				"114"
 			],
 			"allTests": [
 				{
@@ -2475,14 +2202,14 @@
 					"response is at sea": true
 				}
 			],
-			"time": "139",
-			"totalRequestTime": "139",
+			"time": "114",
+			"totalRequestTime": "114",
 			"iterationResults": {}
 		},
 		{
 			"name": "POST /boats/",
 			"id": "6fcf67b5-c378-5f9b-05d8-463cb4ce3b65",
-			"url": "localhost:8080/boats",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 201,
@@ -2512,7 +2239,7 @@
 				}
 			},
 			"times": [
-				"49"
+				"158"
 			],
 			"allTests": [
 				{
@@ -2521,14 +2248,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "49",
-			"totalRequestTime": "49",
+			"time": "158",
+			"totalRequestTime": "158",
 			"iterationResults": {}
 		},
 		{
 			"name": "POST /slips/",
 			"id": "58f6493a-f083-4208-ce28-640dde44c0da",
-			"url": "localhost:8080/slips",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 201,
@@ -2558,7 +2285,7 @@
 				}
 			},
 			"times": [
-				"38"
+				"228"
 			],
 			"allTests": [
 				{
@@ -2567,14 +2294,14 @@
 					"response matches request": true
 				}
 			],
-			"time": "38",
-			"totalRequestTime": "38",
+			"time": "228",
+			"totalRequestTime": "228",
 			"iterationResults": {}
 		},
 		{
 			"name": "DOCK BOAT PUT /boats/{{boat_id}}/slips/{{slip_id}}",
 			"id": "7890bba2-0f45-f8af-cbc9-d77b77793c8d",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -2594,21 +2321,21 @@
 				}
 			},
 			"times": [
-				"155"
+				"225"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "155",
-			"totalRequestTime": "155",
+			"time": "225",
+			"totalRequestTime": "225",
 			"iterationResults": {}
 		},
 		{
 			"name": "BOAT IS DOCKED GET /boats/{{boat_id}}",
 			"id": "f39e0551-5640-8e58-b103-c8494391bab2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2638,7 +2365,7 @@
 				}
 			},
 			"times": [
-				"66"
+				"127"
 			],
 			"allTests": [
 				{
@@ -2647,14 +2374,14 @@
 					"response matches test16 data sent and at_sea false": true
 				}
 			],
-			"time": "66",
-			"totalRequestTime": "66",
+			"time": "127",
+			"totalRequestTime": "127",
 			"iterationResults": {}
 		},
 		{
 			"name": "SLIP OCCUPIED GET /slips/{{slip_id}}",
 			"id": "05efc9cb-bc4e-414e-11b5-75bcb369329c",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2684,7 +2411,7 @@
 				}
 			},
 			"times": [
-				"79"
+				"151"
 			],
 			"allTests": [
 				{
@@ -2693,14 +2420,14 @@
 					"response matches": true
 				}
 			],
-			"time": "79",
-			"totalRequestTime": "79",
+			"time": "151",
+			"totalRequestTime": "151",
 			"iterationResults": {}
 		},
 		{
 			"name": "DELETE BOAT - DELETE /boats/{id}",
 			"id": "ba74596c-43ea-e5d8-0c45-0e1b00aee1a2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 204,
@@ -2720,21 +2447,21 @@
 				}
 			},
 			"times": [
-				"112"
+				"351"
 			],
 			"allTests": [
 				{
 					"response is 204": true
 				}
 			],
-			"time": "112",
-			"totalRequestTime": "112",
+			"time": "351",
+			"totalRequestTime": "351",
 			"iterationResults": {}
 		},
 		{
 			"name": "BOAT IS DELETED (404) GET /boats/{{boat_id}}",
 			"id": "75a5a349-3376-4763-1f9f-391661bc4916",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -2759,7 +2486,7 @@
 				}
 			},
 			"times": [
-				"36"
+				"58"
 			],
 			"allTests": [
 				{
@@ -2767,14 +2494,14 @@
 					"response has error": true
 				}
 			],
-			"time": "36",
-			"totalRequestTime": "36",
+			"time": "58",
+			"totalRequestTime": "58",
 			"iterationResults": {}
 		},
 		{
 			"name": "SLIP EMPTY GET /slips/{{slip_id}}",
 			"id": "ccb16d45-b9c2-8d6e-87ee-38fb59000cbd",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -2787,7 +2514,7 @@
 			"tests": {
 				"response is ok": true,
 				"response has body": true,
-				"response matches test9 data sent": true
+				"response matches": true
 			},
 			"testPassFailCounts": {
 				"response is ok": {
@@ -2798,603 +2525,7 @@
 					"pass": 1,
 					"fail": 0
 				},
-				"response matches test9 data sent": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"114"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches test9 data sent": true
-				}
-			],
-			"time": "114",
-			"totalRequestTime": "114",
-			"iterationResults": {}
-		},
-		{
-			"name": "/slips/",
-			"id": "bf0738ab-78d7-1ecf-8e2c-e7fd2f9d8361",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"76"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "76",
-			"totalRequestTime": "76",
-			"iterationResults": {}
-		},
-		{
-			"name": "/boats/",
-			"id": "799c9c3d-0ba9-8dc1-0002-4ae7cb2adcc3",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"66"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "66",
-			"totalRequestTime": "66",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Extra Info - POST /boats/",
-			"id": "48eb54ae-2f37-a672-827d-4a19fa86148a",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"49"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "49",
-			"totalRequestTime": "49",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/ ",
-			"id": "1b39ad28-302e-1fda-9a3a-ad7e4788f21f",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"95"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "95",
-			"totalRequestTime": "95",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Extra Info - POST /slips/",
-			"id": "242117f3-e072-1ad9-eeb6-e6bbee009564",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"49"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "49",
-			"totalRequestTime": "49",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /slips/",
-			"id": "3f82d081-8600-cb8f-1c11-a60ff7953f8d",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"41"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "41",
-			"totalRequestTime": "41",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Invalid Datatype - POST /boats/",
-			"id": "7cb2638d-1011-5f26-2220-d55cdf64642a",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"19"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "19",
-			"totalRequestTime": "19",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"38"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "38",
-			"totalRequestTime": "38",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Invalid Data - POST /slips/",
-			"id": "291f9012-9c21-2a6c-e728-6820cd8a4e43",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"40"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "40",
-			"totalRequestTime": "40",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /slips/",
-			"id": "6586f52e-0ca8-42be-49b8-432183f2de64",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"35"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "35",
-			"totalRequestTime": "35",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Too Little 1 - POST /boats/",
-			"id": "cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"22"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "22",
-			"totalRequestTime": "22",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "10e67dac-fa94-69da-8492-15366fe0a788",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"47"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "47",
-			"totalRequestTime": "47",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Too Little 2 - POST /boats/",
-			"id": "79eb9bdd-e846-8c59-3011-1958535b0486",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"35"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "35",
-			"totalRequestTime": "35",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "11d95291-802a-7e84-a762-0933a852e676",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
+				"response matches": {
 					"pass": 1,
 					"fail": 0
 				}
@@ -3406,7 +2537,7 @@
 				{
 					"response is ok": true,
 					"response has body": true,
-					"response matches pre exactly": true
+					"response matches": true
 				}
 			],
 			"time": "65",
@@ -3414,49 +2545,9 @@
 			"iterationResults": {}
 		},
 		{
-			"name": "400 - Too Little 3 - POST /boats/",
-			"id": "2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400 Created": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"16"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "16",
-			"totalRequestTime": "16",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "b334c6dc-9a92-155b-0639-917e68a968ea",
-			"url": "localhost:8080/boats/",
+			"name": "/slips/",
+			"id": "bf0738ab-78d7-1ecf-8e2c-e7fd2f9d8361",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3468,8 +2559,7 @@
 			},
 			"tests": {
 				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
+				"response has body": true
 			},
 			"testPassFailCounts": {
 				"response is ok": {
@@ -3479,30 +2569,65 @@
 				"response has body": {
 					"pass": 1,
 					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
 				}
 			},
 			"times": [
-				"51"
+				"65"
 			],
 			"allTests": [
 				{
 					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
+					"response has body": true
 				}
 			],
-			"time": "51",
-			"totalRequestTime": "51",
+			"time": "65",
+			"totalRequestTime": "65",
 			"iterationResults": {}
 		},
 		{
-			"name": "400 - Too Little - POST /slips/",
-			"id": "af12af81-d7ec-99bf-53d5-29e559d7cfe7",
-			"url": "localhost:8080/slips/",
+			"name": "/boats/",
+			"id": "799c9c3d-0ba9-8dc1-0002-4ae7cb2adcc3",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"61"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "61",
+			"totalRequestTime": "61",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Extra Info - POST /boats/",
+			"id": "48eb54ae-2f37-a672-827d-4a19fa86148a",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -3522,51 +2647,6 @@
 					"fail": 0
 				},
 				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"42"
-			],
-			"allTests": [
-				{
-					"response is 400 Created": true,
-					"response has error": true
-				}
-			],
-			"time": "42",
-			"totalRequestTime": "42",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /slips/",
-			"id": "9ac03fed-6b33-8e35-9eda-9ba3df3e770d",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
 					"pass": 1,
 					"fail": 0
 				}
@@ -3576,9 +2656,8 @@
 			],
 			"allTests": [
 				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
+					"response is 400 Created": true,
+					"response has error": true
 				}
 			],
 			"time": "46",
@@ -3586,9 +2665,657 @@
 			"iterationResults": {}
 		},
 		{
+			"name": "Verify /boats/ ",
+			"id": "1b39ad28-302e-1fda-9a3a-ad7e4788f21f",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"55"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "55",
+			"totalRequestTime": "55",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Extra Info - POST /slips/",
+			"id": "242117f3-e072-1ad9-eeb6-e6bbee009564",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"47"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "47",
+			"totalRequestTime": "47",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "3f82d081-8600-cb8f-1c11-a60ff7953f8d",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"55"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "55",
+			"totalRequestTime": "55",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Datatype - POST /boats/",
+			"id": "7cb2638d-1011-5f26-2220-d55cdf64642a",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"46"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "46",
+			"totalRequestTime": "46",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"117"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "117",
+			"totalRequestTime": "117",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Data - POST /slips/",
+			"id": "291f9012-9c21-2a6c-e728-6820cd8a4e43",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"46"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "46",
+			"totalRequestTime": "46",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "6586f52e-0ca8-42be-49b8-432183f2de64",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"57"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "57",
+			"totalRequestTime": "57",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 1 - POST /boats/",
+			"id": "cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"46"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "46",
+			"totalRequestTime": "46",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "10e67dac-fa94-69da-8492-15366fe0a788",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"58"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "58",
+			"totalRequestTime": "58",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 2 - POST /boats/",
+			"id": "79eb9bdd-e846-8c59-3011-1958535b0486",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"50"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "50",
+			"totalRequestTime": "50",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "11d95291-802a-7e84-a762-0933a852e676",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"54"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "54",
+			"totalRequestTime": "54",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little 3 - POST /boats/",
+			"id": "2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"112"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "112",
+			"totalRequestTime": "112",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "b334c6dc-9a92-155b-0639-917e68a968ea",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"142"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "142",
+			"totalRequestTime": "142",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Too Little - POST /slips/",
+			"id": "af12af81-d7ec-99bf-53d5-29e559d7cfe7",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400 Created": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"49"
+			],
+			"allTests": [
+				{
+					"response is 400 Created": true,
+					"response has error": true
+				}
+			],
+			"time": "49",
+			"totalRequestTime": "49",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "9ac03fed-6b33-8e35-9eda-9ba3df3e770d",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"57"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "57",
+			"totalRequestTime": "57",
+			"iterationResults": {}
+		},
+		{
 			"name": "/slips/",
 			"id": "3e0cabbc-97da-a5e2-9040-cea9765a7be6",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3613,7 +3340,7 @@
 				}
 			},
 			"times": [
-				"41"
+				"55"
 			],
 			"allTests": [
 				{
@@ -3621,14 +3348,14 @@
 					"response has body": true
 				}
 			],
-			"time": "41",
-			"totalRequestTime": "41",
+			"time": "55",
+			"totalRequestTime": "55",
 			"iterationResults": {}
 		},
 		{
 			"name": "/boats/",
 			"id": "ee606220-9492-f505-9bb7-a3a4ebf16de0",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3653,7 +3380,7 @@
 				}
 			},
 			"times": [
-				"31"
+				"57"
 			],
 			"allTests": [
 				{
@@ -3661,14 +3388,14 @@
 					"response has body": true
 				}
 			],
-			"time": "31",
-			"totalRequestTime": "31",
+			"time": "57",
+			"totalRequestTime": "57",
 			"iterationResults": {}
 		},
 		{
 			"name": "404 /boats/{{fake_id}}",
 			"id": "784cb22c-9f2a-b0f2-458d-593d333b1e4a",
-			"url": "localhost:8080/boats/asdf1234",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -3693,7 +3420,7 @@
 				}
 			},
 			"times": [
-				"18"
+				"194"
 			],
 			"allTests": [
 				{
@@ -3701,14 +3428,14 @@
 					"response has error": true
 				}
 			],
-			"time": "18",
-			"totalRequestTime": "18",
+			"time": "194",
+			"totalRequestTime": "194",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /boats/",
 			"id": "3ef77eb5-e79b-d713-8510-063f5452d4c6",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3738,7 +3465,7 @@
 				}
 			},
 			"times": [
-				"44"
+				"54"
 			],
 			"allTests": [
 				{
@@ -3747,14 +3474,14 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "44",
-			"totalRequestTime": "44",
+			"time": "54",
+			"totalRequestTime": "54",
 			"iterationResults": {}
 		},
 		{
 			"name": "404 /slips/{{fake_id}}",
 			"id": "59fbe851-2e79-2eb9-59f3-5fe2570a8e7f",
-			"url": "localhost:8080/slips/asdf1234",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/asdf1234",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -3779,7 +3506,7 @@
 				}
 			},
 			"times": [
-				"92"
+				"48"
 			],
 			"allTests": [
 				{
@@ -3787,14 +3514,14 @@
 					"response has error": true
 				}
 			],
-			"time": "92",
-			"totalRequestTime": "92",
+			"time": "48",
+			"totalRequestTime": "48",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /slips/",
 			"id": "230a57f3-e0db-d13e-9ae7-6ed2ff4c335c",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3824,7 +3551,7 @@
 				}
 			},
 			"times": [
-				"42"
+				"67"
 			],
 			"allTests": [
 				{
@@ -3833,14 +3560,14 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "42",
-			"totalRequestTime": "42",
+			"time": "67",
+			"totalRequestTime": "67",
 			"iterationResults": {}
 		},
 		{
 			"name": "/boats/",
 			"id": "7ce51c42-3d31-85e0-e5b5-59b2dcf4be53",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3880,7 +3607,7 @@
 		{
 			"name": "/slips/",
 			"id": "dc761673-648f-bf3a-3635-49f06c7538c4",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -3905,7 +3632,7 @@
 				}
 			},
 			"times": [
-				"113"
+				"64"
 			],
 			"allTests": [
 				{
@@ -3913,14 +3640,14 @@
 					"response has body": true
 				}
 			],
-			"time": "113",
-			"totalRequestTime": "113",
+			"time": "64",
+			"totalRequestTime": "64",
 			"iterationResults": {}
 		},
 		{
 			"name": "404 /boats/{fake_id}",
 			"id": "2b88311a-c5ff-cbbb-3d00-3a650e6521b0",
-			"url": "localhost:8080/boats/asdf1234",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -3945,7 +3672,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"50"
 			],
 			"allTests": [
 				{
@@ -3953,14 +3680,14 @@
 					"response has error": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "50",
+			"totalRequestTime": "50",
 			"iterationResults": {}
 		},
 		{
 			"name": "404 /slips/{fake_id}",
 			"id": "c2f7446f-6d6d-1178-b7df-94ced31f5733",
-			"url": "localhost:8080/slips/asdf1234",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/asdf1234",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 404,
@@ -3980,521 +3707,6 @@
 					"fail": 0
 				},
 				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"17"
-			],
-			"allTests": [
-				{
-					"response is 404 Not Found": true,
-					"response has error": true
-				}
-			],
-			"time": "17",
-			"totalRequestTime": "17",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "fdfa7793-2127-ef7d-3028-aaae98af7856",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"39"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "39",
-			"totalRequestTime": "39",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /slips/",
-			"id": "d10748ff-8105-071c-abb5-30bbbec709bc",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"28"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "28",
-			"totalRequestTime": "28",
-			"iterationResults": {}
-		},
-		{
-			"name": "POST /boats/",
-			"id": "449e63e6-d97d-5106-0587-b7ca93b4b887",
-			"url": "localhost:8080/boats",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 201,
-				"name": "Created",
-				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
-				}
-			},
-			"tests": {
-				"response is 201 Created": true,
-				"response has body": true,
-				"response matches request": true
-			},
-			"testPassFailCounts": {
-				"response is 201 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"111"
-			],
-			"allTests": [
-				{
-					"response is 201 Created": true,
-					"response has body": true,
-					"response matches request": true
-				}
-			],
-			"time": "111",
-			"totalRequestTime": "111",
-			"iterationResults": {}
-		},
-		{
-			"name": "POST /slips/",
-			"id": "e0020c68-d9c8-be7c-8bc3-ba665dbc3d52",
-			"url": "localhost:8080/slips",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 201,
-				"name": "Created",
-				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
-				}
-			},
-			"tests": {
-				"response is 201 Created": true,
-				"response has body": true,
-				"response matches request": true
-			},
-			"testPassFailCounts": {
-				"response is 201 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"35"
-			],
-			"allTests": [
-				{
-					"response is 201 Created": true,
-					"response has body": true,
-					"response matches request": true
-				}
-			],
-			"time": "35",
-			"totalRequestTime": "35",
-			"iterationResults": {}
-		},
-		{
-			"name": "/slips/",
-			"id": "63207568-8aa6-a081-88a5-7a8b4b2c5fb3",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"38"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "38",
-			"totalRequestTime": "38",
-			"iterationResults": {}
-		},
-		{
-			"name": "/boats/",
-			"id": "556b949b-2ec2-73a0-c879-aeb34646fad2",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"44"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "44",
-			"totalRequestTime": "44",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 EXTRA INFO  /boats/{boat_id}",
-			"id": "44cc6da5-e4c6-6a9a-963c-a6ae835dadfe",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCAw",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"110"
-			],
-			"allTests": [
-				{
-					"response is 400": true,
-					"response has error": true
-				}
-			],
-			"time": "110",
-			"totalRequestTime": "110",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 EXTRA INFO  /slips/{slip_id}",
-			"id": "0cdc704a-51c0-c7dc-fa37-af168b756d8d",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCgw",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"97"
-			],
-			"allTests": [
-				{
-					"response is 400": true,
-					"response has error": true
-				}
-			],
-			"time": "97",
-			"totalRequestTime": "97",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Invalid Data - PATCH /boats/{{boat_id}}",
-			"id": "2f2d0eec-fec0-919c-463e-9ba77b558ee2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCAw",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"21"
-			],
-			"allTests": [
-				{
-					"response is 400": true,
-					"response has error": true
-				}
-			],
-			"time": "21",
-			"totalRequestTime": "21",
-			"iterationResults": {}
-		},
-		{
-			"name": "400 - Invalid Data - PATCH /slips/{{slip_id}}",
-			"id": "b54001cb-492d-1a3d-51b9-ca7d7f110d33",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCgw",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 400,
-				"name": "Bad Request",
-				"detail": {
-					"name": "Bad Request",
-					"detail": "The request cannot be fulfilled due to bad syntax."
-				}
-			},
-			"tests": {
-				"response is 400": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 400": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"25"
-			],
-			"allTests": [
-				{
-					"response is 400": true,
-					"response has error": true
-				}
-			],
-			"time": "25",
-			"totalRequestTime": "25",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/",
-			"id": "eabd2c64-09b8-bccf-96f9-edc2293969d2",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"69"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
-				}
-			],
-			"time": "69",
-			"totalRequestTime": "69",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /slips/",
-			"id": "3310d785-245f-011e-6040-bef0b42694f8",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true,
-				"response matches pre exactly": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches pre exactly": {
 					"pass": 1,
 					"fail": 0
 				}
@@ -4504,9 +3716,8 @@
 			],
 			"allTests": [
 				{
-					"response is ok": true,
-					"response has body": true,
-					"response matches pre exactly": true
+					"response is 404 Not Found": true,
+					"response has error": true
 				}
 			],
 			"time": "48",
@@ -4514,261 +3725,9 @@
 			"iterationResults": {}
 		},
 		{
-			"name": "POST /boats/",
-			"id": "3a1f45ea-647b-1f06-8e72-dabe3d2293af",
-			"url": "localhost:8080/boats",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 201,
-				"name": "Created",
-				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
-				}
-			},
-			"tests": {
-				"response is 201 Created": true,
-				"response has body": true,
-				"response matches request": true
-			},
-			"testPassFailCounts": {
-				"response is 201 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"43"
-			],
-			"allTests": [
-				{
-					"response is 201 Created": true,
-					"response has body": true,
-					"response matches request": true
-				}
-			],
-			"time": "43",
-			"totalRequestTime": "43",
-			"iterationResults": {}
-		},
-		{
-			"name": "POST /slips/",
-			"id": "b9f67017-4c97-d056-e301-c6ad11983f2d",
-			"url": "localhost:8080/slips",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 201,
-				"name": "Created",
-				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
-				}
-			},
-			"tests": {
-				"response is 201 Created": true,
-				"response has body": true,
-				"response matches request": true
-			},
-			"testPassFailCounts": {
-				"response is 201 Created": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"43"
-			],
-			"allTests": [
-				{
-					"response is 201 Created": true,
-					"response has body": true,
-					"response matches request": true
-				}
-			],
-			"time": "43",
-			"totalRequestTime": "43",
-			"iterationResults": {}
-		},
-		{
-			"name": "/slips/",
-			"id": "efd4d200-3bd7-d8be-75be-452bfb559b26",
-			"url": "localhost:8080/slips/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"40"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "40",
-			"totalRequestTime": "40",
-			"iterationResults": {}
-		},
-		{
-			"name": "/boats/",
-			"id": "e1145046-d788-7e25-fb1e-871455fdba93",
-			"url": "localhost:8080/boats/",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 200,
-				"name": "OK",
-				"detail": {
-					"name": "OK",
-					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
-				}
-			},
-			"tests": {
-				"response is ok": true,
-				"response has body": true
-			},
-			"testPassFailCounts": {
-				"response is ok": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"37"
-			],
-			"allTests": [
-				{
-					"response is ok": true,
-					"response has body": true
-				}
-			],
-			"time": "37",
-			"totalRequestTime": "37",
-			"iterationResults": {}
-		},
-		{
-			"name": "404 /boats/{{fake_id}}/slips/{{slip_id}}",
-			"id": "5956a0a8-a3ac-f669-b3d8-c01b4a77d8c6",
-			"url": "localhost:8080/boats/asdf1234/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found",
-				"detail": {
-					"name": "Not Found",
-					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
-				}
-			},
-			"tests": {
-				"response is 404 Not Found": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 404 Not Found": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"17"
-			],
-			"allTests": [
-				{
-					"response is 404 Not Found": true,
-					"response has error": true
-				}
-			],
-			"time": "17",
-			"totalRequestTime": "17",
-			"iterationResults": {}
-		},
-		{
-			"name": "404 /boats/{{boat_id}}/slips/{{fake_id}}",
-			"id": "eb0744a1-1aa7-0b07-433b-302c1a6bc30d",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww/slips/asdf1234",
-			"totalTime": 0,
-			"responseCode": {
-				"code": 404,
-				"name": "Not Found",
-				"detail": {
-					"name": "Not Found",
-					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
-				}
-			},
-			"tests": {
-				"response is 404 Not Found": true,
-				"response has error": true
-			},
-			"testPassFailCounts": {
-				"response is 404 Not Found": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response has error": {
-					"pass": 1,
-					"fail": 0
-				}
-			},
-			"times": [
-				"232"
-			],
-			"allTests": [
-				{
-					"response is 404 Not Found": true,
-					"response has error": true
-				}
-			],
-			"time": "232",
-			"totalRequestTime": "232",
-			"iterationResults": {}
-		},
-		{
-			"name": "Verify /boats/ 1",
-			"id": "8f03b7e6-8eb0-6693-dfbd-79e9ffe7a984",
-			"url": "localhost:8080/boats/",
+			"name": "Verify /boats/",
+			"id": "fdfa7793-2127-ef7d-3028-aaae98af7856",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -4798,7 +3757,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"61"
 			],
 			"allTests": [
 				{
@@ -4807,14 +3766,782 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "61",
+			"totalRequestTime": "61",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "d10748ff-8105-071c-abb5-30bbbec709bc",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"58"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "58",
+			"totalRequestTime": "58",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "449e63e6-d97d-5106-0587-b7ca93b4b887",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"response is 201 Created": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"147"
+			],
+			"allTests": [
+				{
+					"response is 201 Created": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "147",
+			"totalRequestTime": "147",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /slips/",
+			"id": "e0020c68-d9c8-be7c-8bc3-ba665dbc3d52",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"response is 201 Created": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"216"
+			],
+			"allTests": [
+				{
+					"response is 201 Created": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "216",
+			"totalRequestTime": "216",
+			"iterationResults": {}
+		},
+		{
+			"name": "/slips/",
+			"id": "63207568-8aa6-a081-88a5-7a8b4b2c5fb3",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"178"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "178",
+			"totalRequestTime": "178",
+			"iterationResults": {}
+		},
+		{
+			"name": "/boats/",
+			"id": "556b949b-2ec2-73a0-c879-aeb34646fad2",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"59"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "59",
+			"totalRequestTime": "59",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 EXTRA INFO  /boats/{boat_id}",
+			"id": "44cc6da5-e4c6-6a9a-963c-a6ae835dadfe",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_I4AgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"122"
+			],
+			"allTests": [
+				{
+					"response is 400": true,
+					"response has error": true
+				}
+			],
+			"time": "122",
+			"totalRequestTime": "122",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 EXTRA INFO  /slips/{slip_id}",
+			"id": "0cdc704a-51c0-c7dc-fa37-af168b756d8d",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"70"
+			],
+			"allTests": [
+				{
+					"response is 400": true,
+					"response has error": true
+				}
+			],
+			"time": "70",
+			"totalRequestTime": "70",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Data - PATCH /boats/{{boat_id}}",
+			"id": "2f2d0eec-fec0-919c-463e-9ba77b558ee2",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_I4AgM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"58"
+			],
+			"allTests": [
+				{
+					"response is 400": true,
+					"response has error": true
+				}
+			],
+			"time": "58",
+			"totalRequestTime": "58",
+			"iterationResults": {}
+		},
+		{
+			"name": "400 - Invalid Data - PATCH /slips/{{slip_id}}",
+			"id": "b54001cb-492d-1a3d-51b9-ca7d7f110d33",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQkM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request",
+				"detail": {
+					"name": "Bad Request",
+					"detail": "The request cannot be fulfilled due to bad syntax."
+				}
+			},
+			"tests": {
+				"response is 400": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"52"
+			],
+			"allTests": [
+				{
+					"response is 400": true,
+					"response has error": true
+				}
+			],
+			"time": "52",
+			"totalRequestTime": "52",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/",
+			"id": "eabd2c64-09b8-bccf-96f9-edc2293969d2",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"137"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "137",
+			"totalRequestTime": "137",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /slips/",
+			"id": "3310d785-245f-011e-6040-bef0b42694f8",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"60"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "60",
+			"totalRequestTime": "60",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "3a1f45ea-647b-1f06-8e72-dabe3d2293af",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"response is 201 Created": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"163"
+			],
+			"allTests": [
+				{
+					"response is 201 Created": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "163",
+			"totalRequestTime": "163",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /slips/",
+			"id": "b9f67017-4c97-d056-e301-c6ad11983f2d",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 201,
+				"name": "Created",
+				"detail": {
+					"name": "Created",
+					"detail": "The request has been fulfilled and resulted in a new resource being created."
+				}
+			},
+			"tests": {
+				"response is 201 Created": true,
+				"response has body": true,
+				"response matches request": true
+			},
+			"testPassFailCounts": {
+				"response is 201 Created": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches request": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"181"
+			],
+			"allTests": [
+				{
+					"response is 201 Created": true,
+					"response has body": true,
+					"response matches request": true
+				}
+			],
+			"time": "181",
+			"totalRequestTime": "181",
+			"iterationResults": {}
+		},
+		{
+			"name": "/slips/",
+			"id": "efd4d200-3bd7-d8be-75be-452bfb559b26",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"106"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "106",
+			"totalRequestTime": "106",
+			"iterationResults": {}
+		},
+		{
+			"name": "/boats/",
+			"id": "e1145046-d788-7e25-fb1e-871455fdba93",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"57"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true
+				}
+			],
+			"time": "57",
+			"totalRequestTime": "57",
+			"iterationResults": {}
+		},
+		{
+			"name": "404 /boats/{{fake_id}}/slips/{{slip_id}}",
+			"id": "5956a0a8-a3ac-f669-b3d8-c01b4a77d8c6",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"response is 404 Not Found": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"46"
+			],
+			"allTests": [
+				{
+					"response is 404 Not Found": true,
+					"response has error": true
+				}
+			],
+			"time": "46",
+			"totalRequestTime": "46",
+			"iterationResults": {}
+		},
+		{
+			"name": "404 /boats/{{boat_id}}/slips/{{fake_id}}",
+			"id": "eb0744a1-1aa7-0b07-433b-302c1a6bc30d",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM/slips/asdf1234",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found",
+				"detail": {
+					"name": "Not Found",
+					"detail": "The requested resource could not be found but may be available again in the future. Subsequent requests by the client are permissible."
+				}
+			},
+			"tests": {
+				"response is 404 Not Found": true,
+				"response has error": true
+			},
+			"testPassFailCounts": {
+				"response is 404 Not Found": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"81"
+			],
+			"allTests": [
+				{
+					"response is 404 Not Found": true,
+					"response has error": true
+				}
+			],
+			"time": "81",
+			"totalRequestTime": "81",
+			"iterationResults": {}
+		},
+		{
+			"name": "Verify /boats/ 1",
+			"id": "8f03b7e6-8eb0-6693-dfbd-79e9ffe7a984",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 200,
+				"name": "OK",
+				"detail": {
+					"name": "OK",
+					"detail": "Standard response for successful HTTP requests. The actual response will depend on the request method used. In a GET request, the response will contain an entity corresponding to the requested resource. In a POST request the response will contain an entity describing or containing the result of the action."
+				}
+			},
+			"tests": {
+				"response is ok": true,
+				"response has body": true,
+				"response matches pre exactly": true
+			},
+			"testPassFailCounts": {
+				"response is ok": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response has body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response matches pre exactly": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"57"
+			],
+			"allTests": [
+				{
+					"response is ok": true,
+					"response has body": true,
+					"response matches pre exactly": true
+				}
+			],
+			"time": "57",
+			"totalRequestTime": "57",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /slips/ 1",
 			"id": "343cd75d-3271-2940-07f6-79146d818a9a",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -4849,7 +4576,7 @@
 				}
 			},
 			"times": [
-				"30"
+				"59"
 			],
 			"allTests": [
 				{
@@ -4859,14 +4586,14 @@
 					"response matches pre history": true
 				}
 			],
-			"time": "30",
-			"totalRequestTime": "30",
+			"time": "59",
+			"totalRequestTime": "59",
 			"iterationResults": {}
 		},
 		{
 			"name": "400 EXTRA DATA -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "3d0f13b2-9d5a-8c9c-8901-b38d834c5dd6",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -4891,7 +4618,7 @@
 				}
 			},
 			"times": [
-				"112"
+				"94"
 			],
 			"allTests": [
 				{
@@ -4899,14 +4626,14 @@
 					"response has error": true
 				}
 			],
-			"time": "112",
-			"totalRequestTime": "112",
+			"time": "94",
+			"totalRequestTime": "94",
 			"iterationResults": {}
 		},
 		{
 			"name": "400 NO DATA -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "a38ab6d5-891c-67b9-3276-773d141c82cb",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -4931,7 +4658,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"53"
 			],
 			"allTests": [
 				{
@@ -4939,14 +4666,14 @@
 					"response has error": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "53",
+			"totalRequestTime": "53",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /boats/ 2",
 			"id": "afc87ffc-d11a-a27b-0d8e-bddc2b4c4231",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -4976,7 +4703,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"58"
 			],
 			"allTests": [
 				{
@@ -4985,14 +4712,14 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "58",
+			"totalRequestTime": "58",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /slips/ 2",
 			"id": "14f898e9-7f5b-6bff-f207-c29d31426a48",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -5022,7 +4749,7 @@
 				}
 			},
 			"times": [
-				"27"
+				"67"
 			],
 			"allTests": [
 				{
@@ -5031,14 +4758,14 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "27",
-			"totalRequestTime": "27",
+			"time": "67",
+			"totalRequestTime": "67",
 			"iterationResults": {}
 		},
 		{
 			"name": "400 INVALID INFO 1 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "08d74db5-9ca4-acc1-6882-ea3e42f5cbce",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -5063,7 +4790,7 @@
 				}
 			},
 			"times": [
-				"73"
+				"56"
 			],
 			"allTests": [
 				{
@@ -5071,14 +4798,14 @@
 					"response has error": true
 				}
 			],
-			"time": "73",
-			"totalRequestTime": "73",
+			"time": "56",
+			"totalRequestTime": "56",
 			"iterationResults": {}
 		},
 		{
 			"name": "400 INVALID INFO 2 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "1e0e9511-2771-d0a3-0cf9-d6d8b5b2aed6",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -5103,7 +4830,7 @@
 				}
 			},
 			"times": [
-				"68"
+				"159"
 			],
 			"allTests": [
 				{
@@ -5111,14 +4838,14 @@
 					"response has error": true
 				}
 			],
-			"time": "68",
-			"totalRequestTime": "68",
+			"time": "159",
+			"totalRequestTime": "159",
 			"iterationResults": {}
 		},
 		{
 			"name": "400 INVALID INFO 3 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "bdac3bab-1a1a-0e99-d5bd-f170233da509",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 400,
@@ -5143,7 +4870,7 @@
 				}
 			},
 			"times": [
-				"62"
+				"55"
 			],
 			"allTests": [
 				{
@@ -5151,14 +4878,14 @@
 					"response has error": true
 				}
 			],
-			"time": "62",
-			"totalRequestTime": "62",
+			"time": "55",
+			"totalRequestTime": "55",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /boats/ 3",
 			"id": "2b84eee2-37e4-8f7f-361f-7d6ae88f9529",
-			"url": "localhost:8080/boats/",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -5188,7 +4915,7 @@
 				}
 			},
 			"times": [
-				"50"
+				"82"
 			],
 			"allTests": [
 				{
@@ -5197,14 +4924,14 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "50",
-			"totalRequestTime": "50",
+			"time": "82",
+			"totalRequestTime": "82",
 			"iterationResults": {}
 		},
 		{
 			"name": "Verify /slips/ 3",
 			"id": "f21c9e72-86d3-ce6c-160c-29ff13a5461e",
-			"url": "localhost:8080/slips/",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 200,
@@ -5234,7 +4961,7 @@
 				}
 			},
 			"times": [
-				"39"
+				"58"
 			],
 			"allTests": [
 				{
@@ -5243,14 +4970,48 @@
 					"response matches pre exactly": true
 				}
 			],
-			"time": "39",
-			"totalRequestTime": "39",
+			"time": "58",
+			"totalRequestTime": "58",
 			"iterationResults": {}
 		},
 		{
-			"name": "POST /slips/ #2",
-			"id": "e4d05a89-e035-cbe8-e8eb-9ae66784a1b3",
-			"url": "localhost:8080/slips",
+			"name": "DOCK BOAT -  /boats/{boat_id}/slips/{slip_id}",
+			"id": "9c150cfb-a6bf-7451-483d-a367b38f1d35",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"totalTime": 0,
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"tests": {
+				"response is 204": true
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				"172"
+			],
+			"allTests": [
+				{
+					"response is 204": true
+				}
+			],
+			"time": "172",
+			"totalRequestTime": "172",
+			"iterationResults": {}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "c832c88e-a7a9-aa4c-f0be-fd99227004fc",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
 			"totalTime": 0,
 			"responseCode": {
 				"code": 201,
@@ -5280,7 +5041,7 @@
 				}
 			},
 			"times": [
-				"47"
+				"154"
 			],
 			"allTests": [
 				{
@@ -5289,67 +5050,61 @@
 					"response matches request": true
 				}
 			],
-			"time": "47",
-			"totalRequestTime": "47",
+			"time": "154",
+			"totalRequestTime": "154",
 			"iterationResults": {}
 		},
 		{
-			"name": "POST /boats/ #2",
-			"id": "7106013a-ae12-71ea-4cc5-e7a9c7f8eb06",
-			"url": "localhost:8080/boats",
+			"name": "403 SLIP OCCUPIED -  /boats/{boat_id}/slips/{slip_id}",
+			"id": "5c2d8364-4372-8cc0-9cfb-553987be9584",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgJmZ3QgM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
 			"totalTime": 0,
 			"responseCode": {
-				"code": 201,
-				"name": "Created",
+				"code": 403,
+				"name": "Forbidden",
 				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
 				}
 			},
 			"tests": {
-				"response is 201 Created": true,
-				"response has body": true,
-				"response matches request": true
+				"response is 403 Forbidden": true,
+				"response has error": true
 			},
 			"testPassFailCounts": {
-				"response is 201 Created": {
+				"response is 403 Forbidden": {
 					"pass": 1,
 					"fail": 0
 				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
+				"response has error": {
 					"pass": 1,
 					"fail": 0
 				}
 			},
 			"times": [
-				"44"
+				"171"
 			],
 			"allTests": [
 				{
-					"response is 201 Created": true,
-					"response has body": true,
-					"response matches request": true
+					"response is 403 Forbidden": true,
+					"response has error": true
 				}
 			],
-			"time": "44",
-			"totalRequestTime": "44",
+			"time": "171",
+			"totalRequestTime": "171",
 			"iterationResults": {}
 		}
 	],
-	"totalPass": 407,
+	"totalPass": 309,
 	"totalFail": 0,
-	"totalTime": 12488,
+	"totalTime": 13903,
 	"lifecycle": "done",
 	"requests": [
 		{
 			"name": "CLEAN UP - Boats 1",
 			"id": "5012d7a8-1c75-5cf3-1fb4-54fa8f04cee7",
-			"url": "localhost:8080/boats/",
-			"time": "33",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "52",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5360,11 +5115,11 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 2,
+					"pass": 12,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 2,
+					"pass": 12,
 					"fail": 0
 				}
 			}
@@ -5372,8 +5127,8 @@
 		{
 			"name": "CLEAN UP - Boats 2",
 			"id": "68e02598-88d4-2d47-4311-84043dae7bf4",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDyCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgJnOjAgM",
+			"time": "151",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -5384,7 +5139,7 @@
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 1,
+					"pass": 11,
 					"fail": 0
 				}
 			}
@@ -5392,8 +5147,8 @@
 		{
 			"name": "CLEAN UP - Slips 1",
 			"id": "c1862c74-dd0d-f163-3792-1987b035a9b2",
-			"url": "localhost:8080/slips/",
-			"time": "38",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "70",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5404,15 +5159,15 @@
 			},
 			"testPassFailCounts": {
 				"response is ok": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				},
 				"response has json body": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				},
 				"Conditional": {
-					"pass": 38,
+					"pass": 6,
 					"fail": 0
 				}
 			}
@@ -5420,8 +5175,8 @@
 		{
 			"name": "CLEAN UP - Slips 2",
 			"id": "92b72bbf-53ec-91c8-7956-feffedf85c55",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCYCgw",
-			"time": "83",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgJ3AuggM",
+			"time": "172",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -5432,7 +5187,7 @@
 			},
 			"testPassFailCounts": {
 				"response is 204": {
-					"pass": 37,
+					"pass": 5,
 					"fail": 0
 				}
 			}
@@ -5440,8 +5195,8 @@
 		{
 			"name": "TEST 1: GET /boats/",
 			"id": "65bcc712-a13b-5098-0187-cc247689be3c",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5468,8 +5223,8 @@
 		{
 			"name": "TEST 2: POST /boats/",
 			"id": "1a877e77-c279-bd6e-a25b-0b1b7b705a0a",
-			"url": "localhost:8080/boats",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -5496,8 +5251,8 @@
 		{
 			"name": "TEST 3: GET {{test2url}}",
 			"id": "1471d4db-7124-b366-4097-66b429748415",
-			"url": "http://localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5524,8 +5279,8 @@
 		{
 			"name": "TEST 4: GET /boats/{{test2id}}",
 			"id": "ffe399bf-fb96-99ba-c420-d39219e7ca27",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5552,8 +5307,8 @@
 		{
 			"name": "TEST 5: GET /boats/",
 			"id": "638243e8-97db-47a8-588e-b16b17662f10",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5584,8 +5339,8 @@
 		{
 			"name": "TEST 6: PATCH /boats/{test2id}",
 			"id": "7005fe70-5f2d-54bb-f48c-5c027182e977",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5612,8 +5367,8 @@
 		{
 			"name": "TEST 7: GET /boats/{{test2id}}",
 			"id": "f641ac7e-e721-9e9d-0b09-53b36e3f2c63",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5640,8 +5395,8 @@
 		{
 			"name": "TEST 8: GET /slips/",
 			"id": "1b0f49bc-3878-2160-eaa6-558dc7fae17b",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5668,8 +5423,8 @@
 		{
 			"name": "TEST 9: POST /slips/",
 			"id": "0f50a39c-e3c1-6a6c-5865-e5f1e7d652c2",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -5696,8 +5451,8 @@
 		{
 			"name": "TEST 10: GET {{test9url}}",
 			"id": "574eac10-2771-8ca4-7d3e-99f05373451f",
-			"url": "http://localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5744,8 +5499,8 @@
 		{
 			"name": "TEST 11: GET /slips/{{test9id}}",
 			"id": "793fcb1c-bef2-d152-0858-651602166dc0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5772,8 +5527,8 @@
 		{
 			"name": "TEST 12: GET /slips/",
 			"id": "85e0f58b-3a33-9597-830a-8c655e6dfda7",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5804,8 +5559,8 @@
 		{
 			"name": "TEST 13: PATCH /slips/{test9id}",
 			"id": "94bbb092-fadf-f277-e294-510870911203",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5832,8 +5587,8 @@
 		{
 			"name": "TEST 14: GET /slips/{{test9id}}",
 			"id": "e1708caa-e2b3-f3fd-3889-ae31d71d1870",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5860,8 +5615,8 @@
 		{
 			"name": "TEST 15: GET /slips/{{test9id}}",
 			"id": "6c84deed-3cdd-357c-f6a5-340ddacee66e",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5888,8 +5643,8 @@
 		{
 			"name": "TEST 16: GET /boats/{{test2id}}",
 			"id": "224efce3-4487-cdfb-0318-d3b482ce81c5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5916,8 +5671,8 @@
 		{
 			"name": "TEST 17: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "b3ea3daf-5d84-2660-15dc-3012bb7a8663",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -5936,8 +5691,8 @@
 		{
 			"name": "TEST 18: GET /boats/{{test2id}}",
 			"id": "0c21f5c8-fb89-1010-6638-6dba93ca41a5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5964,8 +5719,8 @@
 		{
 			"name": "TEST 19: GET /slips/{{test9id}}",
 			"id": "c32c750c-91a0-0376-8aec-0d14b6b82677",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -5992,8 +5747,8 @@
 		{
 			"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a40f02b8-efb9-e815-a00a-864f72bfdacc",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw?departure=2/5/2016",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM?departure=2/5/2016",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -6012,8 +5767,8 @@
 		{
 			"name": "TEST 21: GET /slips/{{test9id}}",
 			"id": "5a0e64e5-0ecc-02a8-cb60-f92f7717c1f0",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6060,8 +5815,8 @@
 		{
 			"name": "TEST 22: GET /boats/{{test2id}}",
 			"id": "30ed4fd5-a3af-f807-3a0b-97250108c482",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6088,8 +5843,8 @@
 		{
 			"name": "TEST 23: PUT /boats/{{test2id}}/slips/{{test9id}}",
 			"id": "a8aaa458-4f18-d7c4-b460-9fa88cfdd5bf",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -6108,8 +5863,8 @@
 		{
 			"name": "TEST 24: GET /slips/{{test9id}}",
 			"id": "e66406c4-97a4-66aa-0551-0f3a00ed19e1",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6136,8 +5891,8 @@
 		{
 			"name": "TEST 25: GET /boats/{{test2id}}",
 			"id": "4956e253-33af-68a9-9f57-ed9522b2d7d5",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6164,8 +5919,8 @@
 		{
 			"name": "TEST 26: DELETE /slips/{{test9id}}",
 			"id": "880c6673-2af3-e350-a8de-55c3944297c1",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -6184,8 +5939,8 @@
 		{
 			"name": "TEST 27: GET /slips/{{test9id}}",
 			"id": "005a3f63-35a3-3f2f-d55d-822cf1df6741",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgOu24AoM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -6208,8 +5963,8 @@
 		{
 			"name": "TEST 28: GET /boats/{{test2id}}",
 			"id": "f48a5e5b-b76c-e19f-1be9-035eaaba0dd4",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_1pAsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6236,8 +5991,8 @@
 		{
 			"name": "POST /boats/",
 			"id": "6fcf67b5-c378-5f9b-05d8-463cb4ce3b65",
-			"url": "localhost:8080/boats",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -6264,8 +6019,8 @@
 		{
 			"name": "POST /slips/",
 			"id": "58f6493a-f083-4208-ce28-640dde44c0da",
-			"url": "localhost:8080/slips",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -6292,8 +6047,8 @@
 		{
 			"name": "DOCK BOAT PUT /boats/{{boat_id}}/slips/{{slip_id}}",
 			"id": "7890bba2-0f45-f8af-cbc9-d77b77793c8d",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -6312,8 +6067,8 @@
 		{
 			"name": "BOAT IS DOCKED GET /boats/{{boat_id}}",
 			"id": "f39e0551-5640-8e58-b103-c8494391bab2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6340,8 +6095,8 @@
 		{
 			"name": "SLIP OCCUPIED GET /slips/{{slip_id}}",
 			"id": "05efc9cb-bc4e-414e-11b5-75bcb369329c",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6368,8 +6123,8 @@
 		{
 			"name": "DELETE BOAT - DELETE /boats/{id}",
 			"id": "ba74596c-43ea-e5d8-0c45-0e1b00aee1a2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 204,
 				"name": "No Content",
@@ -6388,8 +6143,8 @@
 		{
 			"name": "BOAT IS DELETED (404) GET /boats/{{boat_id}}",
 			"id": "75a5a349-3376-4763-1f9f-391661bc4916",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLCKCQw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgLrc_woM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -6412,8 +6167,8 @@
 		{
 			"name": "SLIP EMPTY GET /slips/{{slip_id}}",
 			"id": "ccb16d45-b9c2-8d6e-87ee-38fb59000cbd",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLCKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAgO2t8goM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6431,7 +6186,7 @@
 					"pass": 1,
 					"fail": 0
 				},
-				"response matches test9 data sent": {
+				"response matches": {
 					"pass": 1,
 					"fail": 0
 				}
@@ -6440,8 +6195,8 @@
 		{
 			"name": "/slips/",
 			"id": "bf0738ab-78d7-1ecf-8e2c-e7fd2f9d8361",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6464,8 +6219,8 @@
 		{
 			"name": "/boats/",
 			"id": "799c9c3d-0ba9-8dc1-0002-4ae7cb2adcc3",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6488,8 +6243,8 @@
 		{
 			"name": "400 - Extra Info - POST /boats/",
 			"id": "48eb54ae-2f37-a672-827d-4a19fa86148a",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6512,8 +6267,8 @@
 		{
 			"name": "Verify /boats/ ",
 			"id": "1b39ad28-302e-1fda-9a3a-ad7e4788f21f",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6540,8 +6295,8 @@
 		{
 			"name": "400 - Extra Info - POST /slips/",
 			"id": "242117f3-e072-1ad9-eeb6-e6bbee009564",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6564,8 +6319,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "3f82d081-8600-cb8f-1c11-a60ff7953f8d",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6592,8 +6347,8 @@
 		{
 			"name": "400 - Invalid Datatype - POST /boats/",
 			"id": "7cb2638d-1011-5f26-2220-d55cdf64642a",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6616,8 +6371,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "5e3cd318-aa7c-d2bd-05a0-a6e1b308e965",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6644,8 +6399,8 @@
 		{
 			"name": "400 - Invalid Data - POST /slips/",
 			"id": "291f9012-9c21-2a6c-e728-6820cd8a4e43",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6668,8 +6423,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "6586f52e-0ca8-42be-49b8-432183f2de64",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6696,8 +6451,8 @@
 		{
 			"name": "400 - Too Little 1 - POST /boats/",
 			"id": "cc826b2e-8d1f-f4d4-a2f3-b22e721c4cd4",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6720,8 +6475,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "10e67dac-fa94-69da-8492-15366fe0a788",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6748,8 +6503,8 @@
 		{
 			"name": "400 - Too Little 2 - POST /boats/",
 			"id": "79eb9bdd-e846-8c59-3011-1958535b0486",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6772,8 +6527,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "11d95291-802a-7e84-a762-0933a852e676",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6800,8 +6555,8 @@
 		{
 			"name": "400 - Too Little 3 - POST /boats/",
 			"id": "2233d0fd-1dd1-cdf1-8434-4a3bdf106e62",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6824,8 +6579,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "b334c6dc-9a92-155b-0639-917e68a968ea",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6852,8 +6607,8 @@
 		{
 			"name": "400 - Too Little - POST /slips/",
 			"id": "af12af81-d7ec-99bf-53d5-29e559d7cfe7",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -6876,8 +6631,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "9ac03fed-6b33-8e35-9eda-9ba3df3e770d",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6904,8 +6659,8 @@
 		{
 			"name": "/slips/",
 			"id": "3e0cabbc-97da-a5e2-9040-cea9765a7be6",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6928,8 +6683,8 @@
 		{
 			"name": "/boats/",
 			"id": "ee606220-9492-f505-9bb7-a3a4ebf16de0",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -6952,8 +6707,8 @@
 		{
 			"name": "404 /boats/{{fake_id}}",
 			"id": "784cb22c-9f2a-b0f2-458d-593d333b1e4a",
-			"url": "localhost:8080/boats/asdf1234",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -6976,8 +6731,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "3ef77eb5-e79b-d713-8510-063f5452d4c6",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7004,8 +6759,8 @@
 		{
 			"name": "404 /slips/{{fake_id}}",
 			"id": "59fbe851-2e79-2eb9-59f3-5fe2570a8e7f",
-			"url": "localhost:8080/slips/asdf1234",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/asdf1234",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -7028,8 +6783,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "230a57f3-e0db-d13e-9ae7-6ed2ff4c335c",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7056,8 +6811,8 @@
 		{
 			"name": "/boats/",
 			"id": "7ce51c42-3d31-85e0-e5b5-59b2dcf4be53",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7080,8 +6835,8 @@
 		{
 			"name": "/slips/",
 			"id": "dc761673-648f-bf3a-3635-49f06c7538c4",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7104,8 +6859,8 @@
 		{
 			"name": "404 /boats/{fake_id}",
 			"id": "2b88311a-c5ff-cbbb-3d00-3a650e6521b0",
-			"url": "localhost:8080/boats/asdf1234",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -7128,8 +6883,8 @@
 		{
 			"name": "404 /slips/{fake_id}",
 			"id": "c2f7446f-6d6d-1178-b7df-94ced31f5733",
-			"url": "localhost:8080/slips/asdf1234",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/asdf1234",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -7152,8 +6907,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "fdfa7793-2127-ef7d-3028-aaae98af7856",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7180,8 +6935,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "d10748ff-8105-071c-abb5-30bbbec709bc",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7208,8 +6963,8 @@
 		{
 			"name": "POST /boats/",
 			"id": "449e63e6-d97d-5106-0587-b7ca93b4b887",
-			"url": "localhost:8080/boats",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -7236,8 +6991,8 @@
 		{
 			"name": "POST /slips/",
 			"id": "e0020c68-d9c8-be7c-8bc3-ba665dbc3d52",
-			"url": "localhost:8080/slips",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -7264,8 +7019,8 @@
 		{
 			"name": "/slips/",
 			"id": "63207568-8aa6-a081-88a5-7a8b4b2c5fb3",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7288,8 +7043,8 @@
 		{
 			"name": "/boats/",
 			"id": "556b949b-2ec2-73a0-c879-aeb34646fad2",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7312,8 +7067,8 @@
 		{
 			"name": "400 EXTRA INFO  /boats/{boat_id}",
 			"id": "44cc6da5-e4c6-6a9a-963c-a6ae835dadfe",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_I4AgM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7336,8 +7091,8 @@
 		{
 			"name": "400 EXTRA INFO  /slips/{slip_id}",
 			"id": "0cdc704a-51c0-c7dc-fa37-af168b756d8d",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQkM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7360,8 +7115,8 @@
 		{
 			"name": "400 - Invalid Data - PATCH /boats/{{boat_id}}",
 			"id": "2f2d0eec-fec0-919c-463e-9ba77b558ee2",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCAw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgK_I4AgM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7384,8 +7139,8 @@
 		{
 			"name": "400 - Invalid Data - PATCH /slips/{{slip_id}}",
 			"id": "b54001cb-492d-1a3d-51b9-ca7d7f110d33",
-			"url": "localhost:8080/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCgw",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQkM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7408,8 +7163,8 @@
 		{
 			"name": "Verify /boats/",
 			"id": "eabd2c64-09b8-bccf-96f9-edc2293969d2",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7436,8 +7191,8 @@
 		{
 			"name": "Verify /slips/",
 			"id": "3310d785-245f-011e-6040-bef0b42694f8",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7464,8 +7219,8 @@
 		{
 			"name": "POST /boats/",
 			"id": "3a1f45ea-647b-1f06-8e72-dabe3d2293af",
-			"url": "localhost:8080/boats",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -7492,8 +7247,8 @@
 		{
 			"name": "POST /slips/",
 			"id": "b9f67017-4c97-d056-e301-c6ad11983f2d",
-			"url": "localhost:8080/slips",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -7520,8 +7275,8 @@
 		{
 			"name": "/slips/",
 			"id": "efd4d200-3bd7-d8be-75be-452bfb559b26",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7544,8 +7299,8 @@
 		{
 			"name": "/boats/",
 			"id": "e1145046-d788-7e25-fb1e-871455fdba93",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7568,8 +7323,8 @@
 		{
 			"name": "404 /boats/{{fake_id}}/slips/{{slip_id}}",
 			"id": "5956a0a8-a3ac-f669-b3d8-c01b4a77d8c6",
-			"url": "localhost:8080/boats/asdf1234/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/asdf1234/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -7592,8 +7347,8 @@
 		{
 			"name": "404 /boats/{{boat_id}}/slips/{{fake_id}}",
 			"id": "eb0744a1-1aa7-0b07-433b-302c1a6bc30d",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww/slips/asdf1234",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM/slips/asdf1234",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 404,
 				"name": "Not Found",
@@ -7616,8 +7371,8 @@
 		{
 			"name": "Verify /boats/ 1",
 			"id": "8f03b7e6-8eb0-6693-dfbd-79e9ffe7a984",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7644,8 +7399,8 @@
 		{
 			"name": "Verify /slips/ 1",
 			"id": "343cd75d-3271-2940-07f6-79146d818a9a",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7676,8 +7431,8 @@
 		{
 			"name": "400 EXTRA DATA -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "3d0f13b2-9d5a-8c9c-8901-b38d834c5dd6",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7700,8 +7455,8 @@
 		{
 			"name": "400 NO DATA -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "a38ab6d5-891c-67b9-3276-773d141c82cb",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7724,8 +7479,8 @@
 		{
 			"name": "Verify /boats/ 2",
 			"id": "afc87ffc-d11a-a27b-0d8e-bddc2b4c4231",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7752,8 +7507,8 @@
 		{
 			"name": "Verify /slips/ 2",
 			"id": "14f898e9-7f5b-6bff-f207-c29d31426a48",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7780,8 +7535,8 @@
 		{
 			"name": "400 INVALID INFO 1 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "08d74db5-9ca4-acc1-6882-ea3e42f5cbce",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7804,8 +7559,8 @@
 		{
 			"name": "400 INVALID INFO 2 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "1e0e9511-2771-d0a3-0cf9-d6d8b5b2aed6",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7828,8 +7583,8 @@
 		{
 			"name": "400 INVALID INFO 3 -  /boats/{boat_id}/slips/{slip_id}",
 			"id": "bdac3bab-1a1a-0e99-d5bd-f170233da509",
-			"url": "localhost:8080/boats/aghkZXZ-Tm9uZXIRCxIEQm9hdBiAgICAgLDKCQw/slips/aghkZXZ-Tm9uZXIRCxIEU2xpcBiAgICAgLDKCww",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 400,
 				"name": "Bad Request",
@@ -7852,8 +7607,8 @@
 		{
 			"name": "Verify /boats/ 3",
 			"id": "2b84eee2-37e4-8f7f-361f-7d6ae88f9529",
-			"url": "localhost:8080/boats/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7880,8 +7635,8 @@
 		{
 			"name": "Verify /slips/ 3",
 			"id": "f21c9e72-86d3-ce6c-160c-29ff13a5461e",
-			"url": "localhost:8080/slips/",
-			"time": "2018-02-01T21:49:31.930Z",
+			"url": "https://totemic-splicer-145122.appspot.com/slips/",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 200,
 				"name": "OK",
@@ -7906,10 +7661,30 @@
 			}
 		},
 		{
-			"name": "POST /slips/ #2",
-			"id": "e4d05a89-e035-cbe8-e8eb-9ae66784a1b3",
-			"url": "localhost:8080/slips",
-			"time": "2018-02-01T21:49:31.930Z",
+			"name": "DOCK BOAT -  /boats/{boat_id}/slips/{slip_id}",
+			"id": "9c150cfb-a6bf-7451-483d-a367b38f1d35",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgIDD9QsM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
+			"responseCode": {
+				"code": 204,
+				"name": "No Content",
+				"detail": {
+					"name": "No Content",
+					"detail": "The server successfully processed the request, but is not returning any content."
+				}
+			},
+			"testPassFailCounts": {
+				"response is 204": {
+					"pass": 1,
+					"fail": 0
+				}
+			}
+		},
+		{
+			"name": "POST /boats/",
+			"id": "c832c88e-a7a9-aa4c-f0be-fd99227004fc",
+			"url": "https://totemic-splicer-145122.appspot.com/boats",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
 				"code": 201,
 				"name": "Created",
@@ -7934,28 +7709,24 @@
 			}
 		},
 		{
-			"name": "POST /boats/ #2",
-			"id": "7106013a-ae12-71ea-4cc5-e7a9c7f8eb06",
-			"url": "localhost:8080/boats",
-			"time": "2018-02-01T21:49:31.930Z",
+			"name": "403 SLIP OCCUPIED -  /boats/{boat_id}/slips/{slip_id}",
+			"id": "5c2d8364-4372-8cc0-9cfb-553987be9584",
+			"url": "https://totemic-splicer-145122.appspot.com/boats/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBEJvYXQYgICAgJmZ3QgM/slips/ahhzfnRvdGVtaWMtc3BsaWNlci0xNDUxMjJyEQsSBFNsaXAYgICAwMjetQsM",
+			"time": "2018-02-01T23:12:25.890Z",
 			"responseCode": {
-				"code": 201,
-				"name": "Created",
+				"code": 403,
+				"name": "Forbidden",
 				"detail": {
-					"name": "Created",
-					"detail": "The request has been fulfilled and resulted in a new resource being created."
+					"name": "Forbidden",
+					"detail": "The request was a legal request, but the server is refusing to respond to it. Unlike a 401 Unauthorized response, authenticating will make no difference."
 				}
 			},
 			"testPassFailCounts": {
-				"response is 201 Created": {
+				"response is 403 Forbidden": {
 					"pass": 1,
 					"fail": 0
 				},
-				"response has body": {
-					"pass": 1,
-					"fail": 0
-				},
-				"response matches request": {
+				"response has error": {
 					"pass": 1,
 					"fail": 0
 				}
