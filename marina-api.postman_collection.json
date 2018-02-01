@@ -1688,75 +1688,6 @@
 						"description": "Slip has boat and boat url and arrival_date"
 					},
 					"response": []
-				},
-				{
-					"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "d44104e7-c422-49ee-878b-6833c9e83d11",
-								"type": "text/javascript",
-								"exec": [
-									"// Delete boat and Repeat",
-									"pm.test(\"response is 204\", function () {",
-									"    pm.response.to.have.status(204);",
-									"});"
-								]
-							}
-						},
-						{
-							"listen": "prerequest",
-							"script": {
-								"id": "cb0daa19-7e1c-4be1-a0ec-9e4e9dd7de55",
-								"type": "text/javascript",
-								"exec": [
-									"var test18 = pm.environment.get(\"test18\");",
-									"var test19 = pm.environment.get(\"test19\");",
-									"",
-									"// Skip this folder",
-									"if ( ( test18 === false ) || (test19 === false ) ) {",
-									"    console.log(\"Skipping Boat Departure Test\");",
-									"    postman.setNextRequest(null);",
-									"}"
-								]
-							}
-						}
-					],
-					"request": {
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": ""
-						},
-						"url": {
-							"raw": "{{domain}}/boats/{{test2id}}/slips/{{test9id}}?departure={{test20_departure_date}}",
-							"host": [
-								"{{domain}}"
-							],
-							"path": [
-								"boats",
-								"{{test2id}}",
-								"slips",
-								"{{test9id}}"
-							],
-							"query": [
-								{
-									"key": "departure",
-									"value": "{{test20_departure_date}}",
-									"equals": true
-								}
-							]
-						},
-						"description": "Set boat to at sea boat and empty the slip"
-					},
-					"response": []
 				}
 			],
 			"event": [
@@ -1786,6 +1717,75 @@
 			"name": "Boat Departure 1",
 			"description": "",
 			"item": [
+				{
+					"name": "TEST 20: DELETE /boats/{{test2id}}/slips/{{test9id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Delete boat and Repeat",
+									"pm.test(\"response is 204\", function () {",
+									"    pm.response.to.have.status(204);",
+									"});"
+								],
+								"id": "d44104e7-c422-49ee-878b-6833c9e83d11",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var test18 = pm.environment.get(\"test18\");",
+									"var test19 = pm.environment.get(\"test19\");",
+									"",
+									"// Skip this folder",
+									"if ( ( test18 === false ) || (test19 === false ) ) {",
+									"    console.log(\"Skipping Boat Departure Test\");",
+									"    postman.setNextRequest(null);",
+									"}"
+								],
+								"id": "cb0daa19-7e1c-4be1-a0ec-9e4e9dd7de55",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{test2id}}/slips/{{test9id}}?departure={{test20_departure_date}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{test2id}}",
+								"slips",
+								"{{test9id}}"
+							],
+							"query": [
+								{
+									"equals": true,
+									"key": "departure",
+									"value": "{{test20_departure_date}}"
+								}
+							]
+						},
+						"description": "Set boat to at sea boat and empty the slip"
+					},
+					"response": []
+				},
 				{
 					"name": "TEST 21: GET /slips/{{test9id}}",
 					"event": [
@@ -2786,7 +2786,7 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "386e4b84-747a-49eb-8f21-2b9332ba9acb",
+								"id": "429a2a38-cd0d-4025-9819-35a74028f182",
 								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
@@ -2799,14 +2799,13 @@
 									"    pm.response.to.not.have.jsonBody('error');",
 									"});",
 									"",
-									"pm.test(\"response matches test9 data sent\", function () {",
+									"pm.test(\"response matches\", function () {",
 									"    exp_num = pm.environment.get(\"number\");",
 									"    exp_boat = null;",
 									"    exp_boat_url = null;",
 									"    exp_arrival_date = null;",
 									"    exp_url = pm.environment.get(\"slip_url\");",
 									"    exp_id = pm.environment.get(\"slip_id\");",
-									"    ",
 									"    ",
 									"    res = pm.response.json();",
 									"    pm.expect(res['number'].toString()).to.equal(String(exp_num));",
@@ -2815,9 +2814,6 @@
 									"    pm.expect(res['arrival_date']).to.equal(exp_arrival_date);",
 									"    pm.expect(res['url']).to.equal(exp_url);",
 									"    pm.expect(res['id']).to.equal(exp_id);",
-									"    ",
-									"    ",
-									"    pm.environment.set(\"test15slip\", JSON.stringify(res));",
 									"    ",
 									"});"
 								]

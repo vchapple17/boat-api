@@ -299,10 +299,10 @@ class DockingHandler(RequestHandler):
 
         # Verify Slip Empty, reject if not
         if (slip.current_boat != None) or (slip.current_boat_url != None) or (slip.arrival_date != None):
-            # print("slip", slip);
             self.response.write(json.dumps({"error": "Slip already occupied."}));
             self.response.status_int = 403;
             return
+
 
         # Get json from Request Body
         try:
