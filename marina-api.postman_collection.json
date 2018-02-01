@@ -2341,30 +2341,29 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "ff363bf4-77fa-47d3-9d3b-9da1d63a64bb",
-								"type": "text/javascript",
 								"exec": [
 									"var domain = pm.environment.get(\"domain\");",
 									"var preBOATS = pm.environment.get(\"pre-BOATS\");",
 									"",
 									"postman.clearEnvironmentVariables();",
-									"if (typeof domain == 'undefined') {",
-									"    pm.environment.set(\"domain\", domain);",
-									"}",
-									"else {",
-									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
-									"}",
+									"pm.environment.set(\"domain\", domain);",
+									"// if (typeof domain === undefined) {",
+									"    ",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
 									"",
 									"pm.environment.set(\"pre-BOATS\", preBOATS);",
 									""
-								]
+								],
+								"id": "8de0a5c5-cc6d-4fa2-b260-e6687767282b",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
-								"id": "d522cbe3-6a21-45b7-81f6-53ad8f4bd992",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2382,7 +2381,9 @@
 									"",
 									"",
 									""
-								]
+								],
+								"id": "d522cbe3-6a21-45b7-81f6-53ad8f4bd992",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -2410,31 +2411,29 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "34d75e39-bb71-4403-a892-7baf7e0c6fb4",
-								"type": "text/javascript",
 								"exec": [
 									"var domain = pm.environment.get(\"domain\");",
 									"var preSLIPS = pm.environment.get(\"pre-SLIPS\");",
 									"",
 									"postman.clearEnvironmentVariables();",
-									"if (typeof domain == 'undefined') {",
+									"// if (typeof domain == 'undefined') {",
 									"    pm.environment.set(\"domain\", domain);",
-									"}",
-									"else {",
-									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
-									"}",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
 									"",
 									"pm.environment.set(\"pre-SLIPS\", preSLIPS);",
 									"",
 									""
-								]
+								],
+								"id": "1c709b3f-a807-477e-aa88-0c0545f7903d",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
-								"id": "ad318861-9714-498f-bad6-449d3e6984e9",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2450,7 +2449,9 @@
 									"    pm.environment.set(\"pre-BOATS\", JSON.stringify(res))",
 									"});",
 									""
-								]
+								],
+								"id": "ad318861-9714-498f-bad6-449d3e6984e9",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -2669,18 +2670,16 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
-								"type": "text/javascript",
 								"exec": [
 									""
-								]
+								],
+								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
-								"id": "d09f5123-a2c5-44d0-9629-56e96e00b753",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -2724,7 +2723,9 @@
 									"        // }",
 									"    } ",
 									"});"
-								]
+								],
+								"id": "d09f5123-a2c5-44d0-9629-56e96e00b753",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3586,31 +3587,29 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "96592a64-02e6-4e75-ba8a-b5809e572fb2",
-								"type": "text/javascript",
 								"exec": [
 									"var domain = pm.environment.get(\"domain\");",
 									"var preBOATS = pm.environment.get(\"pre-BOATS\");",
 									"",
 									"postman.clearEnvironmentVariables();",
 									"if (typeof domain == 'undefined') {",
-									"    pm.environment.set(\"domain\", domain);",
+									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
 									"}",
 									"else {",
-									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"    pm.environment.set(\"domain\", domain);",
 									"}",
 									"",
 									"pm.environment.set(\"pre-BOATS\", preBOATS);",
 									"",
 									"pm.environment.set(\"number\", 17);"
-								]
+								],
+								"id": "fae3ccb6-b30a-4bf5-91f6-f3512c038ea0",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
-								"id": "d522cbe3-6a21-45b7-81f6-53ad8f4bd992",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -3628,7 +3627,9 @@
 									"",
 									"",
 									""
-								]
+								],
+								"id": "d522cbe3-6a21-45b7-81f6-53ad8f4bd992",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3656,31 +3657,29 @@
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "cf6d40f1-2a36-45f2-89e8-4a903822617b",
-								"type": "text/javascript",
 								"exec": [
 									"var domain = pm.environment.get(\"domain\");",
 									"",
 									"if (typeof domain == 'undefined') {",
-									"    pm.environment.set(\"domain\", domain);",
+									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
 									"}",
 									"else {",
-									"    pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"    pm.environment.set(\"domain\", domain);",
 									"}",
 									"",
 									"",
 									"// Set environmental variables.",
 									"pm.environment.set(\"name\", \"Boat Name\");",
 									"pm.environment.set(\"type\", \"Boat Type\");",
-									"pm.environment.set(\"length\", 10);"
-								]
+									"pm.environment.set(\"length\", \"10\");"
+								],
+								"id": "c09a6915-2033-44a7-8af6-2e53a08fb76b",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "test",
 							"script": {
-								"id": "ad318861-9714-498f-bad6-449d3e6984e9",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is ok\", function () {",
 									"    pm.response.to.have.status(200);",
@@ -3696,7 +3695,9 @@
 									"    pm.environment.set(\"pre-BOATS\", JSON.stringify(res))",
 									"});",
 									""
-								]
+								],
+								"id": "ad318861-9714-498f-bad6-449d3e6984e9",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3724,8 +3725,6 @@
 						{
 							"listen": "test",
 							"script": {
-								"id": "2ead5c75-0c08-4699-a786-b7bcc3b5121f",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is 404 Not Found\", function () {",
 									"    pm.response.to.have.status(404);",
@@ -3736,17 +3735,19 @@
 									"    pm.response.to.have.jsonBody('error');",
 									"});",
 									""
-								]
+								],
+								"id": "2ead5c75-0c08-4699-a786-b7bcc3b5121f",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "3b1ec3ca-5acf-46a6-9946-d18d8aabffb3",
-								"type": "text/javascript",
 								"exec": [
 									"pm.environment.set(\"fake_id\", \"asdf1234\");"
-								]
+								],
+								"id": "3b1ec3ca-5acf-46a6-9946-d18d8aabffb3",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3769,13 +3770,77 @@
 					"response": []
 				},
 				{
+					"name": "Verify /boats/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches pre exactly\", function() {",
+									"    res = pm.response.json();",
+									"    console.log(res);",
+									"    exp = JSON.parse(pm.environment.get(\"pre-BOATS\"));",
+									"",
+									"    // Compare Pre vs. Post",
+									"    for (i = 0; i < res.length; i++ ) {",
+									"        pm.expect(res[i][\"id\"]).to.equal(exp[i][\"id\"]);",
+									"        pm.expect(res[i][\"url\"]).to.equal(exp[i][\"url\"]);",
+									"        pm.expect(res[i][\"length\"]).to.equal(exp[i][\"length\"]);",
+									"        pm.expect(res[i][\"name\"]).to.equal(exp[i][\"name\"]);",
+									"        pm.expect(res[i][\"type\"]).to.equal(exp[i][\"type\"]);",
+									"        pm.expect(res[i][\"at_sea\"]).to.equal(exp[i][\"at_sea\"]);",
+									"    } ",
+									"});"
+								],
+								"id": "795c0d73-a7ef-4b0e-994b-4adf37e210b6",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
 					"name": "404 /slips/{{fake_id}}",
 					"event": [
 						{
 							"listen": "test",
 							"script": {
-								"id": "2ead5c75-0c08-4699-a786-b7bcc3b5121f",
-								"type": "text/javascript",
 								"exec": [
 									"pm.test(\"response is 404 Not Found\", function () {",
 									"    pm.response.to.have.status(404);",
@@ -3786,17 +3851,19 @@
 									"    pm.response.to.have.jsonBody('error');",
 									"});",
 									""
-								]
+								],
+								"id": "2ead5c75-0c08-4699-a786-b7bcc3b5121f",
+								"type": "text/javascript"
 							}
 						},
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "3b1ec3ca-5acf-46a6-9946-d18d8aabffb3",
-								"type": "text/javascript",
 								"exec": [
 									"pm.environment.set(\"fake_id\", \"asdf1234\");"
-								]
+								],
+								"id": "3b1ec3ca-5acf-46a6-9946-d18d8aabffb3",
+								"type": "text/javascript"
 							}
 						}
 					],
@@ -3900,6 +3967,941 @@
 						"description": ""
 					},
 					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update Rejections",
+			"description": "",
+			"item": [
+				{
+					"name": "/boats/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "82d89a86-8a7d-4283-92b2-032c1885e2f4",
+								"type": "text/javascript",
+								"exec": [
+									"// var domain = pm.environment.get(\"domain\");",
+									"",
+									"// if (typeof domain == 'undefined') {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", domain);",
+									"// }",
+									"",
+									"",
+									"// // Set environmental variables.",
+									"// pm.environment.set(\"name\", \"Boat Name\");",
+									"// pm.environment.set(\"type\", \"Boat Type\");",
+									"// pm.environment.set(\"length\", \"10\");"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "eb28e4a9-a3c9-453c-a16a-d3ae2b41feae",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"    ",
+									"    // Save Boats Response",
+									"    res = pm.response.json();",
+									"    pm.environment.set(\"pre-BOATS2\", JSON.stringify(res))",
+									"});",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/slips/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "cffabb52-71dd-423f-b413-10e9b449e65a",
+								"type": "text/javascript",
+								"exec": [
+									"// var domain = pm.environment.get(\"domain\");",
+									"// var preBOATS = pm.environment.get(\"pre-BOATS\");",
+									"",
+									"// postman.clearEnvironmentVariables();",
+									"// if (typeof domain == 'undefined') {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", domain);",
+									"// }",
+									"",
+									"// pm.environment.set(\"pre-BOATS\", preBOATS);",
+									"",
+									"// pm.environment.set(\"number\", 17);"
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e061ea4e-fd9d-4a55-91ff-8318edcebc01",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"    ",
+									"    // Save Slips Response",
+									"    res = pm.response.json();",
+									"    pm.environment.set(\"pre-SLIPS2\", JSON.stringify(res))",
+									"});",
+									"",
+									"",
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "404 /boats/{fake_id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 404 Not Found\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								],
+								"id": "0483af1e-4b7b-4179-92fe-4413752acddb",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "fcc266d0-f6dc-447c-97e0-cbf57aa62ff0",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"New name\",\n  \"type\": \"canoe\",\n  \"length\": 15\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{fake_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{fake_id}}"
+							]
+						},
+						"description": "Edit boat"
+					},
+					"response": []
+				},
+				{
+					"name": "404 /slips/{fake_id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 404 Not Found\", function () {",
+									"    pm.response.to.have.status(404);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								],
+								"id": "a38aa728-79ea-42df-8de5-31d0f7e5027f",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": {{number}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/slips/{{fake_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{fake_id}}"
+							]
+						},
+						"description": "pm.environment.set(\"good_number\", 17);\npm.environment.set(\"null_boat\", \"null\");\npm.environment.set(\"null_boat_url\", \"null\");\npm.environment.set(\"null_arrival_date\", \"null\");\npm.environment.set(\"empty_departure_history\", JSON.stringify([]));"
+					},
+					"response": []
+				},
+				{
+					"name": "Verify /boats/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "7b5ae158-65d2-4fcd-a250-063e9465eaa9",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches pre exactly\", function() {",
+									"    res = pm.response.json();",
+									"    console.log(res);",
+									"    exp = JSON.parse(pm.environment.get(\"pre-BOATS2\"));",
+									"",
+									"    // Compare Pre vs. Post",
+									"    for (i = 0; i < res.length; i++ ) {",
+									"        pm.expect(res[i][\"id\"]).to.equal(exp[i][\"id\"]);",
+									"        pm.expect(res[i][\"url\"]).to.equal(exp[i][\"url\"]);",
+									"        pm.expect(res[i][\"length\"]).to.equal(exp[i][\"length\"]);",
+									"        pm.expect(res[i][\"name\"]).to.equal(exp[i][\"name\"]);",
+									"        pm.expect(res[i][\"type\"]).to.equal(exp[i][\"type\"]);",
+									"        pm.expect(res[i][\"at_sea\"]).to.equal(exp[i][\"at_sea\"]);",
+									"    } ",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "Verify /slips/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "53151dae-db0e-4151-9ccc-d326f91f94b7",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches pre exactly\", function() {",
+									"    res = pm.response.json();",
+									"    // console.log(res);",
+									"    exp = JSON.parse(pm.environment.get(\"pre-SLIPS2\"));",
+									"",
+									"    // Compare Pre vs. Post",
+									"    for (i = 0; i < res.length; i++ ) {",
+									"        pm.expect(res[i][\"id\"]).to.equal(exp[i][\"id\"]);",
+									"        pm.expect(res[i][\"url\"]).to.equal(exp[i][\"url\"]);",
+									"        pm.expect(res[i][\"number\"]).to.equal(exp[i][\"number\"]);",
+									"        pm.expect(res[i][\"current_boat\"]).to.equal(exp[i][\"current_boat\"]);",
+									"        pm.expect(res[i][\"current_boat_url\"]).to.equal(exp[i][\"current_boat_url\"]);",
+									"        ",
+									"        // Departure History matches",
+									"        exp_departure_history = exp[i][\"departure_history\"]",
+									"        console.log(typeof(exp_departure_history));",
+									"        actual_departure_history = res[i][\"departure_history\"]",
+									"        ",
+									"        // if (typeof exp_departure_history == \"string\") {",
+									"        //     exp_departure_history = JSON.parse(exp_departure_history)",
+									"        // }",
+									"        // if (typeof actual_departure_history == \"string\") {",
+									"        //     actual_departure_history = JSON.parse(actual_departure_history)",
+									"        // }",
+									"    ",
+									"    ",
+									"        // for ( i = 0; i < actual_departure_history.length; i++ ) {",
+									"        //     pm.expect(actual_departure_history[i][\"departed_boat\"]).to.equal(exp_departure_history[i][\"departed_boat\"]);",
+									"        //     pm.expect(actual_departure_history[i][\"departure_date\"]).to.equal(exp_departure_history[i][\"departure_date\"]);",
+									"        // }",
+									"    } ",
+									"});"
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST /boats/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 201 Created\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches request\", function () {",
+									"    exp_name = pm.environment.get(\"name\");",
+									"    exp_type = pm.environment.get(\"type\");",
+									"    exp_length = pm.environment.get(\"length\");",
+									"    exp_at_sea = true;",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['name']).to.equal(exp_name);",
+									"    pm.expect(res['type']).to.equal(exp_type);",
+									"    pm.expect(res['length'].toString()).to.equal(exp_length);",
+									"    pm.expect(res['at_sea']).to.equal(exp_at_sea);",
+									"    ",
+									"    // Save URL and ID",
+									"    pm.environment.set(\"boat_url\", res['url']);",
+									"    pm.environment.set(\"boat_id\", res['id']);",
+									"    ",
+									"    // Save response as string",
+									"    res_string = JSON.stringify(res);",
+									"    pm.environment.set(\"preBoat\", res_string);",
+									"    ",
+									"});",
+									"",
+									""
+								],
+								"id": "3596d6fa-51a9-4032-8ce0-236a47d20c13",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"{{name}}\",\n  \"type\": \"{{type}}\",\n  \"length\": {{length}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "POST /slips/",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 201 Created\", function () {",
+									"    pm.response.to.have.status(201);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches request\", function () {",
+									"    exp_number = pm.environment.get(\"number\");",
+									"    ",
+									"    res = pm.response.json();",
+									"    pm.expect(res['number'].toString()).to.equal(exp_number);",
+									"    ",
+									"    // Save URL and ID",
+									"    pm.environment.set(\"slip_url\", res['url']);",
+									"    pm.environment.set(\"slip_id\", res['id']);",
+									"    ",
+									"    // Save response as string",
+									"    res_string = JSON.stringify(res);",
+									"    pm.environment.set(\"preSlip\", res_string);",
+									"    ",
+									"});",
+									"",
+									""
+								],
+								"id": "2ed495d2-1183-4cd6-ba18-55c3c56c184b",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": {{number}}\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/slips",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/slips/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// var domain = pm.environment.get(\"domain\");",
+									"// var preBOATS = pm.environment.get(\"pre-BOATS\");",
+									"",
+									"// postman.clearEnvironmentVariables();",
+									"// if (typeof domain == 'undefined') {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", domain);",
+									"// }",
+									"",
+									"// pm.environment.set(\"pre-BOATS\", preBOATS);",
+									"",
+									"// pm.environment.set(\"number\", 17);"
+								],
+								"id": "cffabb52-71dd-423f-b413-10e9b449e65a",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"    ",
+									"    // Save Slips Response",
+									"    res = pm.response.json();",
+									"    pm.environment.set(\"pre-SLIPS2\", JSON.stringify(res))",
+									"});",
+									"",
+									"",
+									""
+								],
+								"id": "e061ea4e-fd9d-4a55-91ff-8318edcebc01",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/slips/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "/boats/",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"// var domain = pm.environment.get(\"domain\");",
+									"",
+									"// if (typeof domain == 'undefined') {",
+									"//     pm.environment.set(\"domain\", \"http://localhost:8080\");",
+									"// }",
+									"// else {",
+									"//     pm.environment.set(\"domain\", domain);",
+									"// }",
+									"",
+									"",
+									"// // Set environmental variables.",
+									"// pm.environment.set(\"name\", \"Boat Name\");",
+									"// pm.environment.set(\"type\", \"Boat Type\");",
+									"// pm.environment.set(\"length\", \"10\");"
+								],
+								"id": "82d89a86-8a7d-4283-92b2-032c1885e2f4",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"    ",
+									"    // Save Boats Response",
+									"    res = pm.response.json();",
+									"    pm.environment.set(\"pre-BOATS2\", JSON.stringify(res))",
+									"});",
+									""
+								],
+								"id": "eb28e4a9-a3c9-453c-a16a-d3ae2b41feae",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{domain}}/boats/",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								""
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "400 EXTRA INFO  /boats/{boat_id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 404 Not Found\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								],
+								"id": "d1443d14-69a3-48c5-b9ed-5b7b63f76bd2",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "fcc266d0-f6dc-447c-97e0-cbf57aa62ff0",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"NEW {{name}}\",\n  \"type\": \"NEW {{type}}\",\n  \"length\": 100,\n  \"extra\": \"nonsense\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{boat_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{boat_id}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "400 EXTRA INFO  /slips/{slip_id}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 404 Not Found\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								],
+								"id": "d1443d14-69a3-48c5-b9ed-5b7b63f76bd2",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "fcc266d0-f6dc-447c-97e0-cbf57aa62ff0",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"NEW {{number}}\",\n  \"extra\": \"nonsense\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/slips/{{slip_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{slip_id}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Invalid Data - PATCH /boats/{{boat_id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is 400 Created\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								],
+								"id": "1c9f28ea-310f-4037-b513-869cde5268f5",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"id": "8ae48a59-9f7f-4722-85a5-b0c8728aaacc",
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"NEW {{name}}\",\n  \"type\": \"NEW {{type}}\",\n  \"length\": \"seventeen\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/boats/{{boat_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"boats",
+								"{{boat_id}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "400 - Invalid Data - PATCH /slips/{{slip_id}}",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "6f8a8115-680c-4e20-add3-0bf25d5bb1f4",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test(\"response is 400 Created\", function () {",
+									"    pm.response.to.have.status(400);",
+									"});",
+									"",
+									"pm.test(\"response has error\", function () {",
+									"    pm.response.to.be.error;",
+									"    pm.response.to.have.jsonBody('error');",
+									"});",
+									""
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "a7140272-f895-4c46-b508-9aa99480134e",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"number\": \"non-sense\"\n}"
+						},
+						"url": {
+							"raw": "{{domain}}/slips/{{slip_id}}",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"slips",
+								"{{slip_id}}"
+							]
+						},
+						"description": ""
+					},
+					"response": []
 				},
 				{
 					"name": "Verify /boats/",
@@ -3931,7 +4933,7 @@
 									"pm.test(\"response matches pre exactly\", function() {",
 									"    res = pm.response.json();",
 									"    console.log(res);",
-									"    exp = JSON.parse(pm.environment.get(\"pre-BOATS\"));",
+									"    exp = JSON.parse(pm.environment.get(\"pre-BOATS2\"));",
 									"",
 									"    // Compare Pre vs. Post",
 									"    for (i = 0; i < res.length; i++ ) {",
@@ -3944,7 +4946,7 @@
 									"    } ",
 									"});"
 								],
-								"id": "795c0d73-a7ef-4b0e-994b-4adf37e210b6",
+								"id": "7b5ae158-65d2-4fcd-a250-063e9465eaa9",
 								"type": "text/javascript"
 							}
 						}
@@ -3968,86 +4970,120 @@
 					"response": []
 				},
 				{
-					"name": "POST /boats/",
+					"name": "Verify /slips/",
 					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"id": "88f0cd3d-b480-451f-a0c5-f3b1107f39db",
-								"type": "text/javascript",
-								"exec": [
-									"// pm.test(\"response is 201 Created\", function () {",
-									"//     pm.response.to.have.status(201);",
-									"// });",
-									"",
-									"// pm.test(\"response has body\", function () {",
-									"//     pm.response.to.not.be.error;",
-									"//     pm.response.to.have.jsonBody('');",
-									"//     pm.response.to.not.have.jsonBody('error');",
-									"// });",
-									"",
-									"// pm.test(\"response matches request\", function () {",
-									"//     exp_name = pm.environment.get(\"test2name\");",
-									"//     exp_type = pm.environment.get(\"test2type\");",
-									"//     exp_length = pm.environment.get(\"test2length\");",
-									"//     exp_at_sea = true;",
-									"    ",
-									"//     res = pm.response.json();",
-									"//     pm.expect(res['name']).to.equal(exp_name);",
-									"//     pm.expect(res['type']).to.equal(exp_type);",
-									"//     pm.expect(res['length'].toString()).to.equal(exp_length);",
-									"//     pm.expect(res['at_sea']).to.equal(exp_at_sea);",
-									"    ",
-									"//     // Save URL and ID",
-									"//     pm.environment.set(\"test2url\", res['url']);",
-									"//     pm.environment.set(\"test2id\", res['id']);",
-									"    ",
-									"//     // Save response as string",
-									"//     res_string = JSON.stringify(res);",
-									"//     pm.environment.set(\"test2response\", res_string);",
-									"    ",
-									"//     pm.environment.set(\"test1\", true)",
-									"// });",
-									"",
-									""
-								]
-							}
-						},
 						{
 							"listen": "prerequest",
 							"script": {
-								"id": "046e8e06-8c44-4f5a-954a-2a766b1193ef",
-								"type": "text/javascript",
 								"exec": [
 									""
-								]
+								],
+								"id": "463880e8-8e39-46ac-9f96-1e9e6385a48e",
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"response is ok\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"",
+									"pm.test(\"response has body\", function () {",
+									"    pm.response.to.not.be.error;",
+									"    pm.response.to.have.jsonBody('');",
+									"    pm.response.to.not.have.jsonBody('error');",
+									"});",
+									"",
+									"pm.test(\"response matches pre exactly\", function() {",
+									"    res = pm.response.json();",
+									"    // console.log(res);",
+									"    exp = JSON.parse(pm.environment.get(\"pre-SLIPS2\"));",
+									"",
+									"    // Compare Pre vs. Post",
+									"    for (i = 0; i < res.length; i++ ) {",
+									"        pm.expect(res[i][\"id\"]).to.equal(exp[i][\"id\"]);",
+									"        pm.expect(res[i][\"url\"]).to.equal(exp[i][\"url\"]);",
+									"        pm.expect(res[i][\"number\"]).to.equal(exp[i][\"number\"]);",
+									"        pm.expect(res[i][\"current_boat\"]).to.equal(exp[i][\"current_boat\"]);",
+									"        pm.expect(res[i][\"current_boat_url\"]).to.equal(exp[i][\"current_boat_url\"]);",
+									"        ",
+									"        // Departure History matches",
+									"        exp_departure_history = exp[i][\"departure_history\"]",
+									"        console.log(typeof(exp_departure_history));",
+									"        actual_departure_history = res[i][\"departure_history\"]",
+									"        ",
+									"        // if (typeof exp_departure_history == \"string\") {",
+									"        //     exp_departure_history = JSON.parse(exp_departure_history)",
+									"        // }",
+									"        // if (typeof actual_departure_history == \"string\") {",
+									"        //     actual_departure_history = JSON.parse(actual_departure_history)",
+									"        // }",
+									"    ",
+									"    ",
+									"        // for ( i = 0; i < actual_departure_history.length; i++ ) {",
+									"        //     pm.expect(actual_departure_history[i][\"departed_boat\"]).to.equal(exp_departure_history[i][\"departed_boat\"]);",
+									"        //     pm.expect(actual_departure_history[i][\"departure_date\"]).to.equal(exp_departure_history[i][\"departure_date\"]);",
+									"        // }",
+									"    } ",
+									"});"
+								],
+								"id": "53151dae-db0e-4151-9ccc-d326f91f94b7",
+								"type": "text/javascript"
 							}
 						}
 					],
 					"request": {
-						"method": "POST",
-						"header": [
-							{
-								"key": "Content-Type",
-								"value": "application/json"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\n  \"name\": \"{{test2name}}\",\n  \"type\": \"{{test2type}}\",\n  \"length\": {{test2length}}\n}"
-						},
+						"method": "GET",
+						"header": [],
+						"body": {},
 						"url": {
-							"raw": "{{domain}}/boats",
+							"raw": "{{domain}}/slips/",
 							"host": [
 								"{{domain}}"
 							],
 							"path": [
-								"boats"
+								"slips",
+								""
 							]
 						},
 						"description": ""
 					},
 					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"// Set environmental variables.",
+							"// PRE-VALUES",
+							"pm.environment.set(\"name\", \"Boat Name\");",
+							"pm.environment.set(\"type\", \"Boat Type\");",
+							"pm.environment.set(\"length\", \"10\");",
+							"",
+							"pm.environment.set(\"number\", \"17\");",
+							"",
+							"pm.environment.set(\"fake_id\", \"asdf1234\");",
+							"",
+							"pm.environment.set(\"false_at_sea\", false);",
+							"pm.environment.set(\"true_at_sea\", true);"
+						],
+						"id": "954eb6ac-c95b-455d-8559-f424c6fcd264",
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"id": "9a9c873e-75fb-494b-bdc0-9fa9febdef97",
+						"type": "text/javascript"
+					}
 				}
 			]
 		}

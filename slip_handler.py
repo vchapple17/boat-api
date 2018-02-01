@@ -60,10 +60,8 @@ class SlipsHandler(RequestHandler):
         # Create Resource on datastore
 
         try:
-
             slip = Slip(number=number);
             slip.put()
-            print("here");
         except:
             self.response.write(json.dumps({"error": "Error saving Slip"}));
             self.response.status_int = 500;
@@ -81,8 +79,6 @@ class SlipsHandler(RequestHandler):
                 "number": slip.number,
                 "current_boat": slip.current_boat,
                 "current_boat_url": slip.current_boat_url,
-                # "arrival_date": slip.arrival_date,
-                # "departure_history": slip.departure_history
             }
             if (slip.arrival_date) == None:
                 res["arrival_date"] = slip.arrival_date
@@ -90,13 +86,12 @@ class SlipsHandler(RequestHandler):
                 res["arrival_date"] = datetime.strftime(slip.arrival_date, "%-m/%-d/%-Y")
 
             res["departure_history"] = slip._serializeHistory()
-            # print(slip)
+
             self.response.write(json.dumps(res))
         except:
             self.response.write(json.dumps({"error": "Error writing response"}));
             self.response.status_int = 500;
             return
-
 
 class SlipHandler(RequestHandler):
     def get(self, slip_id):
@@ -122,8 +117,6 @@ class SlipHandler(RequestHandler):
             "number": slip.number,
             "current_boat": slip.current_boat,
             "current_boat_url": slip.current_boat_url,
-            # "arrival_date": str(slip.arrival_date),
-            # "departure_history": slip.departure_history
         }
         if (slip.arrival_date) == None:
             res["arrival_date"] = slip.arrival_date
@@ -144,7 +137,7 @@ class SlipHandler(RequestHandler):
             if (slip == None):
                 raise TypeError
         except:
-            self.response.write(json.dumps({"error": "Error getting slip"}));
+            self.response.write(json.dumps({"error": "Invalid Slip ID"}));
             self.response.status_int = 404;
             return
 
@@ -163,7 +156,7 @@ class SlipHandler(RequestHandler):
             for key in obj:
                 # Check that key is a valid input
                 if (key == "number"):
-                    slip.number = obj["number"];
+                    slip.number = int(obj["number"]);
                     saveObject = True;
                 else:
                     saveObject = False;
@@ -172,7 +165,7 @@ class SlipHandler(RequestHandler):
                     self.response.status_int = 400;
                     return
 
-        except (TypeError, ValueError):
+        except:
             self.response.write(json.dumps({"error":"Invalid inputs"}));
             self.response.status_int = 400;
             return

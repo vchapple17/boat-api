@@ -97,7 +97,7 @@ class BoatsHandler(RequestHandler):
 # Boat identified by id
 class BoatHandler(RequestHandler):
     def get(self, boat_id):
-        print("BoatHandler: GET 1")
+        print("BoatHandler: GET 1: " + boat_id)
         # Convert boat_id to ndb object
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
@@ -372,7 +372,7 @@ class DockingHandler(RequestHandler):
             boat.at_sea = True;
             boat.put()
         except:
-            print("Cannot update boat");
+            # print("Cannot update boat");
             self.response.write(json.dumps({"error": "Cannot update boat"}));
             self.response.status_int = 400;
             return
@@ -388,9 +388,9 @@ class DockingHandler(RequestHandler):
                 "departed_boat": boat_id
             })
             slip.put()
-            print("UPDATED SLIP", slip)
+            #print("UPDATED SLIP", slip)
         except:
-            print("Cannot update slip");
+            #print("Cannot update slip");
             # Undo boat update
             boat.at_sea = False;
             boat.put()
