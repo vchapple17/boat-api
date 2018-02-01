@@ -7,7 +7,7 @@ from Boat import Boat
 from Slip import Slip
 from google.appengine.ext import ndb
 from datetime import datetime
-from datetime import date
+
 class BoatsHandler(RequestHandler):
     def get(self):
         print("BoatsHandler: GET LIST")
