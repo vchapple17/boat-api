@@ -1,6 +1,4 @@
-# boat-api
-
-Valerie Chapple
+**Marina API**    Valerie Chapple
 
 ## Boat Example JSON
 
@@ -15,7 +13,7 @@ Valerie Chapple
 
 ```
 {
-  "url": "https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf12",
+  "url": "https://.../boats/kj0987a234bcdasdf12",
   "id":"kj0987a234bcdasdf12",        
   "name": "Sea Witch",  
   "type":"Catamaran",   
@@ -36,16 +34,15 @@ Valerie Chapple
 | `arrival_date` | `string` | Date current boat arrived in "MM/DD/YYYY", null if empty  |
 | `departure_history` | `[ histJSON ]` | list of previous boats and departure dates |
 
-
 A `histJSON` is a json object that contains the `departure_date` and the ID of the `departed_boat`.
 
 ```
 {
-  "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
+  "url": "https://.../slips/123abc",
   "id":"123abc",              
   "number": 5,                
   "current_boat":"abc555",    
-  "current_boat_url":"https://totemic-splicer-145122.appspot.com/boats/abc555",
+  "current_boat_url":"https://.../boats/abc555",
   "arrival_date":"1/1/2015",  
   "departure_history":        
     [ { "departure_date":"11/4/2014", "departed_boat":"123aaa" } ]  
@@ -68,7 +65,7 @@ Status: 200 OK
 
 [
   {
-    "url": "https://totemic-splicer-145122.appspot.com/boats/cdasdf12kj0987a23",
+    "url": "https://.../boats/cdasdf12kj0987a23",
     "id": "cdasdf12kj0987a23",
     "name": "S.S. Awesome",
     "type": "power boat",
@@ -91,7 +88,7 @@ GET /boats/{boat_id}
 Status: 200 OK
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf15",
+  "url": "https://.../boats/kj0987a234bcdasdf15",
   "id": "kj0987a234bcdasdf15",
   "name": "S.S. Awesome",
   "type": "power boat",
@@ -115,11 +112,11 @@ Status: 200 OK
 
 [
   {
-    "url": "https://totemic-splicer-145122.appspot.com/slips/cdasdf12kj0987a23",
+    "url": "https://.../slips/cdasdf12kj0987a23",
     "id":"cdasdf12kj0987a23",
     "number": 5,
     "current_boat":"kj0987a234bcdasdf1234hl",
-    "current_boat_url":"https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf1234hl",
+    "current_boat_url":"https://.../boats/kj0987a234bcdasdf1234hl",
     "arrival_date":"1/1/2015",
     "departure_history":
       [ {
@@ -144,11 +141,11 @@ GET /slips/{slip_id}
 Status: 200 OK
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/slips/123abc",
+  "url": "https://.../slips/123abc",
   "id":"123abc",
   "number": 5,
   "current_boat":"abc555",
-  "current_boat_url":"https://totemic-splicer-145122.appspot.com/boats/abc555",
+  "current_boat_url":"https://.../boats/abc555",
   "arrival_date":"1/1/2015",
   "departure_history":
     [ {
@@ -192,7 +189,7 @@ Invalid data, extra data, or incorrect data types will be rejected.
 Status: 201 Created
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/boats/dasdf1234hl",
+  "url": "https://.../boats/dasdf1234hl",
   "id": "dasdf1234hl",
   "name": "Escape",
   "type": "yacht",
@@ -231,11 +228,11 @@ Invalid data, extra data, or incorrect data types will be rejected.
 Status: 201 Created
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/slips/456abc",
+  "url": "https://.../slips/456abc",
   "id":"456abc",
   "number": 125,
   "current_boat":"kj0987a234bcdasdf15",
-  "current_boat_url":"https://totemic-splicer-145122.appspot.com/boats/kj0987a234bcdasdf15",
+  "current_boat_url":"https://.../boats/kj0987a234bcdasdf15",
   "arrival_date":"1/1/2015",
   "departure_history":
     [ {
@@ -278,7 +275,7 @@ Invalid data, extra data, or incorrect data types will be rejected.
 Status: 200 OK
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/boats/dasdf1234hl",
+  "url": "https://.../boats/dasdf1234hl",
   "id": "dasdf1234hl",
   "name": "Escape",
   "type": "yacht",
@@ -317,7 +314,7 @@ Invalid data, extra data, or incorrect data types will be rejected.
 Status: 200 OK
 
 {
-  "url": "https://totemic-splicer-145122.appspot.com/slips/456abc",
+  "url": "https://.../slips/456abc",
   "id": "456abc",
   "number": 1250,
   "current_boat": null,
