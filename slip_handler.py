@@ -211,7 +211,6 @@ class SlipHandler(RequestHandler):
             self.response.status_int = 500;
             return
 
-
     def delete(self, slip_id):
         print("SlipHandler: DELETE 1")
 
@@ -231,10 +230,9 @@ class SlipHandler(RequestHandler):
             try:
                 boat_key = ndb.Key(urlsafe=slip.current_boat);
                 boat = boat_key.get();
-                if (boat == None):
-                    raise TypeError;
-                boat.at_sea = True;
-                boat.put();
+                if (boat != None):
+                    boat.at_sea = True;
+                    boat.put();
             except:
                 # # Send response that slip is deleted
                 self.response.write(json.dumps({"error": "Cannot release boat from slip."}))
