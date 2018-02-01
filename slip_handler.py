@@ -239,6 +239,7 @@ class SlipHandler(RequestHandler):
                 # # Send response that slip is deleted
                 self.response.write(json.dumps({"error": "Cannot release boat from slip."}))
                 self.response.status_int = 400;
+                return
         # Delete ndb entity
         try:
             slip_key.delete();

@@ -28,6 +28,7 @@ class BoatsHandler(RequestHandler):
         self.response.content_type = 'text/plain'
         self.response.status_int = 200;
         self.response.out.write(json.dumps(res))
+        return
 
     def post(self):
         print("SlipsHandler: CREATE POST")
@@ -336,6 +337,7 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid `departure` parameter"}));
             self.response.status_int = 400;
+            return
 
         # Convert boat_id and slip_id to ndb objects
         try:
@@ -345,6 +347,8 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 400;
+            return
+
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
@@ -353,6 +357,7 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 400;
+            return
 
         # Verify Boat Not At Sea, reject if not
         if (boat.at_sea == True):
