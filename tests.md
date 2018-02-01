@@ -1,96 +1,4 @@
 # boat-api Testing
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
-- [boat-api Testing](#boat-api-testing)
-	- [Pre-Clean](#pre-clean)
-- [Boat: Read All](#boat-read-all)
-	- [Test 1: Get all boats](#test-1-get-all-boats)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-- [Boat: Create & Read Boat](#boat-create-read-boat)
-	- [Test 2: Create a new boat](#test-2-create-a-new-boat)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-	- [Test 3: URL from Test 2 Works](#test-3-url-from-test-2-works)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-	- [Test 4: ID from Test 2 Works](#test-4-id-from-test-2-works)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-	- [Test 5: Get All Boats After Test 2](#test-5-get-all-boats-after-test-2)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-- [Boat: Edit Boat](#boat-edit-boat)
-	- [Test 6: Edit Boat Name, Type, Length](#test-6-edit-boat-name-type-length)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-	- [Test 7: Check Boat Updated Correctly](#test-7-check-boat-updated-correctly)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-- [Slip: Read All Slips](#slip-read-all-slips)
-	- [Test 8: Get all slips](#test-8-get-all-slips)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-- [Slip: Create & Read Slip](#slip-create-read-slip)
-	- [Test 9: Create a new slip](#test-9-create-a-new-slip)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-	- [Test 10: URL from Test 8 Works](#test-10-url-from-test-8-works)
-	- [Test 11: ID from Test 8 Works](#test-11-id-from-test-8-works)
-	- [Test 12: Get All Slips After Test 8](#test-12-get-all-slips-after-test-8)
-- [Slip: Edit Slip](#slip-edit-slip)
-	- [Test 13: Edit Slip Number](#test-13-edit-slip-number)
-	- [Test 14: Check Slip Number Updated Correctly](#test-14-check-slip-number-updated-correctly)
-- [Boat Arrival Case 1](#boat-arrival-case-1)
-	- [Test 15: Verify Slip is Empty](#test-15-verify-slip-is-empty)
-	- [Test 16: Verify Boat is At Sea](#test-16-verify-boat-is-at-sea)
-	- [Test 17: Boat Arrival](#test-17-boat-arrival)
-	- [Test 18: Verify Boat is Not at Sea](#test-18-verify-boat-is-not-at-sea)
-	- [Test 19: Verify Slip lists the Boat and URL](#test-19-verify-slip-lists-the-boat-and-url)
-- [Boat Arrival Case 2](#boat-arrival-case-2)
-	- [Test 20: Verify Slip is Occupied](#test-20-verify-slip-is-occupied)
-	- [Test 21: Verify Boat is At Sea](#test-21-verify-boat-is-at-sea)
-	- [Test 22: Boat Arrival Denied (403 - Slip Occupied)](#test-22-boat-arrival-denied-403-slip-occupied)
-	- [Test 23: Verify Boat is Unchanged](#test-23-verify-boat-is-unchanged)
-	- [Test 24: Verify Slip is Unchanged](#test-24-verify-slip-is-unchanged)
-- [Boat Arrival Case 3](#boat-arrival-case-3)
-	- [Test 25: Verify New Slip is Empty](#test-25-verify-new-slip-is-empty)
-	- [Test 26: Verify Boat is Not At Sea](#test-26-verify-boat-is-not-at-sea)
-	- [Test 27: Verify Boat's Current Slip](#test-27-verify-boats-current-slip)
-	- [Test 28: Boat Arrival](#test-28-boat-arrival)
-	- [Test 29: Verify Boat is Still Not At Sea](#test-29-verify-boat-is-still-not-at-sea)
-	- [Test 30: Verify New Slip is Has Boat and URL](#test-30-verify-new-slip-is-has-boat-and-url)
-	- [Test 31: Verify Old Slip is Empty](#test-31-verify-old-slip-is-empty)
-- [Boat Arrival Case 4](#boat-arrival-case-4)
-	- [Test : Verify New Slip is Occupied](#test-verify-new-slip-is-occupied)
-	- [Test : Verify New Slip's Boat is Not At Sea](#test-verify-new-slips-boat-is-not-at-sea)
-	- [Test : Verify Boat is Not At Sea](#test-verify-boat-is-not-at-sea)
-	- [Test : Verify Boat's Current Slip Has This Boat](#test-verify-boats-current-slip-has-this-boat)
-	- [Test : Boat Arrival Denied (403 - Slip Occupied)](#test-boat-arrival-denied-403-slip-occupied)
-	- [Test : Verify New Slip is Unchanged](#test-verify-new-slip-is-unchanged)
-	- [Test : Verify New Slip's Original Boat Unchanged](#test-verify-new-slips-original-boat-unchanged)
-	- [Test : Verify Boat's Old Slip is Unchanged](#test-verify-boats-old-slip-is-unchanged)
-	- [Test : Verify Boat is Unchanged](#test-verify-boat-is-unchanged)
-- [Boat Departure](#boat-departure)
-	- [Test : Verify Slip has a Boat](#test-verify-slip-has-a-boat)
-	- [Test : Verify that Boat is Not At Sea](#test-verify-that-boat-is-not-at-sea)
-	- [Test : Put Boat At Sea](#test-put-boat-at-sea)
-	- [Test : Verify Slip Updated to Empty and Ship History Updated](#test-verify-slip-updated-to-empty-and-ship-history-updated)
-	- [Test : Verify Boat Updated to At Sea](#test-verify-boat-updated-to-at-sea)
-- [Delete Docked Boat](#delete-docked-boat)
-	- [Test : Delete Docked Boat](#test-delete-docked-boat)
-	- [Test : Check Boat Deleted](#test-check-boat-deleted)
-	- [Test : Check Slip Updated when Current Boat Deleted](#test-check-slip-updated-when-current-boat-deleted)
-	- [Test : Check Boat Deleted](#test-check-boat-deleted)
-- [Delete Occupied Slip](#delete-occupied-slip)
-	- [Test : Delete Occupied Slip](#test-delete-occupied-slip)
-	- [Test : Check Slip Deleted](#test-check-slip-deleted)
-	- [Test : Check Boat Updated to At Sea](#test-check-boat-updated-to-at-sea)
-	- [Test :](#test-)
-		- [Request](#request)
-		- [Expected Response](#expected-response)
-
-<!-- /TOC -->
 
 ## Pre-Clean
 * clean datastore manually: `dev_appserver.py -c app.yaml`
@@ -530,7 +438,6 @@ GET /slips/{test9id}
 	```
 
 
-
 # Boat Arrival Case 1
 
 Place an at sea boat into an empty slip.
@@ -602,7 +509,7 @@ GET /boats/{test2id}
 * Save `test17arrival_date` for future use.
 
 ```
-PUT /slips/{test9id}/boats/{test2id}
+PUT /boats/{test2id}/slips/{test9id}
 
 {
 	"arrival_date", "1/15/2016"
@@ -661,6 +568,8 @@ GET /slips/{test9id}
 
 * JSON that that matches `test15slip` except for `current_boat` is equal to `id` of `test16boat`, `current_boat_url` is equal to `url` of `test16boat`, and `arrival_date` matches requested date (`test17arrival_date`).
 
+* `arrival_date` must be a date string in the form of `mm/dd/yyyy`
+
 ```
 {           
 	"number": 17,                
@@ -690,13 +599,10 @@ GET /slips/{test9id}
 
 * Save `test20departure_date` for future use.
 
+* query parameter `departure` must be a date string in the form of `mm/dd/yyyy`
+
 ```
-DELETE /slips/{test9id}/boats/{test2id}
-
-{
-	"departure_date": "2/1/2016"
-}
-
+DELETE /boats/{test2id}/slips/{test9id}?departure={datestring}
 ```
 
 ### Expected Response
@@ -767,6 +673,169 @@ GET /boats/{test2id}
 }
 ```
 
+# Delete Occupied Slip
+
+## Test 23: Pair a boat and slip (Boat Arrival)
+
+### Request
+
+* Save `test23arrival_date` for future use.
+
+```
+PUT /boats/{test2id}/slips/{test9id}
+
+{
+	"arrival_date", "3/15/2016"
+}
+```
+
+### Expected Response
+
+* Status is 204
+
+* No Content
+
+
+## Test 24: Check Slip is Not Empty
+
+### Request
+
+Verify slip is NOT empty
+
+```
+GET /slips/{test9id}
+
+```
+
+### Expected Response
+
+  * Status is 200
+
+  * JSON that has non-`null` values for `current_boat`, `current_boat_url`, and `arrival_date`.
+
+	```
+	{           
+	  "number": 38,
+		"current_boat": "asdfASDF1234-5678",                
+	  "current_boat_url": "http://.../boats/asdfASDF1234-5678",   
+	  "arrival_date": "3/15/2016",
+	  "departure_history": [],
+	  "id": "asdfASDF1234-1111",
+	  "url": "http://.../slips/asdfASDF1234-1111"
+  }
+  ```
+
+## Test 25: Check Boat is NOT at sea
+
+### Request
+
+Verify boat is not `at_sea`.
+
+```
+GET /boats/{test2id}
+
+```
+
+### Expected Response
+
+  * Status is 200
+
+  * JSON that has `at_sea` set to `false`.
+
+  ```
+  {
+    "name": "Boat Name",
+    "type": "Boat Type",
+    "length": 10,
+    "id": "asdfASDF1234-5678",
+    "url": "http://.../boats/asdfASDF1234-5678",
+    "at_sea": false
+  }
+  ```
+
+## Test 26: Delete Occupied Slip
+
+### Request
+
+```
+DELETE /slips/{test9id}
+
+```
+
+### Expected Response
+
+* Status is 204
+
+* No Content
+
+
+
+## Test 27: Check Slip Deleted
+
+### Request
+
+Verify slip is deleted
+
+```
+GET /slips/{test9id}
+
+```
+
+### Expected Response
+
+  * Status is 404
+
+
+## Test 28: Check Boat Updated to At Sea
+
+### Request
+
+Verify boat is `at_sea`.
+
+```
+GET /boats/{test2id}
+
+```
+
+### Expected Response
+
+  * Status is 200
+
+  * JSON that has `at_sea` set to `true`.
+
+  ```
+  {
+    "name": "Boat Name",
+    "type": "Boat Type",
+    "length": 10,
+    "id": "asdfASDF1234-5678",
+    "url": "http://.../boats/asdfASDF1234-5678",
+    "at_sea": true
+  }
+  ```
+
+
+# Delete Docked Boat
+
+## Test 29: Create New Slip
+
+## Test 30: Dock boat into new slip
+
+## Test 31: Delete Docked Boat
+
+## Test 32: Verify Boat Deleted
+
+## Test 33: Verify Slip is empty & updated history
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -777,76 +846,66 @@ GET /boats/{test2id}
 
 Try to place an at sea boat into an occupied slip and get denied. No changes.
 
-## Test 20: Verify Slip is Occupied
+## Test 34: Create new Boat #1
 
-## Test 21: Verify Boat is At Sea
+## Test 35: Create new Boat #2
 
-## Test 22: Boat Arrival Denied (403 - Slip Occupied)
+## Test 36: Boat #1 Arrives in Slip
 
-## Test 23: Verify Boat is Unchanged
+## Test 37: Verify Slip is Occupied
 
-## Test 24: Verify Slip is Unchanged
+## Test 38: Boat #2 Arrival Denied (403 - Slip Occupied)
+
+## Test 39: Verify Boat #1 is Unchanged
+
+## Test 40: Verify Boat #2 is Unchanged
+
+## Test 41: Verify Slip is Unchanged
+
 
 
 # Boat Arrival Case 3
 
-Move a docked boat into an empty slip.
+Try to place a docked boat into an empty slip and get denied. No changes.
 
-## Test 25: Verify New Slip is Empty
+## Test 42: Verify Slip (#1) is Occupied by Boat #1
 
-## Test 26: Verify Boat is Not At Sea
+## Test 43: Verify Boat #1 is Not At Sea
 
-## Test 27: Verify Boat's Current Slip
+## Test 44: Create new Slip (#2)
 
-## Test 28: Boat Arrival
+## Test 45: Verify Slip #2 is Empty
 
-## Test 29: Verify Boat is Still Not At Sea
+## Test 46: Boat #1 Arrival to Slip #2 Denied (403)
 
-## Test 30: Verify New Slip is Has Boat and URL
+## Test 47: Verify Boat #1 is Still Not At Sea
 
-## Test 31: Verify Old Slip is Empty
+## Test 48: Verify Slip #2 is Still Empty
+
+## Test 49: Verify Slip #1 is Unchanged
+
 
 
 # Boat Arrival Case 4
 
 Try to place a docked boat into an occupied slip and get denied. No changes.
 
-## Test : Verify New Slip is Occupied By Another
+## Test 50: Verify Slip #1 is Occupied By Boat #1
 
-## Test : Verify New Slip's Boat is Not At Sea
+## Test 51: Verify Boat #1 is Not At Sea
 
-## Test : Verify Boat is Not At Sea
+## Test 52: Boat #2 Arrival to Slip #2
 
-## Test : Verify Boat's Current Slip Has This Boat
+## Test 53: Verify Slip #2 is Occupied By Boat #2
 
-## Test : Boat Arrival Denied (403 - Slip Occupied)
+## Test 54: Verify Boat #2 is Not At Sea
 
-## Test : Verify New Slip is Unchanged
+## Test 55: Boat #1 to Slip #2 Denied (403)
 
-## Test : Verify New Slip's Original Boat Unchanged
+## Test 56: Verify Slip #1 is Unchanged
 
-## Test : Verify Boat's Old Slip is Unchanged
+## Test 57: Verify Slip #2 is Unchanged
 
-## Test : Verify Boat is Unchanged
+## Test 58: Verify Boat #1 is Unchanged
 
-
-
-# Delete Docked Boat
-
-## Test : Delete Docked Boat
-
-## Test : Check Boat Deleted
-
-## Test : Check Slip Updated when Current Boat Deleted
-
-## Test : Check Boat Deleted
-
-
-
-# Delete Occupied Slip
-
-## Test : Delete Occupied Slip
-
-## Test : Check Slip Deleted
-
-## Test : Check Boat Updated to At Sea
+## Test 59: Verify Boat #2 is Unchanged
