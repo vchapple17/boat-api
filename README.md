@@ -28,6 +28,10 @@ To deploy the app to a server using Google Cloud Shell:
 gcloud app deploy app.yaml
 ```
 
+# Documentation
+
+[https://github.com/vchapple17/boat-api/blob/master/doc.md]
+
 # Endpoints
 
 ## Boat
