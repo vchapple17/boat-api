@@ -4,6 +4,7 @@ import webapp2_extras
 import json
 from const import baseURL, boatsURL
 from Boat import Boat
+from Slip import Slip
 from google.appengine.ext import ndb
 from datetime import datetime
 
@@ -28,6 +29,7 @@ class BoatsHandler(RequestHandler):
         self.response.content_type = 'text/plain'
         self.response.status_int = 200;
         self.response.out.write(json.dumps(res))
+        return
 
     def post(self):
         print("SlipsHandler: CREATE POST")
@@ -97,11 +99,13 @@ class BoatsHandler(RequestHandler):
 # Boat identified by id
 class BoatHandler(RequestHandler):
     def get(self, boat_id):
-        print("BoatHandler: GET 1")
+        print("BoatHandler: GET 1: " + boat_id)
         # Convert boat_id to ndb object
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
             boat = boat_key.get()
+            if (boat == None):
+                raise TypeError;
         except:
             self.response.write(json.dumps({"error": "Error getting boat"}));
             self.response.status_int = 404;
@@ -207,17 +211,50 @@ class BoatHandler(RequestHandler):
         # Convert boat_id to ndb KEY
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
+            boat = boat_key.get()
+            if (boat == None):
+                raise TypeError
         except:
-            self.response.write(json.dumps({"error": "Cannot get boat from id."}));
-            self.response.status_int = 404;
+            self.response.status_int = 204;
             return
 
-        # Delete ndb entity
+
+        # occupied_slip
+        try:
+            # Find Boat's Slip and Remove
+            query = Slip.query()
+            slips = query.filter(Slip._properties["current_boat"] == boat_id).fetch()
+
+            if (len(slips) == 1):
+                slip = slips[0];
+
+                # Backup Boat URL and ID for Slip
+                boatURL = slip.current_boat_url
+                boatDate = slip.arrival_date
+
+                # Update Slip
+                slip.current_boat = None;
+                slip.current_boat_url = None;
+                slip.arrival_date = None;
+
+                slip.put()
+                print("UPDATED SLIP", slip)
+        except:
+            # Send Response
+            self.response.write(json.dumps({"error": "Cannot update slip."}));
+            self.response.status_int = 500;
+            return
+
+        # Delete boat entity
         try:
             boat_key.delete();
         except:
             self.response.write(json.dumps({"error": "Cannot delete boat."}));
             self.response.status_int = 404;
+            slip.current_boat = boat_id;
+            slip.current_boat_url = boatURL;
+            slip.arrival_date = boatDate;
+            slip.put()
             return
 
         # # Send response that boat is deleted
@@ -262,10 +299,10 @@ class DockingHandler(RequestHandler):
 
         # Verify Slip Empty, reject if not
         if (slip.current_boat != None) or (slip.current_boat_url != None) or (slip.arrival_date != None):
-            # print("slip", slip);
             self.response.write(json.dumps({"error": "Slip already occupied."}));
             self.response.status_int = 403;
             return
+
 
         # Get json from Request Body
         try:
@@ -336,15 +373,20 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid `departure` parameter"}));
             self.response.status_int = 400;
+            return
 
         # Convert boat_id and slip_id to ndb objects
         try:
             boat_key = ndb.Key(urlsafe=boat_id);
             boat = boat_key.get()
             boatURL = boatsURL + "/" + boat_id;
+            if (boat == None):
+                raise TypeError
         except:
             self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 400;
+            return
+
         try:
             slip_key = ndb.Key(urlsafe=slip_id);
             slip = slip_key.get()
@@ -353,6 +395,7 @@ class DockingHandler(RequestHandler):
         except:
             self.response.write(json.dumps({"error": "Invalid inputs"}));
             self.response.status_int = 400;
+            return
 
         # Verify Boat Not At Sea, reject if not
         if (boat.at_sea == True):
@@ -372,7 +415,7 @@ class DockingHandler(RequestHandler):
             boat.at_sea = True;
             boat.put()
         except:
-            print("Cannot update boat");
+            # print("Cannot update boat");
             self.response.write(json.dumps({"error": "Cannot update boat"}));
             self.response.status_int = 400;
             return
@@ -388,9 +431,9 @@ class DockingHandler(RequestHandler):
                 "departed_boat": boat_id
             })
             slip.put()
-            print("UPDATED SLIP", slip)
+            #print("UPDATED SLIP", slip)
         except:
-            print("Cannot update slip");
+            #print("Cannot update slip");
             # Undo boat update
             boat.at_sea = False;
             boat.put()

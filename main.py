@@ -21,15 +21,17 @@ application = webapp2.WSGIApplication([
     Route('/boats', handler=BoatsHandler, name='boats'),
     PathPrefixRoute( '/boats',[
         Route('/', handler=BoatsHandler, name='boats'),
-        Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=BoatHandler, name='boat'),
-        Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+>/slips/<slip_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=DockingHandler, name='docking'),
+        # Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=BoatHandler, name='boat'),
+        Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-._])+(/)?>', handler=BoatHandler, name='boat'),
+
+        Route('/<boat_id:([A-Z]|[a-z]|[0-9]|[-._])+>/slips/<slip_id:([A-Z]|[a-z]|[0-9]|[-._])+(/)?>', handler=DockingHandler, name='docking'),
 
     ]),
 
     Route('/slips', handler=SlipsHandler, name='slips'),
     PathPrefixRoute( '/slips',[
         Route('/', handler=SlipsHandler, name='slips'),
-        Route('/<slip_id:([A-Z]|[a-z]|[0-9]|[-])+(/)?>', handler=SlipHandler, name='slip'),
+        Route('/<slip_id:([A-Z]|[a-z]|[0-9]|[-._])+(/)?>', handler=SlipHandler, name='slip'),
     ]),
 
 ], debug=DEBUG_FLAG)
